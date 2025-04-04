@@ -1,6 +1,7 @@
 package com.Rest.CategoryProduct.Service;
 
 import com.Rest.CategoryProduct.Entity.Category;
+import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.CategoryRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
@@ -60,10 +61,13 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public String deleteCategory(Long id) {
-        Optional<Category> categoryExist = categoryRepo.findById(id);
-        if(!categoryExist.isPresent()){
-            return "There is no such category";
-        }
+//        Optional<Category> categoryExist = categoryRepo.findById(id);
+//        if(!categoryExist.isPresent()){
+//            return "There is no such category";
+//        }
+
+        Category categoryExist = categoryRepo.findById(id)
+                        .orElseThrow(() -> new ResourceNotFoundExceptions("There is no such category"));
         categoryRepo.deleteById(id);
 //        resetAutoIncrement();
         return "Category deleted successfully";

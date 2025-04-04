@@ -50,17 +50,13 @@ public class CategoryContoller {
     @DeleteMapping("/{id}")
     @Tag(name = "Delete category", description = "It is used to delete category")
     public ResponseEntity<String> deleteCategory(@PathVariable Long id){
-        try {
             String status = categorySer.deleteCategory(id);
             return new ResponseEntity<>(status, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
-        }
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(value = Exception.class)
-    public String generalExceptionHandler(){
-        return "Exception is occurred";
-    }
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(value = Exception.class)
+//    public String generalExceptionHandler(){
+//        return "Exception is occurred";
+//    }
 }

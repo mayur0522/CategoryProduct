@@ -42,17 +42,14 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Long id){
-        try{
             String status = productService.deleteProduct(id);
             return new ResponseEntity<>(status, HttpStatus.OK);
-        }catch (Exception ex){
-            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
-        }
+
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler(value = Exception.class)
-    public String generalExceptionHandler(){
-        return "Exception is occurred";
-    }
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ExceptionHandler(value = Exception.class)
+//    public String generalExceptionHandler(){
+//        return "Exception is occurred";
+//    }
 }
