@@ -86,7 +86,7 @@ public class BrandServiceImpl implements BrandService{
 
 //                                          Status
 //Add some custom finder methods  -         Already Done
-//use logging framework : log4j, sl4j -
+//use logging framework : log4j, slf4j -
 // use exception handling                   Done
 // use @ControllerAdvice                    Done
 //Unit testing

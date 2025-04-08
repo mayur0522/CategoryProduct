@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -59,4 +60,9 @@ public class CategoryContoller {
 //    public String generalExceptionHandler(){
 //        return "Exception is occurred";
 //    }
+
+    @GetMapping("/currentUserName")
+    public String getLoggedInUser(Principal principal){
+        return principal.getName();
+    }
 }
