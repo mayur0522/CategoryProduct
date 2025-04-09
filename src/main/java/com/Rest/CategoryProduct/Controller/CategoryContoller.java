@@ -61,8 +61,4 @@ public class CategoryContoller {
 //        return "Exception is occurred";
 //    }
 
-    @GetMapping("/currentUserName")
-    public String getLoggedInUser(Principal principal){
-        return principal.getName();
-    }
 }
