@@ -34,10 +34,10 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
 
-        this.doAuthenticate(request.getEmail(), request.getPassword());
+        this.doAuthenticate(request.getUsername(), request.getPassword());
 
 
-        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getEmail());
+        UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
         String token = this.helper.generateToken(userDetails);
 
         JwtResponse response = JwtResponse.builder()
@@ -52,7 +52,6 @@ public class AuthController {
         try {
             manager.authenticate(authentication);
 
-
         } catch (BadCredentialsException e) {
             throw new BadCredentialsException(" Invalid Username or Password  !!");
         }
@@ -60,7 +59,7 @@ public class AuthController {
     }
 
     @ExceptionHandler(BadCredentialsException.class)
-    public String exceptionHandler() {
-        return "Credentials Invalid !!";
+    public ResponseEntity<String> exceptionHandler() {
+        return new ResponseEntity<>("Credentials Invalid !!", HttpStatus.OK);
     }
 }

@@ -90,5 +90,6 @@ public class BrandServiceImpl implements BrandService{
 // use exception handling                   Done
 // use @ControllerAdvice                    Done
 //Unit testing
-//User module and apply jwt or oAuth2
+//User module and apply jwt or oAuth2       Done
 //apply splunk
+// Method level Authorization               Done
