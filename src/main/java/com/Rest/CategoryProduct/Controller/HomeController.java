@@ -21,4 +21,13 @@ public class HomeController {
     public String getLoggedInUser(Principal principal){
         return principal.getName();
     }
+//<<<<<<< Updated upstream
+//=======
+//
+//    @PostMapping("/register")
+//    public ResponseEntity<String> createUser(@RequestBody AppUser user){
+//        String status = userService.createUser(user);
+//        return new ResponseEntity<>(status, HttpStatus.OK);
+//    }
+//>>>>>>> Stashed changes
 }
