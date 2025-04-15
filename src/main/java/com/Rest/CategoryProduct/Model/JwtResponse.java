@@ -2,12 +2,10 @@ package com.Rest.CategoryProduct.Model;
 
 import lombok.*;
 
-@Getter
-@Setter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@ToString
 public class JwtResponse {
 
     private String jwtToken;
