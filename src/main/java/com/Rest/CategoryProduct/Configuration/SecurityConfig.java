@@ -26,7 +26,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         auth-> auth
                         .requestMatchers("/home/**").authenticated()
-                        .requestMatchers("auth/login").permitAll()
+                        .requestMatchers("auth/login",
+                                "/swagger-ui/**",
+                                "/v3/api-docs/**",
+                                "/swagger-ui.html"
+                        ).permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex ->ex.authenticationEntryPoint(point))
