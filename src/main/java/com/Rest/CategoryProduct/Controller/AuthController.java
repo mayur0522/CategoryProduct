@@ -36,7 +36,6 @@ public class AuthController {
 
         this.doAuthenticate(request.getUsername(), request.getPassword());
 
-
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
         String token = this.helper.generateToken(userDetails);
 

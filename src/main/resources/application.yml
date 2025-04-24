@@ -16,3 +16,10 @@ spring:
 #        user:
 #            name: Yogesh
 #            password: 123
+
+logging:
+    file:
+        name: logs/application.log
+    level:
+        root: INFO
+        com.Rest.CategoryProduct: DEBUG
