@@ -10,17 +10,12 @@ import java.security.Principal;
 @RestController
 @RequestMapping("/home")
 public class HomeController {
-
-    @GetMapping("/user")
-    public String getUser(){
-        System.out.print("Getting User");
-        return "User";
-    }
-
     @GetMapping("/currentUserName")
     public String getLoggedInUser(Principal principal){
         return principal.getName();
     }
+
+
 //<<<<<<< Updated upstream
 //=======
 //

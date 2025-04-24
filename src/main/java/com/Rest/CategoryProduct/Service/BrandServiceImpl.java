@@ -71,7 +71,7 @@ public class BrandServiceImpl implements BrandService{
     public String deleteBrand(Long id) {
         Optional<Brand> brandExist = brandRepo.findById(id);
         if(!brandExist.isPresent()){
-            return "There is no such brand";
+            return "Product Does Not Found With Id : "+id;
         }
         brandRepo.deleteById(id);
 //        resetAutoIncrement();

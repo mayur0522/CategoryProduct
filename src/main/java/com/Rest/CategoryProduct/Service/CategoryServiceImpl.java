@@ -67,7 +67,7 @@ public class CategoryServiceImpl implements CategoryService{
 //        }
 
         Category categoryExist = categoryRepo.findById(id)
-                        .orElseThrow(() -> new ResourceNotFoundExceptions("There is no such category"));
+                        .orElseThrow(() -> new ResourceNotFoundExceptions("category Does Not Found With Id : "+id));
         categoryRepo.deleteById(id);
 //        resetAutoIncrement();
         return "Category deleted successfully";
