@@ -7,6 +7,7 @@ import com.Rest.CategoryProduct.Repositories.ProductRepositories;
 //import jakarta.persistence.EntityManager;
 //import jakarta.persistence.PersistenceContext;
 //import jakarta.transaction.Transactional;
+import com.Rest.CategoryProduct.pubsub.PubSubPublisher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ import java.util.Optional;
 public class ProductServiceImpl implements  ProductService{
 
     private static final Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
+
+    @Autowired
+    private PubSubPublisher pubSubPublisher;
     @Autowired
     private ProductRepositories productRepo;
 
@@ -55,6 +59,10 @@ public class ProductServiceImpl implements  ProductService{
         }
         productRepo.save(product);
         logger.info("Successfully created a new product : {}", product.getProductName());
+
+        // Using pub-sub
+        String message = String.format("\"event\":\"PRODUCT_CREATED\", \"id\":%d, \"name\":\"%s\" ",product.getProductId(),product.getProductName());
+        pubSubPublisher.publish(message);
         return "Data inserted successfully";
     }
 

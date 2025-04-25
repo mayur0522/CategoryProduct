@@ -12,6 +12,11 @@ spring:
             ddl-auto: update
         show-sql: true
 
+    cloud :
+        gcp :
+            project-id : springboot-app-457506
+            credentials :
+                location : file:/C:/Users/jatha/OneDrive/Documents/gcp/springboot-app-457506-459b9c19321c.json
 #    security:
 #        user:
 #            name: Yogesh

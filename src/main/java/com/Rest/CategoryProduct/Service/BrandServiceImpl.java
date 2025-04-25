@@ -105,11 +105,29 @@ public class BrandServiceImpl implements BrandService{
 }
 
 //                                          Status
-//Add some custom fidner methods  -         Already Done
-//use logging framework : log4j, slf4j -
+//Prometheus
+//Grafana
+//Unit testing
+//apply splunk / OpenObserve
+//Kafka
+//OAthu2  : Github, Google,
+
+//Docker
+//Jenkins CICD
+
+//Microservices
+//Github : Branching, revert, rebase, cherrypick, go back to previous commit
+//Kubernetes : architecture, Commands,
+
+
+
 // use exception handling                   Done
 // use @ControllerAdvice                    Done
-//Unit testing
-//User module and apply jwt or oAuth2       Done
-//apply splunk
+//User module and apply jwt or oAuth2
 // Method level Authorization               Done
+//Add some custom finder methods  -         Done
+//use logging framework : log4j, slf4j -    Done
+
+
+//Theroy:
+//OS Working and internal working
