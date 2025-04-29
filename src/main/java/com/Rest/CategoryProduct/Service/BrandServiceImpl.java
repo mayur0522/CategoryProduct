@@ -5,6 +5,8 @@ import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.BrandRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
+import com.Rest.CategoryProduct.pubsub.BrandPubSubPublisher;
+import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,9 @@ import java.util.Optional;
 
 @Service
 public class BrandServiceImpl implements BrandService{
-
     private static final Logger logger = LoggerFactory.getLogger(BrandServiceImpl.class);
+    @Autowired
+    private BrandPubSubPublisher pubSubPublisher;
     @Autowired
     private BrandRepositories brandRepo;
 
@@ -27,22 +30,35 @@ public class BrandServiceImpl implements BrandService{
     @Override
     public Brand getBrandById(Long id) {
         logger.info("Requesting to Fetch the brand {}",id);
-        Optional<Brand> findById = brandRepo.findById(id);
+        Optional<Brand> findById = Optional.ofNullable(brandRepo.findById(id)
+                .orElseThrow(() -> {
+                    logger.info("Brand does not found with id : {}",id);
+                    return new ResourceNotFoundExceptions("Brand does not found with id : " + id);
+                }));
 
-        if (findById.isPresent()){
-            logger.info("Brand found with id : {}",id);
-            return findById.get();
-        }else{
-            logger.info("Brand does not found with id : {}",id);
-            return null;
-        }
+        Brand brand = findById.get();
+        logger.info("Brand found with id : {}",id);
+
+        // Using pub/sub
+        String message = String.format("{\"event\":\"GET_BRAND\", \"id\":%d, \"name\":\"%s\"}",id,brand.getBrandName());
+        pubSubPublisher.publish(message);
+        return brand;
+
     }
 
     @Override
     public List<Brand> getAllBrand() {
         logger.info("Requesting to fetch all the brands");
+        List<Brand> brands = brandRepo.findAll();
+        if (brands.isEmpty()){
+            logger.warn("No brands found in the database.");
+            return brands;
+        }
         logger.info("Fetched all the brands");
-        return brandRepo.findAll();
+        // Using pub/sub
+        String message = String.format("{\"event\":\"GET_All_BRANDS\", \"Count\":%s}",brands.size());
+        pubSubPublisher.publish(message);
+        return brands;
     }
 
 //    @Override
@@ -56,10 +72,19 @@ public class BrandServiceImpl implements BrandService{
         Optional<Brand> brandExist = brandRepo.findByBrandName(brand.getBrandName());
         if(brandExist.isPresent()){
             logger.error("{} brand already exists !!!",brand.getBrandName());
-            return "Brand already exists";
+            return brand.getBrandName()+" Brand already exists";
         }
         brandRepo.save(brand);
         logger.info("Successfully created a new category : {}",brand.getBrandName());
+
+        // Using pub-sub
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("event", "BRAND_CREATED");
+        jsonObject.addProperty("id", brand.getBrandId());
+        jsonObject.addProperty("name", brand.getBrandName());
+
+        String message = jsonObject.toString();
+        pubSubPublisher.publish(message);
         return "Data inserted successfully";
     }
 
@@ -69,8 +94,8 @@ public class BrandServiceImpl implements BrandService{
         logger.info("Request received to update the brand with id : {}",id);
         Optional<Brand> brandExist = Optional.ofNullable(brandRepo.findById(id)
                 .orElseThrow(() -> {
-                    logger.error("brand Not Found With Id : {}", id);
-                    return new ResourceNotFoundExceptions("brand Does Not Found With Id : {}" + id);
+                    logger.error("Brand Not Found With Id : {}", id);
+                    return new ResourceNotFoundExceptions("Brand Does Not Found With Id : {}" + id);
                 }));
 //        if(!brandExist.isPresent()){
 //            return "There is no such brand";
@@ -80,20 +105,32 @@ public class BrandServiceImpl implements BrandService{
         brand1.setBrandName(brand.getBrandName());
         brandRepo.save(brand1);
         logger.info("Updated a brand with id : {}",id);
+
+        // Using pub-sub
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("event", "BRAND_UPDATED");
+        jsonObject.addProperty("id", id);
+        jsonObject.addProperty("name", brand.getBrandName());
+
+        String message = jsonObject.toString();
+        pubSubPublisher.publish(message);
         return "Data updated successfully";
     }
 
     @Override
     public String deleteBrand(Long id) {
         logger.info("Request received to delete the brand with id : {}",id);
-        Optional<Brand> brandExist = brandRepo.findById(id);
-        if(!brandExist.isPresent()){
-            logger.error("Brand Not Found With Id : {}",id);
-            return "Product Does Not Found With Id : "+id;
-        }
+        Brand brandExist = brandRepo.findById(id)
+                .orElseThrow(()->{
+                    logger.error("Brand Not Found With Id : {}",id);
+                    return new ResourceNotFoundExceptions("Brand Not Found With Id : "+id);
+                });
         brandRepo.deleteById(id);
         logger.info("Deleted brand with id : {}",id);
 
+        // Using pub/sub
+        String message = String.format("{\"event\":\"BRAND_DELETED\", \"id\":%d, \"name\":\"%s\"}",id,brandExist.getBrandName());
+        pubSubPublisher.publish(message);
 //        resetAutoIncrement();
         return "Brand deleted successfully";
     }

@@ -9,21 +9,20 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductPubSubSubscriber {
-
+public class CategoryPubSubSubscriber {
     private final PubSubTemplate pubSubTemplate;
 
-    public ProductPubSubSubscriber(PubSubTemplate pubSubTemplate) {
+    public CategoryPubSubSubscriber(PubSubTemplate pubSubTemplate) {
         this.pubSubTemplate = pubSubTemplate;
     }
 
     @PostConstruct
-    public void subscribeToProductEvents() {
-        // Subscribe to the Pub/Sub topic and process the message
-        pubSubTemplate.subscribe("yoj-product-topic-sub", (BasicAcknowledgeablePubsubMessage message) -> {
+    public void subscribeToCategoryEvents() {
+        // Subscribe to the Pub/Sub topic and processing the message
+        pubSubTemplate.subscribe("yoj-category-topic-sub", (BasicAcknowledgeablePubsubMessage message) -> {
             String payload = new String(message.getPubsubMessage().getData().toByteArray());
             handleMessage(payload);
-            message.ack(); // Acknowledge the message after processing
+            message.ack(); // Acknowledging the message after processing
         });
     }
 
@@ -34,23 +33,23 @@ public class ProductPubSubSubscriber {
 
             String eventType = jsonObject.get("event").getAsString();
 
-//            if ("PRODUCT_CREATED".equals(eventType)) {
+//            if ("CATEGORY_CREATED".equals(eventType)) {
 //                // Handle the product created event
-//                System.out.println("Handling event: " + eventType + ", Product ID: " + productId + ", Product Name: " + productName);
+//                System.out.println("Handling event: " + eventType + ", Category ID: " + categoryId + ", Category Name: " + categoryName);
 //            }
 
             switch (eventType){
-                case "GET_All_PRODUCTS":
+                case "GET_All_CATEGORIES":
                     int count = jsonObject.has("Count") ? jsonObject.get("Count").getAsInt() : 0;
-                    System.out.println("Handling event: " + eventType + ", Product Count: "+count);
+                    System.out.println("Handling event: " + eventType + ", Category Count: "+count);
                     break;
-                case "PRODUCT_CREATED":
-                case "GET_PRODUCT":
-                case "PRODUCT_UPDATED":
-                case "PRODUCT_DELETED":
-                    long productId = jsonObject.has("id") ? jsonObject.get("id").getAsLong() : -1;
-                    String productName = jsonObject.has("name") ? jsonObject.get("name").getAsString() : "N/A";
-                    System.out.println("Handling event: " + eventType + ", Product ID: " + productId + ", Product Name: " + productName);
+                case "CATEGORY_CREATED":
+                case "GET_CATEGORY":
+                case "CATEGORY_UPDATED":
+                case "CATEGORY_DELETED":
+                    long categoryId = jsonObject.get("id").getAsLong();
+                    String categoryName = jsonObject.get("name").getAsString();
+                    System.out.println("Handling event: " + eventType + ", Category ID: " + categoryId + ", Category Name: " + categoryName);
                     break;
                 default:
                     System.out.println("Unhandled event type: " + eventType);
