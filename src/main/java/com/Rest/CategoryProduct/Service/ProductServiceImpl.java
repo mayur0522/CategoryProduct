@@ -31,7 +31,7 @@ public class ProductServiceImpl implements  ProductService{
 
     @Override
     public Product getProductById(Long id) {
-        logger.info("Requesting to fetch the record {}",id);
+        logger.info("Requesting to fetch the product record {}",id);
         Optional<Product> findById = Optional.ofNullable(productRepo.findById(id)
                 .orElseThrow(() -> {
                     logger.info("Product Does not found with id : {}", id);
@@ -50,8 +50,18 @@ public class ProductServiceImpl implements  ProductService{
     @Override
     public List<Product> getAllProducts() {
         logger.info("Requesting to fetch all the products");
-        logger.info("Fetched all the products");
-        return productRepo.findAll();
+
+        List<Product> products = productRepo.findAll();
+        if (products.isEmpty()){
+            logger.warn("No products found in the database.");
+            return  products;
+        }
+
+        logger.info("Fetched {} products",products.size());
+//      pub/sub
+        String message = String.format("{\"event\":\"GET_All_PRODUCTS\", \"Count\":%s}",products.size());
+        pubSubPublisher.publish(message);
+        return products;
     }
 
     @Override
@@ -59,8 +69,8 @@ public class ProductServiceImpl implements  ProductService{
         logger.info("Request received to create a new product with name : {}",product.getProductName());
         Optional<Product> categoryExist = productRepo.findByProductName(product.getProductName());
         if(categoryExist.isPresent()){
-            logger.error("{} product already exists !!!",product.getProductName());
-            return "Product already exists";
+            logger.warn("{} product already exists !!!",product.getProductName());
+            return product.getProductName()+" Product already exists";
         }
         productRepo.save(product);
         logger.info("Successfully created a new product : {}", product.getProductName());
@@ -85,7 +95,7 @@ public class ProductServiceImpl implements  ProductService{
         Optional<Product> productExist = Optional.ofNullable(productRepo.findById(id)
                 .orElseThrow(() -> {
                     logger.error("product Not Found With Id : {}", id);
-                    return new ResourceNotFoundExceptions("product Does Not Found With Id : {}" + id);
+                    return new ResourceNotFoundExceptions("product Does Not Found With Id : "+ id);
                 }));
         /*if(!productExist.isPresent()){
             return "There is no such product";
@@ -95,6 +105,15 @@ public class ProductServiceImpl implements  ProductService{
         product1.setProductName(product.getProductName());
         productRepo.save(product1);
         logger.info("Updated a product with id : {}",id);
+
+        // Using pub/sub
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("event", "PRODUCT_UPDATED");
+        jsonObject.addProperty("id", id);
+        jsonObject.addProperty("name", product.getProductName());
+
+        String message = jsonObject.toString();
+        pubSubPublisher.publish(message);
         return "Data updates successfully";
     }
 
@@ -110,12 +129,16 @@ public class ProductServiceImpl implements  ProductService{
         Product productExist = productRepo.findById(id)
                 .orElseThrow(() -> {
                     logger.error("product Not Found With Id : {}",id);
-                    return new RuntimeException("Product Does Not Found With Id : "+id);
+                    return new ResourceNotFoundExceptions("Product Does Not Found With Id : "+id);
                 });
 
 //        Using Exception handling
         productRepo.deleteById(id);
         logger.info("Deleted product with id : {}",id);
+
+      // Using pub/sub
+        String message = String.format("{\"event\":\"PRODUCT_DELETED\", \"id\":%d, \"name\":\"%s\"}",id,productExist.getProductName());
+        pubSubPublisher.publish(message);
 
 //        resetAutoIncrement();
         return "Data deleted successfully";
