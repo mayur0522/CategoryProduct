@@ -8,6 +8,7 @@ import jakarta.persistence.PersistenceContext;*/
 import com.Rest.CategoryProduct.pubsub.CategoryPubSubPublisher;
 import com.Rest.CategoryProduct.pubsub.ProductPubSubPublisher;
 import com.google.gson.JsonObject;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Service
 public class CategoryServiceImpl implements CategoryService{
-    private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
+//    private static final Logger log = LoggerFactory.getLogger(CategoryServiceImpl.class);
     @Autowired
     private CategoryPubSubPublisher pubSubPublisher;
     @Autowired
@@ -30,15 +32,15 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public Category getCategoryById(Long id) {
-        logger.info("Requesting to fetch the record {}",id);
+        log.info("Requesting to fetch the Category record with id {}",id);
         Optional<Category> findById = Optional.of(categoryRepo.findById(id)
                 .orElseThrow(()->{
-                    logger.info("Category does not found with id : {}",id);
+                    log.info("Category does not found with id : {}",id);
                     return new ResourceNotFoundExceptions("Category does not found with id : "+id);
                 }));
 
         Category category = findById.get();
-        logger.info("Category found with id : {}",id);
+        log.info("Category found with id : {}",id);
 
         // Using pub/sub
         String message = String.format("{\"event\":\"GET_CATEGORY\", \"id\":%d, \"name\":\"%s\"}",id,category.getCategoryName());
@@ -49,15 +51,15 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public List<Category> getAllCategory() {
-        logger.info("Requesting to fetch all the categories");
+        log.info("Requesting to fetch all the categories");
 
         List<Category> categories = categoryRepo.findAll();
         if (categories.isEmpty()){
-            logger.warn("No categories found in the database.");
+            log.warn("No categories found in the database.");
             return categories;
         }
 
-        logger.info("Fetched {} categories",categories.size());
+        log.info("Fetched {} categories",categories.size());
         // Using pub/sub
         String message = String.format("{\"event\":\"GET_All_CATEGORIES\", \"Count\":%s}",categories.size());
         pubSubPublisher.publish(message);
@@ -66,14 +68,14 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public String insertCategory(Category category) {
-        logger.info("Request received to create a new category with name : {}",category.getCategoryName());
+        log.info("Request received to create a new category with name : {}",category.getCategoryName());
         Optional<Category> categoryExist = categoryRepo.findByCategoryName(category.getCategoryName());
         if(categoryExist.isPresent()){
-            logger.error("{} category already exists !!!",category.getCategoryName());
+            log.error("{} category already exists !!!",category.getCategoryName());
             return category.getCategoryName()+" Category already exists";
         }
         categoryRepo.save(category);
-        logger.info("Successfully created a new category : {}",category.getCategoryName());
+        log.info("Successfully created a new category : {}",category.getCategoryName());
 
         // Using pub-sub
         JsonObject jsonObject = new JsonObject();
@@ -89,10 +91,10 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public String updateCategory(Category category, Long id) {
-        logger.info("Request received to update the category with id : {}",id);
+        log.info("Request received to update the category with id : {}",id);
         Optional<Category> categoryExist = Optional.ofNullable(categoryRepo.findById(id)
                 .orElseThrow(() -> {
-                    logger.warn("Category Not Found With Id : {}",id);
+                    log.warn("Category Not Found With Id : {}",id);
                     return new ResourceNotFoundExceptions("category Does Not Found With Id : {}" + id);
                 }));
 
@@ -104,7 +106,7 @@ public class CategoryServiceImpl implements CategoryService{
         Category category1 = categoryExist.get();
         category1.setCategoryName(category.getCategoryName());
         categoryRepo.save(category1);
-        logger.info("Updated a category with id : {}",id);
+        log.info("Updated a category with id : {}",id);
 
         // Using pub-sub
         JsonObject jsonObject = new JsonObject();
@@ -124,14 +126,14 @@ public class CategoryServiceImpl implements CategoryService{
             return "There is no such category";
         }*/
 
-        logger.info("Request received to delete the category with id : {}",id);
+        log.info("Request received to delete the category with id : {}",id);
         Category categoryExist = categoryRepo.findById(id)
                 .orElseThrow(() ->{
-                    logger.error("Category Not Found With Id : {}",id);
+                    log.error("Category Not Found With Id : {}",id);
                     return new ResourceNotFoundExceptions("category Does Not Found With Id : "+id);
                 });
         categoryRepo.deleteById(id);
-        logger.info("Deleted category with id : {}",id);
+        log.info("Deleted category with id : {}",id);
 
         // Using pub/sub
         String message = String.format("{\"event\":\"CATEGORY_DELETED\", \"id\":%d, \"name\":\"%s\"}",id,categoryExist.getCategoryName());
