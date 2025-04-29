@@ -23,8 +23,10 @@ spring:
 #            password: 123
 
 logging:
-    file:
-        name: logs/application.log
     level:
         root: INFO
         com.Rest.CategoryProduct: DEBUG
+    file:
+        name: logs/application.log
+    pattern:
+        file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

@@ -5,6 +5,8 @@ import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.CategoryRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
+import com.Rest.CategoryProduct.pubsub.ProductPubSubPublisher;
+import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ import java.util.Optional;
 @Service
 public class CategoryServiceImpl implements CategoryService{
     private static final Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
+    @Autowired
+    private ProductPubSubPublisher pubSubPublisher;
     @Autowired
     private CategoryRepositories categoryRepo;
 
@@ -54,6 +58,16 @@ public class CategoryServiceImpl implements CategoryService{
         }
         categoryRepo.save(category);
         logger.info("Successfully created a new category : {}",category.getCategoryName());
+
+        // Using pub-sub
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("event", "CATEGORY_CREATED");
+        jsonObject.addProperty("id", category.getCategoryId());
+        jsonObject.addProperty("name", category.getCategoryName());
+
+        String message = jsonObject.toString();
+        pubSubPublisher.publish(message);
+
         return "Category inserted successfully";
     }
 

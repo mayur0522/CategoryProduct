@@ -4,11 +4,11 @@ import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PubSubPublisher {
+public class ProductPubSubPublisher {
 
     private final PubSubTemplate pubSubTemplate;
 
-    public PubSubPublisher(PubSubTemplate pubSubTemplate) {
+    public ProductPubSubPublisher(PubSubTemplate pubSubTemplate) {
         this.pubSubTemplate = pubSubTemplate;
     }
 
