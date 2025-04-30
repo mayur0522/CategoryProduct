@@ -162,7 +162,7 @@ public class BrandServiceImpl implements BrandService{
 
 // use exception handling                   Done
 // use @ControllerAdvice                    Done
-//User module and apply jwt or oAuth2
+//User module and apply jwt or oAuth2       Done
 // Method level Authorization               Done
 //Add some custom finder methods  -         Done
 //use logging framework : log4j, slf4j -    Done
