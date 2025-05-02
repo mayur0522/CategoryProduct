@@ -4,7 +4,6 @@ import com.Rest.CategoryProduct.Entity.Category;
 import com.Rest.CategoryProduct.Entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 import java.util.Optional;
 
 @Repository

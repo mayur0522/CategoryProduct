@@ -44,7 +44,6 @@ public class ProductController {
     public ResponseEntity<String> deleteProduct(@PathVariable Long id){
             String status = productService.deleteProduct(id);
             return new ResponseEntity<>(status, HttpStatus.OK);
-
     }
 
 //    @ResponseStatus(HttpStatus.BAD_REQUEST)

@@ -1,7 +1,9 @@
+# Spring Application Name
 spring:
     application:
         name: CategoryProduct
 
+#   MySQL Database Configuration
     datasource:
         url: jdbc:mysql://localhost:3306/categorydb
         username: root
@@ -12,7 +14,23 @@ spring:
             ddl-auto: update
         show-sql: true
 
-#    security:
+#  GCP Cloud configuration
+    cloud :
+        gcp :
+            project-id : springboot-app-457506
+            credentials :
+                location : file:/C:/Users/jatha/OneDrive/Documents/gcp/springboot-app-457506-459b9c19321c.json
+
+#   Setting spring security default user using yaml
+#    security :
 #        user:
 #            name: Yogesh
 #            password: 123
+
+#Logging Configuration
+logging:
+    level:
+        root: INFO
+        com.Rest.CategoryProduct: DEBUG
+    file:
+        name: C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\logs\application.log
