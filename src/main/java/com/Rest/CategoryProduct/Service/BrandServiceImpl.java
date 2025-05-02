@@ -149,13 +149,13 @@ public class BrandServiceImpl implements BrandService{
 //Unit testing
 //apply splunk / OpenObserve
 //Kafka
-//OAthu2  : Github, Google,
+//OAuth2  : Github, Google,
 
 //Docker
-//Jenkins CICD
+//Jenkins CI-CD
 
 //Microservices
-//Github : Branching, revert, rebase, cherrypick, go back to previous commit
+//GitHub : Branching, revert, rebase, cherry-pick, go back to previous commit
 //Kubernetes : architecture, Commands,
 
 
@@ -168,5 +168,5 @@ public class BrandServiceImpl implements BrandService{
 //use logging framework : log4j, slf4j -    Done
 
 
-//Theroy:
+//Theory:
 //OS Working and internal working

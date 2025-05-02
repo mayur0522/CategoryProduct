@@ -66,6 +66,29 @@ public class CategoryServiceTest {
     }
 
     @Test
+    @DisplayName("Get the name of category using id")
+    void testGetCategoryById(){
+        Category category = mockCategories.get(0);
+        when(categoryRepositories.findById(1L)).thenReturn(java.util.Optional.of(category));
+
+        Category result = categoryService.getCategoryById(1L);
+
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals("Electronics",result.getCategoryName());
+        verify(categoryRepositories, times(1)).findById(1L);
+        verify(pubSubPublisher,times(1)).publish(contains("GET_CATEGORY"));
+    }
+
+    @Test
+    void testGetCategoryById_ThrowsException(){
+        Long categoryId = 999l;
+        when(categoryRepositories.findById(categoryId)).thenReturn(Optional.empty());
+
+        Assertions.assertThrows(ResourceNotFoundExceptions.class, ()-> categoryService.getCategoryById(categoryId));
+        verify(pubSubPublisher,times(0)).publish(any());
+    }
+
+    @Test
     @DisplayName("It should return all the categories from repository")
     void testGetAllCategories(){
 //        Do not use like this
@@ -79,6 +102,7 @@ public class CategoryServiceTest {
         Assertions.assertEquals(2,result.size());
         Assertions.assertEquals("Electronics", result.get(0).getCategoryName());
         verify(categoryRepositories, times(1)).findAll();
+        verify(pubSubPublisher,times(1)).publish(contains("GET_All_CATEGORIES"));
     }
 
     @Test
@@ -90,26 +114,7 @@ public class CategoryServiceTest {
         Assertions.assertNotNull(result);
         Assertions.assertTrue(result.isEmpty());
         verify(categoryRepositories,times(1)).findAll();
-    }
-
-    @Test
-    @DisplayName("Get the name of category using id")
-    void testGetCategoryById(){
-        Category category = mockCategories.get(0);
-        when(categoryRepositories.findById(1L)).thenReturn(java.util.Optional.of(category));
-
-        Category result = categoryService.getCategoryById(1L);
-
-        Assertions.assertNotNull(result);
-        verify(categoryRepositories, times(1)).findById(1L);
-    }
-
-    @Test
-    void testGetCategoryById_ThrowsException(){
-        Long categoryId = 999l;
-        when(categoryRepositories.findById(categoryId)).thenReturn(Optional.empty());
-
-        Assertions.assertThrows(ResourceNotFoundExceptions.class, ()-> categoryService.getCategoryById(categoryId));
+        verify(pubSubPublisher,never()).publish(any());
     }
 
     @Test
@@ -129,7 +134,7 @@ public class CategoryServiceTest {
     }
 
     @Test
-    void testInsertCategory_ForUniqueCategory(){
+    void testInsertCategory_ForDuplicateCategory(){
         Category category = mockCategories.get(0);
         Category newCategory = new Category(11l,"Electronics",new ArrayList<>());
         String newCategoryName = newCategory.getCategoryName();
@@ -137,6 +142,9 @@ public class CategoryServiceTest {
 
         String result = categoryService.insertCategory(newCategory);
         Assertions.assertNotNull(result);
+
+        verify(categoryRepositories,times(1)).findByCategoryName(newCategoryName);
+        verify(pubSubPublisher,never()).publish(any());
     }
     @Test
     void testUpdateCategory() {
@@ -163,6 +171,7 @@ public class CategoryServiceTest {
         when(categoryRepositories.findById(categoryId)).thenReturn(Optional.empty());
 
         Assertions.assertThrows(ResourceNotFoundExceptions.class, ()-> categoryService.updateCategory(category,categoryId));
+        verify(pubSubPublisher,never()).publish(any());
     }
     @Test
     void testDeleteCategory_whenCategoryExist(){
@@ -175,6 +184,7 @@ public class CategoryServiceTest {
         // Assert
         Assertions.assertEquals("Category deleted successfully", result);
         verify(categoryRepositories).deleteById(categoryId);
+        verify(pubSubPublisher,times(1)).publish(contains("CATEGORY_DELETED"));
     }
 
     @Test
@@ -183,5 +193,8 @@ public class CategoryServiceTest {
         Long categoryId = 999L;
         when(categoryRepositories.findById(categoryId)).thenReturn(Optional.empty());
         Assertions.assertThrows(ResourceNotFoundExceptions.class, () -> categoryService.deleteCategory(categoryId));
+        verify(categoryRepositories,never()).deleteById(categoryId);
+        verify(categoryRepositories,times(1)).findById(categoryId);
+        verify(pubSubPublisher,never()).publish(any());
     }
 }

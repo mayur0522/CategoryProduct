@@ -115,7 +115,7 @@ public class ProductServiceImpl implements  ProductService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-        return "Data updates successfully";
+        return "Data updated successfully";
     }
 
     @Override

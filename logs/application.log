@@ -167,3 +167,8 @@
 2025-05-02T10:17:44.708+05:30  INFO 14860 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
 2025-05-02T10:17:44.716+05:30  INFO 14860 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
 2025-05-02T10:17:44.769+05:30  INFO 14860 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_All_CATEGORIES, Category Count: 2
+2025-05-02T10:52:45.295+05:30  INFO 14860 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-02T10:52:45.314+05:30  INFO 14860 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-02T10:52:45.326+05:30  INFO 14860 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-02T10:52:45.331+05:30  INFO 14860 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-02T10:52:45.339+05:30  INFO 14860 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
