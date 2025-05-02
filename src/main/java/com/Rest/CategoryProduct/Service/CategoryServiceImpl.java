@@ -46,13 +46,11 @@ public class CategoryServiceImpl implements CategoryService{
         String message = String.format("{\"event\":\"GET_CATEGORY\", \"id\":%d, \"name\":\"%s\"}",id,category.getCategoryName());
         pubSubPublisher.publish(message);
         return category;
-
     }
 
     @Override
     public List<Category> getAllCategory() {
         log.info("Requesting to fetch all the categories");
-
         List<Category> categories = categoryRepo.findAll();
         if (categories.isEmpty()){
             log.warn("No categories found in the database.");
@@ -63,7 +61,7 @@ public class CategoryServiceImpl implements CategoryService{
         // Using pub/sub
         String message = String.format("{\"event\":\"GET_All_CATEGORIES\", \"Count\":%s}",categories.size());
         pubSubPublisher.publish(message);
-        return categoryRepo.findAll();
+        return categories;
     }
 
     @Override
@@ -85,7 +83,6 @@ public class CategoryServiceImpl implements CategoryService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-
         return "Category inserted successfully";
     }
 
@@ -138,12 +135,12 @@ public class CategoryServiceImpl implements CategoryService{
         // Using pub/sub
         String message = String.format("{\"event\":\"CATEGORY_DELETED\", \"id\":%d, \"name\":\"%s\"}",id,categoryExist.getCategoryName());
         pubSubPublisher.publish(message);
-
-//        resetAutoIncrement();
         return "Category deleted successfully";
     }
 
-/*    @Transactional
+/*
+ To use this method call it in delete method so that when we delete any record from db it will reset
+ @Transactional
     public void resetAutoIncrement(){
         entityManager.createNativeQuery("ALTER TABLE category AUTO_INCREMENT = 1").executeUpdate();
     }*/

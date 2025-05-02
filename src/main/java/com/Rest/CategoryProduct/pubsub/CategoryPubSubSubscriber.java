@@ -6,8 +6,10 @@ import com.google.cloud.spring.pubsub.support.BasicAcknowledgeablePubsubMessage;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class CategoryPubSubSubscriber {
     private final PubSubTemplate pubSubTemplate;
@@ -21,8 +23,13 @@ public class CategoryPubSubSubscriber {
         // Subscribe to the Pub/Sub topic and processing the message
         pubSubTemplate.subscribe("yoj-category-topic-sub", (BasicAcknowledgeablePubsubMessage message) -> {
             String payload = new String(message.getPubsubMessage().getData().toByteArray());
-            handleMessage(payload);
-            message.ack(); // Acknowledging the message after processing
+            try {
+                handleMessage(payload);
+                message.ack(); // Acknowledging the message after processing
+            } catch (Exception e) {
+                log.error("Failed to process message ",e);
+                message.nack();
+            }
         });
     }
 
@@ -41,7 +48,7 @@ public class CategoryPubSubSubscriber {
             switch (eventType){
                 case "GET_All_CATEGORIES":
                     int count = jsonObject.has("Count") ? jsonObject.get("Count").getAsInt() : 0;
-                    System.out.println("Handling event: " + eventType + ", Category Count: "+count);
+                    log.info("Handling event: " + eventType + ", Category Count: "+count);
                     break;
                 case "CATEGORY_CREATED":
                 case "GET_CATEGORY":
@@ -49,13 +56,13 @@ public class CategoryPubSubSubscriber {
                 case "CATEGORY_DELETED":
                     long categoryId = jsonObject.get("id").getAsLong();
                     String categoryName = jsonObject.get("name").getAsString();
-                    System.out.println("Handling event: " + eventType + ", Category ID: " + categoryId + ", Category Name: " + categoryName);
+                    log.info("Handling event: " + eventType + ", Category ID: " + categoryId + ", Category Name: " + categoryName);
                     break;
                 default:
-                    System.out.println("Unhandled event type: " + eventType);
+                    log.warn("Unhandled event type: " + eventType);
             }
         } catch (Exception e) {
-            System.err.println("Error processing message: " + e.getMessage());
+            log.error("Error processing message: " + e.getMessage());
         }
     }
 }
