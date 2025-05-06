@@ -9,12 +9,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.List;
 
 @RestController
 @RequestMapping("/category")
-public class CategoryContoller {
+public class CategoryController {
 
     @Autowired
     private CategoryService categorySer;
@@ -58,10 +57,10 @@ public class CategoryContoller {
             return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(value = Exception.class)
-//    public String generalExceptionHandler(){
-//        return "Exception is occurred";
-//    }
+/*    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(value = Exception.class)
+    public String generalExceptionHandler(){
+        return "Exception is occurred";
+    }*/
 
 }

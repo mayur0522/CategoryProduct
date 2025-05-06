@@ -13,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -27,8 +26,8 @@ public class ProductServiceImpl implements  ProductService{
     @Autowired
     private ProductRepositories productRepo;
 
-//    @PersistenceContext
-//    private EntityManager entityManager;
+/*    @PersistenceContext
+    private EntityManager entityManager;*/
 
     @Override
     public Product getProductById(Long id) {
@@ -145,8 +144,8 @@ public class ProductServiceImpl implements  ProductService{
         return "Data deleted successfully";
     }
 
-//    @Transactional
-//    public void resetAutoIncrement(){
-//        entityManager.createNativeQuery("ALTER TABLE category AUTO_INCREMENT = 1").executeUpdate();
-//    }
+/*    @Transactional
+    public void resetAutoIncrement(){
+        entityManager.createNativeQuery("ALTER TABLE category AUTO_INCREMENT = 1").executeUpdate();
+    }*/
 }
