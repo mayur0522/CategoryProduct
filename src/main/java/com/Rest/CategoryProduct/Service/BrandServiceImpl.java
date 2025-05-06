@@ -12,8 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-//import org.springframework.transaction.annotation.Transactional;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,8 +25,8 @@ public class BrandServiceImpl implements BrandService{
     @Autowired
     private BrandRepositories brandRepo;
 
-//    @PersistenceContext
-//    private EntityManager entityManager;
+/*    @PersistenceContext
+    private EntityManager entityManager; */
 
     @Override
     public Brand getBrandById(Long id) {
@@ -63,10 +62,10 @@ public class BrandServiceImpl implements BrandService{
         return brands;
     }
 
-//    @Override
-//    public String insertBrand(String name, Long categoryId) {
-//        return "Data inserted successfully";
-//    }
+/*    @Override
+    public String insertBrand(String name, Long categoryId) {
+        return "Data inserted successfully";
+    }*/
 
     @Override
     public String insertBrand(Brand brand) {
@@ -99,9 +98,9 @@ public class BrandServiceImpl implements BrandService{
                     log.error("Brand Not Found With Id : {}", id);
                     return new ResourceNotFoundExceptions("Brand Does Not Found With Id : {}" + id);
                 }));
-//        if(!brandExist.isPresent()){
-//            return "There is no such brand";
-//        }
+/*        if(!brandExist.isPresent()){
+            return "There is no such brand";
+        }*/
 
         Brand brand1 = brandExist.get();
         brand1.setBrandName(brand.getBrandName());
@@ -146,16 +145,17 @@ public class BrandServiceImpl implements BrandService{
 //                                          Status
 //Prometheus
 //Grafana
-//Unit testing
+//Unit testing                              Done
 //apply splunk / OpenObserve
+//Pub-Sub GCP                               Done
 //Kafka
-//OAthu2  : Github, Google,
+//OAuth2  : Github, Google,
 
 //Docker
-//Jenkins CICD
+//Jenkins CI-CD
 
 //Microservices
-//Github : Branching, revert, rebase, cherrypick, go back to previous commit
+//GitHub : Branching, revert, rebase, cherry-pick, go back to previous commit
 //Kubernetes : architecture, Commands,
 
 
@@ -168,5 +168,5 @@ public class BrandServiceImpl implements BrandService{
 //use logging framework : log4j, slf4j -    Done
 
 
-//Theroy:
+//Theory:
 //OS Working and internal working

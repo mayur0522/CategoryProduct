@@ -1,6 +1,5 @@
 package com.Rest.CategoryProduct.Service;
 
-import com.Rest.CategoryProduct.Entity.Category;
 import com.Rest.CategoryProduct.Entity.Product;
 import org.springframework.stereotype.Service;
 

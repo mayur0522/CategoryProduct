@@ -1,7 +1,6 @@
 package com.Rest.CategoryProduct.Service;
 
 import com.Rest.CategoryProduct.Entity.Brand;
-import com.Rest.CategoryProduct.Entity.Category;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

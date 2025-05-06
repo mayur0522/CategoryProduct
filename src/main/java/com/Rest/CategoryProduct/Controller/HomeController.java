@@ -16,13 +16,13 @@ public class HomeController {
     }
 
 
-//<<<<<<< Updated upstream
-//=======
-//
-//    @PostMapping("/register")
-//    public ResponseEntity<String> createUser(@RequestBody AppUser user){
-//        String status = userService.createUser(user);
-//        return new ResponseEntity<>(status, HttpStatus.OK);
-//    }
-//>>>>>>> Stashed changes
+/*<<<<<<< Updated upstream
+=======
+
+    @PostMapping("/register")
+    public ResponseEntity<String> createUser(@RequestBody AppUser user){
+        String status = userService.createUser(user);
+        return new ResponseEntity<>(status, HttpStatus.OK);
+    }
+>>>>>>> Stashed changes*/
 }

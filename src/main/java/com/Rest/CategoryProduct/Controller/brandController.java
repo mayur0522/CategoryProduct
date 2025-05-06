@@ -36,13 +36,13 @@ public class brandController {
         return new ResponseEntity<>(status, HttpStatus.CREATED);
     }
 
-//    @PostMapping
-//    public ResponseEntity<String> createBrand(@RequestBody Map<String, Object> rb){
-//        String name = (String) rb.get("brandName");
-//        Long categoryId = Long.valueOf(rb.get("categoryId").toString());
-//        String status = brandService.insertBrand(name, categoryId);
-//        return  new ResponseEntity<>(status, HttpStatus.CREATED);
-//    }
+/*    @PostMapping
+    public ResponseEntity<String> createBrand(@RequestBody Map<String, Object> rb){
+        String name = (String) rb.get("brandName");
+        Long categoryId = Long.valueOf(rb.get("categoryId").toString());
+        String status = brandService.insertBrand(name, categoryId);
+        return  new ResponseEntity<>(status, HttpStatus.CREATED);
+    }*/
 
     @PutMapping("/{id}")
     public ResponseEntity<String> updateBrand(@RequestBody Brand brand, @PathVariable Long id){
@@ -56,9 +56,9 @@ public class brandController {
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(value = Exception.class)
-//    public String generalExceptionHandler(){
-//        return "Exception is occurred";
-//    }
+/*    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(value = Exception.class)
+    public String generalExceptionHandler(){
+        return "Exception is occurred";
+    }*/
 }

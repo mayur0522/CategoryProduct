@@ -46,9 +46,9 @@ public class ProductController {
             return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ExceptionHandler(value = Exception.class)
-//    public String generalExceptionHandler(){
-//        return "Exception is occurred";
-//    }
+/*    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(value = Exception.class)
+    public String generalExceptionHandler(){
+        return "Exception is occurred";
+    }*/
 }
