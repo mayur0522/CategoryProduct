@@ -104,7 +104,7 @@ public class ProductServiceTest {
 
         String result = productService.insertProduct(product);
         assertNotNull(result);
-        assertEquals("Data inserted successfully", result);
+        assertEquals("Product inserted successfully", result);
         verify(productRepositories, times(1)).save(product);
         verify(pubSubPublisher, times(1)).publish(contains("PRODUCT_CREATED"));
     }
@@ -137,7 +137,7 @@ public class ProductServiceTest {
 
         String result = productService.updateProduct(updatedProduct, productId);
 
-        assertEquals("Data updated successfully", result);
+        assertEquals("Product updated successfully", result);
         assertEquals("Updated Name", existingProduct.getProductName());
 
         verify(productRepositories, times(1)).findById(productId);
@@ -167,7 +167,7 @@ public class ProductServiceTest {
         when(productRepositories.findById(productId)).thenReturn(Optional.of(product));
         String result = productService.deleteProduct(productId);
 
-        assertEquals("Data deleted successfully", result);
+        assertEquals("Product deleted successfully", result);
         verify(productRepositories).deleteById(productId);
         verify(pubSubPublisher, times(1)).publish(contains("PRODUCT_DELETED"));
     }

@@ -1,7 +1,6 @@
 package com.Rest.CategoryProduct.Service;
 
 import com.Rest.CategoryProduct.Entity.Brand;
-import com.Rest.CategoryProduct.Entity.Category;
 import com.Rest.CategoryProduct.Entity.Product;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.BrandRepositories;
@@ -113,8 +112,8 @@ public class BrandServiceTest {
         Assertions.assertNotNull(result);
         Assertions.assertFalse(result == null);
         Assertions.assertNotEquals(brand.getBrandName()+" Brand already exists",result);
-        Assertions.assertTrue(result == "Data inserted successfully");
-        Assertions.assertEquals("Data inserted successfully",result);
+        Assertions.assertTrue(result == "Brand inserted successfully");
+        Assertions.assertEquals("Brand inserted successfully",result);
         verify(brandRepositories,times(1)).save(brand);
         verify(pubSubPublisher,times(1)).publish(contains("BRAND_CREATED"));
     }
@@ -149,7 +148,7 @@ public class BrandServiceTest {
         String result = brandService.updateBrand(updatedBrand, brandId);
 
         // Assertions
-        Assertions.assertEquals("Data updated successfully", result);
+        Assertions.assertEquals("Brand updated successfully", result);
         Assertions.assertEquals("Updated Brand", existingBrand.getBrandName());
 
         // Verify repository and publisher interactions

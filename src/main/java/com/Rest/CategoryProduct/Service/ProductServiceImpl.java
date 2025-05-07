@@ -86,7 +86,7 @@ public class ProductServiceImpl implements  ProductService{
 //        String message = String.format("{\"event\":\"PRODUCT_CREATED\", \"id\":%d, \"name\":\"%s\" }",product.getProductId(),product.getProductName());
         pubSubPublisher.publish(message);
 
-        return "Data inserted successfully";
+        return "Product inserted successfully";
     }
 
     @Override
@@ -114,7 +114,7 @@ public class ProductServiceImpl implements  ProductService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-        return "Data updated successfully";
+        return "Product updated successfully";
     }
 
     @Override
@@ -141,7 +141,7 @@ public class ProductServiceImpl implements  ProductService{
         pubSubPublisher.publish(message);
 
 //        resetAutoIncrement();
-        return "Data deleted successfully";
+        return "Product deleted successfully";
     }
 
 /*    @Transactional

@@ -156,7 +156,7 @@ public class CategoryServiceTest {
         when(categoryRepositories.save(any(Category.class))).thenReturn(updatedCategory);
 
         String result = categoryService.updateCategory(updatedCategory, categoryId);
-        Assertions.assertEquals("Data updated successfully", result);
+        Assertions.assertEquals("Category updated successfully", result);
         Assertions.assertEquals("Updated Name", existingCategory.getCategoryName());
 
         verify(categoryRepositories, times(1)).findById(categoryId);
