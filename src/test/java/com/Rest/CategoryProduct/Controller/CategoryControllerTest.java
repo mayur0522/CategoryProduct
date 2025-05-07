@@ -46,7 +46,7 @@ class CategoryControllerTest {
     }
 
     @Test
-    void getAllCategory() {
+    void testGetAllCategory() {
         Category category1 = new Category(1l,"Electronics",new ArrayList<>());
         Category category2 = new Category(1l,"Accessories",new ArrayList<>());
         when(categorySer.getAllCategory()).thenReturn(Arrays.asList(category1,category2));
@@ -57,7 +57,7 @@ class CategoryControllerTest {
     }
 
     @Test
-    void createCategory() {
+    void testCreateCategory() {
         Category newCategory = new Category(1l,"Toys",new ArrayList<>());
         when(categorySer.insertCategory(newCategory)).thenReturn("Category inserted successfully");
 
@@ -68,7 +68,7 @@ class CategoryControllerTest {
     }
 
     @Test
-    void updateCategory() {
+    void testUpdateCategory() {
         Category updatedCat = new Category(1l, "Updated Name", new ArrayList<>());
         when(categorySer.updateCategory(updatedCat,1l)).thenReturn("Category updated successfully");
 
@@ -79,7 +79,7 @@ class CategoryControllerTest {
     }
 
     @Test
-    void deleteCategory() {
+    void testDeleteCategory() {
         when(categorySer.deleteCategory(1l)).thenReturn("Category deleted successfully");
 
         ResponseEntity<String> response = categoryController.deleteCategory(1l);
