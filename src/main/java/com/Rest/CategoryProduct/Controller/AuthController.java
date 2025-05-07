@@ -3,6 +3,7 @@ package com.Rest.CategoryProduct.Controller;
 import com.Rest.CategoryProduct.Model.JwtRequest;
 import com.Rest.CategoryProduct.Model.JwtResponse;
 import com.Rest.CategoryProduct.Security.JwtHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -33,7 +35,8 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
-
+        log.info("User is trying to login...");
+        log.info("Validating credentials of user");
         this.doAuthenticate(request.getUsername(), request.getPassword());
 
         UserDetails userDetails = userDetailsService.loadUserByUsername(request.getUsername());
@@ -42,6 +45,8 @@ public class AuthController {
         JwtResponse response = JwtResponse.builder()
                 .jwtToken(token)
                 .username(userDetails.getUsername()).build();
+        log.info("Valid User");
+        log.info("Logged in successfully");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -52,7 +57,8 @@ public class AuthController {
             manager.authenticate(authentication);
 
         } catch (BadCredentialsException e) {
-            throw new BadCredentialsException(" Invalid Username or Password  !!");
+            log.warn("Invalid Username or Password  !!");
+            throw new BadCredentialsException("Invalid Username or Password  !!");
         }
 
     }
