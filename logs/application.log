@@ -902,3 +902,480 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-05-07T11:49:01.978+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-05-07T11:49:02.022+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-07T11:49:02.038+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 9.709 seconds (process running for 10.808)
+2025-05-07T11:54:40.230+05:30  INFO 17208 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-07T11:54:40.234+05:30  INFO 17208 --- [CategoryProduct] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:54:40.240+05:30  INFO 17208 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:54:40.252+05:30  INFO 17208 --- [CategoryProduct] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:54:40.256+05:30  INFO 17208 --- [CategoryProduct] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T11:54:40.264+05:30  INFO 17208 --- [CategoryProduct] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T11:54:40.410+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 17208 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T11:54:40.410+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T11:54:40.410+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:54:41.014+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:54:41.044+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2025-05-07T11:54:41.138+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df6241e4-2878-362a-8f7a-d4bc8ff066ae
+2025-05-07T11:54:41.222+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:54:41.223+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:54:41.224+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:54:41.253+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:54:41.253+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2025-05-07T11:54:41.516+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T11:54:41.571+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:54:41.576+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:54:41.597+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:54:41.598+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-07T11:54:41.619+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@609bf70
+2025-05-07T11:54:41.619+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-07T11:54:41.622+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:54:41.750+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:54:41.786+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:54:41.816+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T11:54:41.832+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T11:54:41.836+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T11:54:41.838+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T11:54:42.104+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:54:42.269+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T11:54:42.301+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T11:54:42.417+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T11:54:42.435+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:54:42.444+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 2.116 seconds (process running for 351.215)
+2025-05-07T11:54:42.447+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T11:54:43.847+05:30  INFO 17208 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-05-07T11:54:43.848+05:30  INFO 17208 --- [CategoryProduct] [Thread-34] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:54:43.852+05:30  INFO 17208 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:54:43.855+05:30  INFO 17208 --- [CategoryProduct] [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:54:43.856+05:30  INFO 17208 --- [CategoryProduct] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-07T11:54:43.861+05:30  INFO 17208 --- [CategoryProduct] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-07T11:54:43.934+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 17208 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T11:54:43.934+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T11:54:43.935+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:54:44.253+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:54:44.291+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2025-05-07T11:54:44.369+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T11:54:44.420+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:54:44.421+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:54:44.421+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:54:44.447+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:54:44.447+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 511 ms
+2025-05-07T11:54:44.652+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T11:54:44.672+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:54:44.674+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:54:44.680+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:54:44.681+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-07T11:54:44.691+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ecf6edb
+2025-05-07T11:54:44.691+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-07T11:54:44.692+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:54:44.738+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:54:44.754+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:54:44.770+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T11:54:44.776+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T11:54:44.779+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T11:54:44.779+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T11:54:44.886+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:54:44.952+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T11:54:44.969+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T11:54:45.041+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T11:54:45.059+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:54:45.076+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 1.167 seconds (process running for 353.846)
+2025-05-07T11:54:45.079+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T11:56:40.038+05:30  INFO 17208 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-07T11:56:40.040+05:30  INFO 17208 --- [CategoryProduct] [Thread-44] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:56:40.044+05:30  INFO 17208 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:56:40.047+05:30  INFO 17208 --- [CategoryProduct] [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:56:40.047+05:30  INFO 17208 --- [CategoryProduct] [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-07T11:56:40.051+05:30  INFO 17208 --- [CategoryProduct] [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-07T11:56:40.129+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 17208 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T11:56:40.129+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T11:56:40.129+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:56:40.361+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:56:40.378+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2025-05-07T11:56:40.434+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=df6241e4-2878-362a-8f7a-d4bc8ff066ae
+2025-05-07T11:56:40.515+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:56:40.516+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:56:40.517+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:56:40.551+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:56:40.552+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 421 ms
+2025-05-07T11:56:40.761+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T11:56:40.794+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:56:40.797+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:56:40.807+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:56:40.808+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-05-07T11:56:40.820+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e046c80
+2025-05-07T11:56:40.820+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-05-07T11:56:40.822+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:56:40.878+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:56:40.899+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:56:40.916+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T11:56:40.924+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T11:56:40.927+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T11:56:40.927+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T11:56:41.097+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:56:41.163+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T11:56:41.178+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T11:56:41.263+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T11:56:41.273+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:56:41.282+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 1.178 seconds (process running for 470.051)
+2025-05-07T11:56:41.283+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T11:57:20.463+05:30  INFO 17208 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-05-07T11:57:20.465+05:30  INFO 17208 --- [CategoryProduct] [Thread-75] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:57:20.471+05:30  INFO 17208 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:57:20.475+05:30  INFO 17208 --- [CategoryProduct] [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:57:20.476+05:30  INFO 17208 --- [CategoryProduct] [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-05-07T11:57:20.481+05:30  INFO 17208 --- [CategoryProduct] [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-05-07T11:57:20.581+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 17208 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T11:57:20.581+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T11:57:20.581+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:57:20.928+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:57:20.958+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2025-05-07T11:57:21.042+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T11:57:21.119+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:57:21.120+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:57:21.120+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:57:21.147+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:57:21.147+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 564 ms
+2025-05-07T11:57:21.379+05:30 DEBUG 17208 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T11:57:21.401+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:57:21.404+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:57:21.413+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:57:21.414+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-05-07T11:57:21.429+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25d11530
+2025-05-07T11:57:21.429+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-05-07T11:57:21.431+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:57:21.500+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:57:21.526+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:57:21.549+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T11:57:21.558+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T11:57:21.563+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T11:57:21.563+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T11:57:21.747+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:57:21.848+05:30  WARN 17208 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T11:57:21.883+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T11:57:22.008+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T11:57:22.028+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:57:22.032+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 1.488 seconds (process running for 510.802)
+2025-05-07T11:57:22.034+05:30  INFO 17208 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T11:57:31.789+05:30  INFO 17208 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T11:57:31.793+05:30  INFO 17208 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T11:57:31.795+05:30  INFO 17208 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:57:31.796+05:30  INFO 17208 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-05-07T11:57:31.802+05:30  INFO 17208 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-05-07T11:57:34.891+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19016 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T11:57:34.894+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T11:57:34.894+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T11:57:34.969+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-07T11:57:34.969+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-07T11:57:36.041+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T11:57:36.121+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2025-05-07T11:57:36.328+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T11:57:36.877+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T11:57:36.894+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T11:57:36.895+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T11:57:36.960+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T11:57:36.960+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1990 ms
+2025-05-07T11:57:37.248+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T11:57:37.395+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T11:57:37.449+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T11:57:37.489+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T11:57:37.773+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T11:57:37.801+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T11:57:38.103+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@637a7f6b
+2025-05-07T11:57:38.106+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T11:57:38.177+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T11:57:38.903+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T11:57:38.963+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T11:57:39.000+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T11:57:39.018+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T11:57:39.064+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T11:57:39.064+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T11:57:40.047+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T11:57:40.409+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T11:57:40.482+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T11:57:41.006+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T11:57:41.062+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T11:57:41.077+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 6.844 seconds (process running for 7.451)
+2025-05-07T11:58:00.048+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-07T11:58:00.048+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-07T11:58:00.051+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-07T11:58:00.083+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T11:58:00.083+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T11:58:00.210+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Controller.AuthController          : User is trying to login...
+2025-05-07T11:58:00.210+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Controller.AuthController          : Validating credentials of user
+2025-05-07T11:58:00.499+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Controller.AuthController          : Valid User
+2025-05-07T11:58:00.500+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Controller.AuthController          : Logged in successfully
+2025-05-07T11:58:27.605+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T11:58:27.655+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T11:58:27.826+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T11:58:28.679+05:30  INFO 19016 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_All_CATEGORIES, Category Count: 2
+2025-05-07T11:58:31.358+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-5] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T11:58:31.363+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T11:58:31.384+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T11:58:34.473+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T11:58:34.477+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T11:58:34.490+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.ProductServiceImpl         : Fetched 7 products
+2025-05-07T11:58:38.491+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-6] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T11:58:38.496+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-6] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T11:58:38.505+05:30  INFO 19016 --- [CategoryProduct] [http-nio-8080-exec-6] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T12:39:59.412+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-4] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: No such host is known (pubsub.googleapis.com)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: No such host is known (pubsub.googleapis.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:39:59.461+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-5] io.grpc.internal.ManagedChannelImpl      : [Channel<3>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:39:59.500+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<5>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:00.230+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:00.417+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<3>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:00.561+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<5>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:02.065+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<3>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:02.160+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T12:40:02.192+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<5>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:23.884+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:27.198+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:33.320+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<1>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:33.647+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<3>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:33.663+05:30  WARN 19016 --- [CategoryProduct] [grpc-default-executor-6] io.grpc.internal.ManagedChannelImpl      : [Channel<5>: (pubsub.googleapis.com:443)] Failed to resolve name. status=Status{code=UNAVAILABLE, description=Unable to resolve host pubsub.googleapis.com, cause=java.lang.RuntimeException: java.net.UnknownHostException: pubsub.googleapis.com
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:222)
+	at io.grpc.internal.DnsNameResolver.doResolve(DnsNameResolver.java:281)
+	at io.grpc.grpclb.GrpclbNameResolver.doResolve(GrpclbNameResolver.java:63)
+	at io.grpc.internal.DnsNameResolver$Resolve.run(DnsNameResolver.java:318)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: pubsub.googleapis.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at io.grpc.internal.DnsNameResolver$JdkAddressResolver.resolveAddress(DnsNameResolver.java:642)
+	at io.grpc.internal.DnsNameResolver.resolveAddresses(DnsNameResolver.java:218)
+	... 6 more
+}
+2025-05-07T13:18:36.941+05:30  WARN 19016 --- [CategoryProduct] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m58s62ms518µs200ns).
