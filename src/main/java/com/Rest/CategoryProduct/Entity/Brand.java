@@ -31,11 +31,4 @@ public class Brand {
     @JsonProperty("products")
     @JsonManagedReference
     private List<Product> products;
-    public String getBrandName() {
-        return brandName;
-    }
-
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
-    }
 }

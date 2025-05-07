@@ -26,23 +26,4 @@ public class Category {
     @JsonProperty("brands")
     @JsonManagedReference
     private List<Brand> brands;
-
-//    private String categoryDescription;
-
-    public long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(long categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
 }

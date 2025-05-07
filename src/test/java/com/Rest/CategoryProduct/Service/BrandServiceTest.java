@@ -87,6 +87,7 @@ public class BrandServiceTest {
         when(brandRepositories.findAll()).thenReturn(mockBrands);
 
         List<Brand> result = brandService.getAllBrand();
+
         Assertions.assertNotNull(result);
         Assertions.assertTrue(result.size() > 0);
         verify(brandRepositories,times(1)).findAll();
@@ -109,6 +110,7 @@ public class BrandServiceTest {
         when(brandRepositories.save(brand)).thenReturn(brand);
 
         String result = brandService.insertBrand(brand);
+
         Assertions.assertNotNull(result);
         Assertions.assertFalse(result == null);
         Assertions.assertNotEquals(brand.getBrandName()+" Brand already exists",result);
@@ -126,10 +128,9 @@ public class BrandServiceTest {
         when(brandRepositories.findByBrandName(name)).thenReturn(Optional.ofNullable(existingBrand));
 
         String result = brandService.insertBrand(brand);
-        System.out.println(result);
+
         Assertions.assertNotNull(result);
         Assertions.assertEquals(name+" Brand already exists",result);
-
         verify(brandRepositories,times(1)).findByBrandName(name);
         verify(pubSubPublisher,times(0)).publish(any());
     }
@@ -188,7 +189,10 @@ public class BrandServiceTest {
         // Invalid ID
         Long brandId = 999L;
         when(brandRepositories.findById(brandId)).thenReturn(Optional.empty());
-        Assertions.assertThrows(ResourceNotFoundExceptions.class, () -> brandService.deleteBrand(brandId));
+
+        Assertions.assertThrows(ResourceNotFoundExceptions.class,
+                () -> brandService.deleteBrand(brandId)
+        );
         verify(brandRepositories,never()).deleteById(brandId);
         verify(brandRepositories,times(1)).findById(brandId);
         verify(pubSubPublisher,never()).publish(any());

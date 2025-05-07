@@ -1379,3 +1379,889 @@ Caused by: java.net.UnknownHostException: pubsub.googleapis.com
 	... 6 more
 }
 2025-05-07T13:18:36.941+05:30  WARN 19016 --- [CategoryProduct] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m58s62ms518µs200ns).
+2025-05-07T13:35:45.210+05:30  INFO 4748 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 4748 (started by jatha in C:\Users\jatha\Projects\CategoryProduct\CategoryProduct)
+2025-05-07T13:35:45.215+05:30 DEBUG 4748 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T13:35:45.215+05:30  INFO 4748 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T13:35:46.512+05:30  INFO 4748 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T13:35:46.607+05:30  INFO 4748 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2025-05-07T13:35:46.861+05:30  INFO 4748 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dbd3f632-6f5c-3b42-aa9b-ca7ff8e62d67
+2025-05-07T13:35:47.353+05:30  INFO 4748 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T13:35:47.427+05:30  INFO 4748 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T13:35:47.468+05:30  INFO 4748 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T13:35:47.887+05:30  INFO 4748 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T13:35:47.927+05:30  INFO 4748 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T13:35:48.407+05:30  INFO 4748 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ef9c8a5
+2025-05-07T13:35:48.409+05:30  INFO 4748 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T13:35:48.529+05:30  INFO 4748 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T13:35:49.495+05:30  INFO 4748 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T13:35:49.578+05:30  INFO 4748 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:35:49.979+05:30  INFO 4748 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T13:35:50.020+05:30  INFO 4748 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T13:35:50.110+05:30  INFO 4748 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T13:35:50.112+05:30  INFO 4748 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T13:35:51.475+05:30  WARN 4748 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T13:35:51.974+05:30  WARN 4748 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T13:35:52.182+05:30  INFO 4748 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T13:35:52.828+05:30  INFO 4748 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.204 seconds (process running for 9.672)
+2025-05-07T13:35:53.385+05:30  INFO 4748 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:35:53.385+05:30  INFO 4748 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T13:35:53.399+05:30  INFO 4748 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T13:37:07.944+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 14780 (started by jatha in C:\Users\jatha\Projects\CategoryProduct\CategoryProduct)
+2025-05-07T13:37:07.946+05:30 DEBUG 14780 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T13:37:07.947+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T13:37:09.184+05:30  INFO 14780 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T13:37:09.275+05:30  INFO 14780 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
+2025-05-07T13:37:09.579+05:30  INFO 14780 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dbd3f632-6f5c-3b42-aa9b-ca7ff8e62d67
+2025-05-07T13:37:10.138+05:30  INFO 14780 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T13:37:10.248+05:30  INFO 14780 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T13:37:10.306+05:30  INFO 14780 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T13:37:10.765+05:30  INFO 14780 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T13:37:10.797+05:30  INFO 14780 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T13:37:11.261+05:30  INFO 14780 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e62e227
+2025-05-07T13:37:11.263+05:30  INFO 14780 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T13:37:11.383+05:30  INFO 14780 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T13:37:12.397+05:30  INFO 14780 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T13:37:12.479+05:30  INFO 14780 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:37:12.832+05:30  INFO 14780 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T13:37:12.856+05:30  INFO 14780 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T13:37:12.925+05:30  INFO 14780 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T13:37:12.928+05:30  INFO 14780 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T13:37:14.415+05:30  WARN 14780 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T13:37:14.925+05:30  WARN 14780 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T13:37:15.166+05:30  INFO 14780 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T13:37:15.826+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.407 seconds (process running for 10.285)
+2025-05-07T13:37:16.694+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T13:37:16.694+05:30  WARN 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-07T13:37:16.747+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-07T13:37:16.749+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T13:37:16.762+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-07T13:37:16.762+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-07T13:37:16.783+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T13:37:16.783+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T13:37:16.789+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T13:37:16.789+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-07T13:37:16.804+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T13:37:16.804+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-07T13:37:16.815+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T13:37:16.815+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T13:37:16.821+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-07T13:37:16.821+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-07T13:37:16.829+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-07T13:37:16.829+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-07T13:37:16.837+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-07T13:37:16.837+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T13:37:16.988+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-07T13:37:16.988+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-07T13:37:17.130+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T13:37:17.130+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-07T13:37:17.136+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T13:37:17.136+05:30  WARN 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-07T13:37:17.136+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-07T13:37:17.136+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T13:37:17.144+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-07T13:37:17.144+05:30  WARN 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-07T13:37:17.152+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-07T13:37:17.152+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-07T13:37:17.161+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-07T13:37:17.161+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-07T13:37:17.166+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-07T13:37:17.169+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-07T13:37:17.169+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-07T13:37:17.175+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T13:37:17.177+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-07T13:37:17.181+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-07T13:37:17.186+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-07T13:37:17.186+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-07T13:37:17.401+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T13:37:17.401+05:30  WARN 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-07T13:37:17.409+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-07T13:37:17.409+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-07T13:37:17.418+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-07T13:37:17.418+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-07T13:37:17.425+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T13:37:17.425+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T13:37:17.432+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-07T13:37:17.433+05:30 ERROR 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T13:37:17.433+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-07T13:37:17.433+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-07T13:37:17.442+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-07T13:37:17.442+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-07T13:37:17.442+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-07T13:37:17.450+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-07T13:37:17.450+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-07T13:37:17.450+05:30  WARN 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T13:37:17.455+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-07T13:37:17.457+05:30  INFO 14780 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-07T13:37:17.482+05:30  INFO 14780 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:37:17.485+05:30  INFO 14780 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T13:37:17.495+05:30  INFO 14780 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T13:56:41.227+05:30  INFO 19016 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-07T13:56:41.237+05:30  INFO 19016 --- [CategoryProduct] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T13:56:41.241+05:30  INFO 19016 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T13:56:41.266+05:30  INFO 19016 --- [CategoryProduct] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:56:41.273+05:30  INFO 19016 --- [CategoryProduct] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T13:56:41.282+05:30  INFO 19016 --- [CategoryProduct] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T13:56:41.521+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19016 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T13:56:41.521+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T13:56:41.521+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T13:56:42.295+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T13:56:42.316+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type com.Rest.CategoryProduct.Entity.Category not present
+2025-05-07T13:56:42.331+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-07T13:56:42.375+05:30 ERROR 19016 --- [CategoryProduct] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type com.Rest.CategoryProduct.Entity.Category not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1296) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:553) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:501) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:263) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:37) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:79) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:93) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:168) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:397) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:396) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:149) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at com.Rest.CategoryProduct.CategoryProductApplication.main(CategoryProductApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: java.lang.ClassNotFoundException: com.Rest.CategoryProduct.Entity.Category
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+
+2025-05-07T13:56:44.906+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19016 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T13:56:44.906+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T13:56:44.906+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T13:56:45.474+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T13:56:45.514+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2025-05-07T13:56:45.686+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T13:56:45.898+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T13:56:45.902+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T13:56:45.904+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T13:56:45.966+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T13:56:45.966+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1058 ms
+2025-05-07T13:56:46.493+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T13:56:46.568+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T13:56:46.577+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T13:56:46.616+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T13:56:46.619+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-07T13:56:46.649+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdbf129
+2025-05-07T13:56:46.649+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-07T13:56:46.651+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T13:56:46.856+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T13:56:46.892+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T13:56:46.954+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T13:56:46.980+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T13:56:46.989+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T13:56:46.989+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T13:56:47.370+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T13:56:47.457+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T13:56:47.489+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T13:56:47.627+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T13:56:47.654+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T13:56:47.656+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 2.811 seconds (process running for 7154.034)
+2025-05-07T13:56:47.660+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T14:01:39.378+05:30  INFO 19016 --- [CategoryProduct] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-05-07T14:01:39.378+05:30  INFO 19016 --- [CategoryProduct] [Thread-34] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T14:01:39.386+05:30  INFO 19016 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T14:01:39.394+05:30  INFO 19016 --- [CategoryProduct] [Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:01:39.394+05:30  INFO 19016 --- [CategoryProduct] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-07T14:01:39.403+05:30  INFO 19016 --- [CategoryProduct] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-07T14:01:39.512+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19016 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T14:01:39.512+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:01:39.512+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:01:39.877+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:01:39.893+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type com.Rest.CategoryProduct.Entity.Category not present
+2025-05-07T14:01:39.895+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-07T14:01:39.903+05:30 ERROR 19016 --- [CategoryProduct] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type com.Rest.CategoryProduct.Entity.Category not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1296) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:553) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:501) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:263) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:37) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:79) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:93) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:168) ~[spring-data-commons-3.4.4.jar:3.4.4]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.4.4.jar:3.4.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:397) ~[spring-context-6.2.5.jar:6.2.5]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:396) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:149) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:121) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
+	at com.Rest.CategoryProduct.CategoryProductApplication.main(CategoryProductApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+Caused by: java.lang.ClassNotFoundException: com.Rest.CategoryProduct.Entity.Category
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 39 common frames omitted
+
+2025-05-07T14:01:43.409+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19016 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T14:01:43.409+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:01:43.409+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:01:43.859+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:01:43.901+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:01:43.998+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T14:01:44.090+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T14:01:44.092+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T14:01:44.092+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T14:01:44.137+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T14:01:44.137+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 728 ms
+2025-05-07T14:01:44.443+05:30 DEBUG 19016 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T14:01:44.486+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:01:44.489+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:01:44.505+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:01:44.506+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-07T14:01:44.515+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 22052 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T14:01:44.519+05:30 DEBUG 22052 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:01:44.521+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:01:44.524+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@461a64de
+2025-05-07T14:01:44.524+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-07T14:01:44.526+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:01:44.614+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-07T14:01:44.614+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-07T14:01:44.624+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:01:44.657+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:01:44.690+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:01:44.707+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:01:44.712+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:01:44.712+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:01:44.965+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:01:45.078+05:30  WARN 19016 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:01:45.119+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:01:45.297+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T14:01:45.318+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T14:01:45.324+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 1.957 seconds (process running for 7451.699)
+2025-05-07T14:01:45.327+05:30  INFO 19016 --- [CategoryProduct] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-07T14:01:46.177+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:01:46.267+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:01:46.582+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T14:01:47.293+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T14:01:47.310+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T14:01:47.310+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T14:01:47.390+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T14:01:47.393+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2777 ms
+2025-05-07T14:01:47.778+05:30 DEBUG 22052 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T14:01:47.983+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:01:48.056+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:01:48.104+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:01:48.437+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:01:48.460+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:01:48.816+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bbb5744
+2025-05-07T14:01:48.821+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:01:48.917+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:01:49.842+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:01:49.919+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:01:49.972+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:01:49.999+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:01:50.064+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:01:50.064+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:01:51.408+05:30  WARN 22052 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:01:51.894+05:30  WARN 22052 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:01:51.985+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:01:52.548+05:30  WARN 22052 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-07T14:01:52.590+05:30  WARN 22052 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-07T14:01:52.598+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:01:52.598+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T14:01:52.606+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T14:01:52.623+05:30  INFO 22052 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-07T14:01:52.639+05:30 ERROR 22052 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-07T14:02:07.506+05:30  INFO 19016 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T14:02:07.522+05:30  INFO 19016 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T14:02:07.522+05:30  INFO 19016 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:02:07.522+05:30  INFO 19016 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-07T14:02:07.531+05:30  INFO 19016 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-07T14:02:43.815+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 24312 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T14:02:43.823+05:30 DEBUG 24312 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:02:43.823+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:02:43.924+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-07T14:02:43.924+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-07T14:02:45.377+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:02:45.486+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:02:45.854+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T14:02:46.640+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T14:02:46.664+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T14:02:46.664+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T14:02:46.754+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T14:02:46.756+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2830 ms
+2025-05-07T14:02:47.141+05:30 DEBUG 24312 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T14:02:47.359+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:02:47.433+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:02:47.482+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:02:47.866+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:02:47.903+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:02:48.301+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2976b620
+2025-05-07T14:02:48.306+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:02:48.404+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:02:49.356+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:02:49.443+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:02:49.512+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:02:49.537+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:02:49.614+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:02:49.614+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:02:50.952+05:30  WARN 24312 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:02:51.427+05:30  WARN 24312 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:02:51.533+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:02:52.128+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T14:02:52.188+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T14:02:52.204+05:30  INFO 24312 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 9.218 seconds (process running for 9.955)
+2025-05-07T14:03:00.846+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-07T14:03:00.846+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-07T14:03:00.853+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-05-07T14:03:00.881+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:03:00.961+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T14:03:01.038+05:30  INFO 24312 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T14:03:18.808+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 10444 (started by jatha in C:\Users\jatha\Projects\CategoryProduct\CategoryProduct)
+2025-05-07T14:03:18.814+05:30 DEBUG 10444 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:03:18.816+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:03:20.226+05:30  INFO 10444 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:03:20.311+05:30  INFO 10444 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:03:20.588+05:30  INFO 10444 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dbd3f632-6f5c-3b42-aa9b-ca7ff8e62d67
+2025-05-07T14:03:21.136+05:30  INFO 10444 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:03:21.232+05:30  INFO 10444 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:03:21.295+05:30  INFO 10444 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:03:21.720+05:30  INFO 10444 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:03:21.768+05:30  INFO 10444 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:03:22.214+05:30  INFO 10444 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ca0166c
+2025-05-07T14:03:22.214+05:30  INFO 10444 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:03:22.318+05:30  INFO 10444 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:03:23.359+05:30  INFO 10444 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:03:23.441+05:30  INFO 10444 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:03:23.803+05:30  INFO 10444 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:03:23.825+05:30  INFO 10444 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:03:23.900+05:30  INFO 10444 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:03:23.900+05:30  INFO 10444 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:03:25.393+05:30  WARN 10444 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:03:25.849+05:30  WARN 10444 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:03:26.100+05:30  INFO 10444 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:03:26.726+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.431 seconds (process running for 10.27)
+2025-05-07T14:03:27.670+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:03:27.672+05:30  WARN 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-07T14:03:27.710+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-07T14:03:27.716+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:03:27.725+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-07T14:03:27.725+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-07T14:03:27.741+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:03:27.749+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T14:03:27.754+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:03:27.757+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-07T14:03:27.765+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:03:27.765+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-07T14:03:27.775+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T14:03:27.775+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T14:03:27.781+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-07T14:03:27.781+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-07T14:03:27.789+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-07T14:03:27.789+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-07T14:03:27.797+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-07T14:03:27.797+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:03:27.961+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-07T14:03:27.961+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-07T14:03:28.123+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:03:28.123+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-07T14:03:28.131+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:03:28.131+05:30  WARN 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-07T14:03:28.137+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-07T14:03:28.139+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:03:28.145+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-07T14:03:28.145+05:30  WARN 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-07T14:03:28.151+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-07T14:03:28.153+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-07T14:03:28.158+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-07T14:03:28.163+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-07T14:03:28.163+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-07T14:03:28.163+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-07T14:03:28.176+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-07T14:03:28.176+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:03:28.179+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-07T14:03:28.179+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-07T14:03:28.179+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-07T14:03:28.179+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-07T14:03:28.367+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:03:28.367+05:30  WARN 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-07T14:03:28.380+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-07T14:03:28.380+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-07T14:03:28.385+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-07T14:03:28.387+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-07T14:03:28.393+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:03:28.393+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T14:03:28.400+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-07T14:03:28.400+05:30 ERROR 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:03:28.409+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-07T14:03:28.409+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-07T14:03:28.416+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-07T14:03:28.416+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-07T14:03:28.424+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-07T14:03:28.424+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-07T14:03:28.432+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-07T14:03:28.432+05:30  WARN 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:03:28.435+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-07T14:03:28.435+05:30  INFO 10444 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-07T14:03:28.471+05:30  INFO 10444 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:03:28.473+05:30  INFO 10444 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T14:03:28.482+05:30  INFO 10444 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T14:04:09.344+05:30  INFO 24312 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-07T14:04:09.359+05:30  INFO 24312 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-07T14:04:09.372+05:30  INFO 24312 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:04:09.383+05:30  INFO 24312 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T14:04:09.405+05:30  INFO 24312 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T14:05:11.958+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 15936 (started by jatha in C:\Users\jatha\Projects\CategoryProduct\CategoryProduct)
+2025-05-07T14:05:11.958+05:30 DEBUG 15936 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:05:11.963+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:05:13.127+05:30  INFO 15936 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:05:13.234+05:30  INFO 15936 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:05:13.508+05:30  INFO 15936 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dbd3f632-6f5c-3b42-aa9b-ca7ff8e62d67
+2025-05-07T14:05:14.008+05:30  INFO 15936 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:05:14.097+05:30  INFO 15936 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:05:14.145+05:30  INFO 15936 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:05:14.555+05:30  INFO 15936 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:05:14.593+05:30  INFO 15936 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:05:15.069+05:30  INFO 15936 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@142918a0
+2025-05-07T14:05:15.070+05:30  INFO 15936 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:05:15.188+05:30  INFO 15936 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:05:16.307+05:30  INFO 15936 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:05:16.389+05:30  INFO 15936 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:05:16.764+05:30  INFO 15936 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:05:16.780+05:30  INFO 15936 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:05:16.865+05:30  INFO 15936 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:05:16.865+05:30  INFO 15936 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:05:18.416+05:30  WARN 15936 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:05:18.911+05:30  WARN 15936 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:05:19.140+05:30  INFO 15936 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:05:19.783+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.348 seconds (process running for 10.094)
+2025-05-07T14:05:20.598+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:05:20.598+05:30  WARN 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-07T14:05:20.633+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-07T14:05:20.633+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:05:20.649+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-07T14:05:20.649+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-07T14:05:20.666+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:05:20.666+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T14:05:20.679+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:05:20.679+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-07T14:05:20.690+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:05:20.694+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-07T14:05:20.698+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T14:05:20.698+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T14:05:20.711+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-07T14:05:20.714+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-07T14:05:20.717+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-07T14:05:20.717+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-07T14:05:20.722+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-07T14:05:20.722+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:05:20.853+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-07T14:05:20.853+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-07T14:05:20.989+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:05:20.990+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-07T14:05:21.003+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:05:21.005+05:30  WARN 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-07T14:05:21.010+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-07T14:05:21.010+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:05:21.019+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-07T14:05:21.019+05:30  WARN 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-07T14:05:21.025+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-07T14:05:21.027+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-07T14:05:21.035+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-07T14:05:21.035+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-07T14:05:21.041+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-07T14:05:21.041+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-07T14:05:21.049+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-07T14:05:21.049+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:05:21.057+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-07T14:05:21.057+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-07T14:05:21.065+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-07T14:05:21.065+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-07T14:05:21.272+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:05:21.272+05:30  WARN 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-07T14:05:21.279+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-07T14:05:21.279+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-07T14:05:21.283+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-07T14:05:21.283+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-07T14:05:21.287+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:05:21.287+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T14:05:21.295+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-07T14:05:21.295+05:30 ERROR 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:05:21.295+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-07T14:05:21.303+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-07T14:05:21.317+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-07T14:05:21.317+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-07T14:05:21.320+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-07T14:05:21.320+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-07T14:05:21.332+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-07T14:05:21.332+05:30  WARN 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:05:21.335+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-07T14:05:21.335+05:30  INFO 15936 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-07T14:05:21.364+05:30  INFO 15936 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:05:21.368+05:30  INFO 15936 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T14:05:21.376+05:30  INFO 15936 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T14:05:27.796+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 11900 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-07T14:05:27.800+05:30 DEBUG 11900 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:05:27.800+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:05:27.893+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-07T14:05:27.893+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-07T14:05:29.210+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:05:29.308+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:05:29.579+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=42353cd1-f118-3208-9cfa-09187789772d
+2025-05-07T14:05:30.306+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-07T14:05:30.325+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-07T14:05:30.325+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-07T14:05:30.415+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-07T14:05:30.415+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2519 ms
+2025-05-07T14:05:30.797+05:30 DEBUG 11900 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-07T14:05:30.977+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:05:31.035+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:05:31.077+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:05:31.420+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:05:31.453+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:05:31.841+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45abcb25
+2025-05-07T14:05:31.847+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:05:31.929+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:05:32.822+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:05:32.885+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:05:32.951+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:05:32.979+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:05:33.059+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:05:33.059+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:05:34.393+05:30  WARN 11900 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:05:34.826+05:30  WARN 11900 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:05:34.907+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:05:35.472+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-07T14:05:35.521+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-07T14:05:35.534+05:30  INFO 11900 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 8.561 seconds (process running for 9.275)
+2025-05-07T14:05:50.363+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-07T14:05:50.363+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-07T14:05:50.366+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-07T14:05:50.424+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:05:50.621+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-07T14:05:50.784+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-07T14:05:51.877+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_CATEGORY, Category ID: 1, Category Name: Electronics
+2025-05-07T14:05:54.132+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:05:54.142+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T14:05:54.150+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T14:05:58.392+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:05:58.403+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-07T14:05:58.411+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-07T14:06:01.635+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:01.643+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:06:01.797+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T14:06:01.855+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_All_CATEGORIES, Category Count: 2
+2025-05-07T14:06:07.089+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-6] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:07.096+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-6] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:06:07.111+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-6] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T14:06:09.870+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:09.878+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:06:09.894+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] c.R.C.Service.ProductServiceImpl         : Fetched 7 products
+2025-05-07T14:06:27.495+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:27.562+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Fake Category 3
+2025-05-07T14:06:27.694+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Fake Category 3
+2025-05-07T14:06:28.395+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: CATEGORY_CREATED, Category ID: 10, Category Name: Fake Category 3
+2025-05-07T14:06:43.274+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:43.282+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:06:43.290+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] c.R.C.Service.CategoryServiceImpl        : Fetched 3 categories
+2025-05-07T14:06:43.880+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber4] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_All_CATEGORIES, Category Count: 3
+2025-05-07T14:06:50.330+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:06:50.339+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 10
+2025-05-07T14:06:50.346+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] c.R.C.Service.CategoryServiceImpl        : Category found with id : 10
+2025-05-07T14:06:51.029+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber3] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_CATEGORY, Category ID: 10, Category Name: Fake Category 3
+2025-05-07T14:07:10.418+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:07:10.425+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 10
+2025-05-07T14:07:10.451+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 10
+2025-05-07T14:07:10.503+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber2] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: CATEGORY_UPDATED, Category ID: 10, Category Name: cssss
+2025-05-07T14:07:18.090+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:07:18.093+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 10
+2025-05-07T14:07:18.098+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Service.CategoryServiceImpl        : Category found with id : 10
+2025-05-07T14:07:18.156+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_CATEGORY, Category ID: 10, Category Name: cssss
+2025-05-07T14:07:30.333+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:07:30.342+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 10
+2025-05-07T14:07:30.369+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 10
+2025-05-07T14:07:30.423+05:30  INFO 11900 --- [CategoryProduct] [global-gcp-pubsub-subscriber4] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: CATEGORY_DELETED, Category ID: 10, Category Name: cssss
+2025-05-07T14:07:33.077+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:07:33.086+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 10
+2025-05-07T14:07:33.086+05:30 ERROR 11900 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 10
+2025-05-07T14:07:33.094+05:30  WARN 11900 --- [CategoryProduct] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions: category Does Not Found With Id : 10]
+2025-05-07T14:07:36.580+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDY1OTkyODAsImV4cCI6MTc0NjYxNzI4MH0.-GlY1_n2df620tCoVc7mdC0XgHHqJCVFekdW6Bfg4QNUHqnDFPkhfj0Rws2Bdp7Dx0-bFmvkRGGHoR2xW-_3sQ
+2025-05-07T14:07:36.589+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 10
+2025-05-07T14:07:36.592+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 10
+2025-05-07T14:07:36.597+05:30  WARN 11900 --- [CategoryProduct] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions: Category does not found with id : 10]
+2025-05-07T14:08:02.272+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 18836 (started by jatha in C:\Users\jatha\Projects\CategoryProduct\CategoryProduct)
+2025-05-07T14:08:02.272+05:30 DEBUG 18836 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-07T14:08:02.281+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T14:08:03.538+05:30  INFO 18836 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T14:08:03.642+05:30  INFO 18836 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2025-05-07T14:08:03.942+05:30  INFO 18836 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dbd3f632-6f5c-3b42-aa9b-ca7ff8e62d67
+2025-05-07T14:08:04.459+05:30  INFO 18836 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T14:08:04.541+05:30  INFO 18836 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-07T14:08:04.582+05:30  INFO 18836 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-07T14:08:04.975+05:30  INFO 18836 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-07T14:08:05.006+05:30  INFO 18836 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T14:08:05.426+05:30  INFO 18836 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40aad17d
+2025-05-07T14:08:05.428+05:30  INFO 18836 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T14:08:05.541+05:30  INFO 18836 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-07T14:08:06.550+05:30  INFO 18836 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-07T14:08:06.640+05:30  INFO 18836 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:08:06.971+05:30  INFO 18836 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-07T14:08:06.996+05:30  INFO 18836 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-07T14:08:07.074+05:30  INFO 18836 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-07T14:08:07.076+05:30  INFO 18836 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-07T14:08:08.589+05:30  WARN 18836 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T14:08:09.098+05:30  WARN 18836 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-07T14:08:09.336+05:30  INFO 18836 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T14:08:09.948+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.282 seconds (process running for 10.128)
+2025-05-07T14:08:10.779+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:08:10.779+05:30  WARN 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-07T14:08:10.819+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-07T14:08:10.819+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:08:10.828+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-07T14:08:10.828+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-07T14:08:10.848+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-07T14:08:10.848+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-07T14:08:10.853+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:08:10.853+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-07T14:08:10.866+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-07T14:08:10.866+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-07T14:08:10.869+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-07T14:08:10.869+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-07T14:08:10.878+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-07T14:08:10.878+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-07T14:08:10.886+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-07T14:08:10.888+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-07T14:08:10.895+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-07T14:08:10.895+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-07T14:08:11.017+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-07T14:08:11.017+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-07T14:08:11.157+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:08:11.157+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-07T14:08:11.166+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-07T14:08:11.166+05:30  WARN 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-07T14:08:11.174+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-07T14:08:11.174+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:08:11.182+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-07T14:08:11.182+05:30  WARN 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-07T14:08:11.184+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-07T14:08:11.190+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-07T14:08:11.190+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-07T14:08:11.199+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-07T14:08:11.204+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-07T14:08:11.204+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-07T14:08:11.210+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-07T14:08:11.210+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-07T14:08:11.214+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-07T14:08:11.214+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-07T14:08:11.214+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-07T14:08:11.214+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-07T14:08:11.427+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:08:11.427+05:30  WARN 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-07T14:08:11.427+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-07T14:08:11.427+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-07T14:08:11.435+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-07T14:08:11.435+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-07T14:08:11.445+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-07T14:08:11.447+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-07T14:08:11.451+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-07T14:08:11.451+05:30 ERROR 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:08:11.451+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-07T14:08:11.460+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-07T14:08:11.460+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-07T14:08:11.460+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-07T14:08:11.468+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-07T14:08:11.468+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-07T14:08:11.476+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-07T14:08:11.476+05:30  WARN 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-07T14:08:11.495+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-07T14:08:11.495+05:30  INFO 18836 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-07T14:08:11.525+05:30  INFO 18836 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T14:08:11.533+05:30  INFO 18836 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-07T14:08:11.569+05:30  INFO 18836 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-07T14:10:12.724+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.724+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.804+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.807+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.807+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:12.985+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:12.985+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:13.014+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:13.014+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:13.553+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 530 ms
+2025-05-07T14:10:19.429+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.429+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-5] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-6] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-10] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-6] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.483+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-8] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.665+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.669+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-07T14:10:19.689+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-07T14:10:19.689+05:30  INFO 11900 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 

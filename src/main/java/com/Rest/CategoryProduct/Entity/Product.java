@@ -23,12 +23,4 @@ public class Product {
     @JoinColumn(name = "brand_id")
     @JsonBackReference
     private Brand brand;
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 }
