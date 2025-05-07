@@ -111,7 +111,7 @@ public class CategoryServiceImpl implements CategoryService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-        return "Data updated successfully";
+        return "Category updated successfully";
     }
 
     @Override

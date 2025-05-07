@@ -86,7 +86,7 @@ public class BrandServiceImpl implements BrandService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-        return "Data inserted successfully";
+        return "Brand inserted successfully";
     }
 
 
@@ -115,7 +115,7 @@ public class BrandServiceImpl implements BrandService{
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
-        return "Data updated successfully";
+        return "Brand updated successfully";
     }
 
     @Override
