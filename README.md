@@ -35,21 +35,16 @@ REST APIs
 11. Kubernetes : architecture, Commands,
 
 # Topics
-| No. | Topic                | Subtopics/Commands                                                            | Learning Resources / Notes |
-| --- | -------------------- | ----------------------------------------------------------------------------- | -------------------------- |
-| 1   | Prometheus           | Installation, Configuration, Metrics, Alerts, Exporters                       | \[ ]                       |
-| 2   | Grafana              | Dashboards, Data Sources, Prometheus Integration, Alerts                      | \[ ]                       |
-| 3   | Unit Testing         | JUnit 5, Mockito, Testcontainers, Integration Testing                         | \[ ]                       |
-| 4   | Splunk / OpenObserve | Log Management, Searching, Alerting, Open Source Observability                | \[ ]                       |
-| 5   | Kafka                | Topics, Producers/Consumers, Zookeeper, Kafka Streams                         | \[ ]                       |
-| 6   | OAuth2               | Google OAuth, GitHub OAuth, Spring Security, JWT                              | \[ ]                       |
-| 7   | Docker               | Dockerfile, Images, Containers, Volumes, Networks                             | \[ ]                       |
-| 8   | Jenkins CI/CD        | Pipeline (Declarative/Scripted), Webhooks, Docker & Kubernetes Integration    | \[ ]                       |
-| 9   | Microservices        | Design, Communication, Resilience (Retry, Circuit Breaker), Service Discovery | \[ ]                       |
-| 10  | GitHub               | Branching, Revert, Rebase, Cherry-pick, Commit History                        | \[ ]                       |
-| 11  | Kubernetes           |                                                                               |                            |
-|     |                      | - Architecture: Master, Node, Kubelet, etcd, Controller Manager, Scheduler    | \[ ]                       |
-|     |                      | - Basic Commands: `kubectl get`, `apply`, `describe`, `logs`, `exec`          | \[ ]                       |
-|     |                      | - Resource Management: Pods, Deployments, Services, ConfigMaps, Secrets       | \[ ]                       |
-|     |                      | - Helm Charts, Ingress, Autoscaling                                           | \[ ]                       |
-|     |                      | - Debugging: `kubectl describe`, `logs`, `port-forward`, `top`                | \[ ]                       |
+| No. | Topic                                                                 | Subtopics/Commands                                                                                                                    | Learning Resources / Notes |
+|-----|-----------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| 1   | GitHub                                                                | Branching, Revert, Rebase, Cherry-pick, Commit History                                                                                | [ ]                        |
+| 2   | Unit Testing                                                          | JUnit 5, Mockito, Testcontainers, Integration Testing                                                                                | [ ]                        |
+| 3   | Kafka                                                                 | Topics, Producers/Consumers, Zookeeper, Kafka Streams                                                                                | [ ]                        |
+| 4   | Prometheus                                                            | Installation, Configuration, Metrics, Alerts, Exporters                                                                              | [ ]                        |
+| 5   | Grafana                                                               | Dashboards, Data Sources, Prometheus Integration, Alerts                                                                             | [ ]                        |
+| 6   | Splunk / OpenObserve                                                  | Log Management, Searching, Alerting, Open Source Observability                                                                       | [ ]                        |
+| 7   | Microservices                                                         | Design, Communication (REST, gRPC), Resilience (Retry, Circuit Breaker), Service Discovery (Eureka, Consul)                           | [ ]                        |
+| 8   | Docker                                                                | Dockerfile, Images, Containers, Volumes, Networks                                                                                    | [ ]                        |
+| 9   | Jenkins CI/CD                                                         | Pipeline (Declarative/Scripted), Webhooks, Docker & Kubernetes Integration                                                           | [ ]                        |
+| 10  | Kubernetes                                                            | • Architecture: Master, Node, Kubelet, etcd, Controller Manager, Scheduler<br>• Basic Commands: `kubectl get`, `apply`, `describe`, `logs`, `exec`<br>• Resource Mgmt: Pods, Deployments, Services, ConfigMaps, Secrets<br>• Helm Charts, Ingress, Autoscaling<br>• Debugging: `kubectl describe`, `logs`, `port-forward`, `top` | [ ]                        |
+| 11  | OAuth2(JWT(DONE), OAuth2(OPENID), SAML) ==> KeyClock(OKTA, FORGEROCK) | Google OAuth, GitHub OAuth, Spring Security, JWT                                                                                     | [ ]                        |
