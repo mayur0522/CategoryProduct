@@ -2,6 +2,7 @@ package com.Rest.CategoryProduct.Controller;
 
 import com.Rest.CategoryProduct.Entity.Category;
 import com.Rest.CategoryProduct.Service.CategoryService;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,6 +28,8 @@ class CategoryControllerTest {
     private CategoryController categoryController;
     @Mock
     private CategoryService categorySer;
+    @Mock
+    private MeterRegistry meterRegistry;
 
     @BeforeEach
     void setUp() {

@@ -3,6 +3,8 @@ package com.Rest.CategoryProduct.Controller;
 import com.Rest.CategoryProduct.Model.JwtRequest;
 import com.Rest.CategoryProduct.Model.JwtResponse;
 import com.Rest.CategoryProduct.Security.JwtHelper;
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.annotation.Timed;
 import io.micrometer.core.instrument.MeterRegistry;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -38,7 +40,8 @@ public class AuthController {
         this.meterRegistry = meterRegistry;
     }
 
-
+    @Counted(value = "auth.login.count", description = "Count of login authentication requests")
+    @Timed(value = "auth.login.time", description = "Time taken for login authentication")
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody JwtRequest request) {
         meterRegistry.counter("auth_requests_total", "endpoint", "/auth/login", "method", "POST").increment();

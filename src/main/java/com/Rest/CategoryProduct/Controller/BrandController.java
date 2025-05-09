@@ -2,6 +2,8 @@ package com.Rest.CategoryProduct.Controller;
 
 import com.Rest.CategoryProduct.Entity.Brand;
 import com.Rest.CategoryProduct.Service.BrandService;
+import io.micrometer.core.annotation.Counted;
+import io.micrometer.core.annotation.Timed;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +25,8 @@ public class BrandController {
     }
 
     //Get single category
+    @Counted(value = "brand.read.single.count", description = "Count of get single brand calls")
+    @Timed(value = "brand.read.single.time", description = "Time taken for getting a single brand")
     @GetMapping("/{id}")
     public ResponseEntity<Brand> getBrandById(@PathVariable Long id){
         meterRegistry.counter("brand_requests_total", "operation", "get_single", "method", "GET").increment();
@@ -31,6 +35,8 @@ public class BrandController {
     }
 
     //Get All category
+    @Counted(value = "brand.read.all.count", description = "Count of get all brands calls")
+    @Timed(value = "brand.read.all.time", description = "Time taken for getting all brands")
     @GetMapping
     public ResponseEntity<List<Brand>> getAllBrand(){
         meterRegistry.counter("brand_requests_total", "operation", "get_all", "method", "GET").increment();
@@ -38,6 +44,8 @@ public class BrandController {
         return new ResponseEntity<>(brands, HttpStatus.OK);
     }
 
+    @Counted(value = "brand.create.count", description = "Count of brand creation calls")
+    @Timed(value = "brand.create.time", description = "Time taken for brand creation")
     @PostMapping
     public ResponseEntity<String> createBrand(@RequestBody Brand brand){
         meterRegistry.counter("brand_requests_total", "operation", "create", "method", "POST").increment();
@@ -53,6 +61,8 @@ public class BrandController {
         return  new ResponseEntity<>(status, HttpStatus.CREATED);
     }*/
 
+    @Counted(value = "brand.update.count", description = "Count of brand update calls")
+    @Timed(value = "brand.update.time", description = "Time taken for brand update")
     @PutMapping("/{id}")
     public ResponseEntity<String> updateBrand(@RequestBody Brand brand, @PathVariable Long id){
         meterRegistry.counter("brand_requests_total", "operation", "update", "method", "PUT").increment();
@@ -60,6 +70,8 @@ public class BrandController {
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
+    @Counted(value = "brand.delete.count", description = "Count of brand delete calls")
+    @Timed(value = "brand.delete.time", description = "Time taken for brand deletion")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteBrand(@PathVariable Long id){
         meterRegistry.counter("brand_requests_total", "operation", "delete", "method", "DELETE").increment();
