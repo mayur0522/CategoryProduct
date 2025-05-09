@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         auth-> auth
                         .requestMatchers("/home/**").authenticated()
-                        .requestMatchers("auth/login",
+                        .requestMatchers("/actuator/prometheus","auth/login",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui.html"

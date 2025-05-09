@@ -34,3 +34,22 @@ logging:
         com.Rest.CategoryProduct: DEBUG
     file:
         name: C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\logs\application.log
+
+# Prometheus
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+            base-path: /actuator
+    endpoint:
+        prometheus:
+            enabled: true
+    metrics:
+        export:
+            prometheus:
+                enabled: true
+
+
+        enable:
+            all=true:
