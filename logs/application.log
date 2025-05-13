@@ -1402,3 +1402,44 @@ Unconditional classes:
 2025-05-13T15:14:35.265+05:30  INFO 18740 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-05-13T15:14:35.512+05:30  INFO 18740 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-13T15:14:35.560+05:30  INFO 18740 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 19.311 seconds (process running for 20.218)
+2025-05-13T16:06:52.873+05:30  WARN 18740 --- [CategoryProduct] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m58s757ms796µs299ns).
+2025-05-13T16:25:42.152+05:30  INFO 18740 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-13T16:25:42.183+05:30  INFO 18740 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-13T16:25:42.200+05:30  INFO 18740 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T16:25:42.200+05:30  INFO 18740 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T16:25:42.217+05:30  INFO 18740 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T16:25:50.257+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 17796 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-13T16:25:50.257+05:30 DEBUG 17796 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T16:25:50.263+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T16:25:50.360+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-13T16:25:50.360+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-13T16:25:52.446+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T16:25:52.559+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2025-05-13T16:25:52.837+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
+2025-05-13T16:25:54.085+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-13T16:25:54.105+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-13T16:25:54.105+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-13T16:25:54.189+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-13T16:25:54.194+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3832 ms
+2025-05-13T16:25:54.998+05:30 DEBUG 17796 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-13T16:25:55.242+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T16:25:55.312+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T16:25:55.376+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T16:25:55.741+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T16:25:55.790+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T16:25:56.271+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f9f33c
+2025-05-13T16:25:56.271+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T16:25:56.390+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T16:25:58.279+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T16:25:58.435+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T16:25:58.684+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T16:25:58.818+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T16:25:58.961+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T16:25:58.963+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
