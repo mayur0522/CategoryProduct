@@ -143,8 +143,8 @@ public class BrandServiceImpl implements BrandService{
 }
 
 //                                          Status
-//Prometheus
-//Grafana
+//Prometheus                                Done
+//Grafana                                   Done
 //Unit testing                              Done
 //apply splunk / OpenObserve
 //Pub-Sub GCP                               Done

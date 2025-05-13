@@ -90,7 +90,7 @@ public class CategoryServiceImpl implements CategoryService{
         Optional<Category> categoryExist = Optional.ofNullable(categoryRepo.findById(id)
                 .orElseThrow(() -> {
                     log.warn("Category Not Found With Id : {}",id);
-                    return new ResourceNotFoundExceptions("category Does Not Found With Id : {}" + id);
+                    return new ResourceNotFoundExceptions("category Does Not Found With Id : " + id);
                 }));
 
         /*if(!categoryExist.isPresent()){
