@@ -29,7 +29,7 @@ public class BrandController {
     @Timed(value = "brand.read.single.time", description = "Time taken for getting a single brand")
     @GetMapping("/{id}")
     public ResponseEntity<Brand> getBrandById(@PathVariable Long id){
-        meterRegistry.counter("brand_requests_total", "operation", "get_single", "method", "GET").increment();
+//        meterRegistry.counter("brand_requests_total", "operation", "get_single", "method", "GET").increment();
         Brand status = brandService.getBrandById(id);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
@@ -39,7 +39,7 @@ public class BrandController {
     @Timed(value = "brand.read.all.time", description = "Time taken for getting all brands")
     @GetMapping
     public ResponseEntity<List<Brand>> getAllBrand(){
-        meterRegistry.counter("brand_requests_total", "operation", "get_all", "method", "GET").increment();
+//        meterRegistry.counter("brand_requests_total", "operation", "get_all", "method", "GET").increment();
         List<Brand> brands = brandService.getAllBrand();
         return new ResponseEntity<>(brands, HttpStatus.OK);
     }
@@ -48,7 +48,7 @@ public class BrandController {
     @Timed(value = "brand.create.time", description = "Time taken for brand creation")
     @PostMapping
     public ResponseEntity<String> createBrand(@RequestBody Brand brand){
-        meterRegistry.counter("brand_requests_total", "operation", "create", "method", "POST").increment();
+//        meterRegistry.counter("brand_requests_total", "operation", "create", "method", "POST").increment();
         String status = brandService.insertBrand(brand);
         return new ResponseEntity<>(status, HttpStatus.CREATED);
     }
@@ -65,7 +65,7 @@ public class BrandController {
     @Timed(value = "brand.update.time", description = "Time taken for brand update")
     @PutMapping("/{id}")
     public ResponseEntity<String> updateBrand(@RequestBody Brand brand, @PathVariable Long id){
-        meterRegistry.counter("brand_requests_total", "operation", "update", "method", "PUT").increment();
+//        meterRegistry.counter("brand_requests_total", "operation", "update", "method", "PUT").increment();
         String status = brandService.updateBrand(brand,id);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
@@ -74,7 +74,7 @@ public class BrandController {
     @Timed(value = "brand.delete.time", description = "Time taken for brand deletion")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteBrand(@PathVariable Long id){
-        meterRegistry.counter("brand_requests_total", "operation", "delete", "method", "DELETE").increment();
+//        meterRegistry.counter("brand_requests_total", "operation", "delete", "method", "DELETE").increment();
         String status = brandService.deleteBrand(id);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }

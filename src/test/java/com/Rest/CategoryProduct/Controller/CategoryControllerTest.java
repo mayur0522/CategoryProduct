@@ -36,7 +36,6 @@ class CategoryControllerTest {
         MockitoAnnotations.openMocks(this);
     }
 
-
     @Test
     void testGetCategoryById(){
         Category category = new Category(1l,"Electronics",new ArrayList<>());
