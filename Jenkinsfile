@@ -10,7 +10,7 @@ pipeline {
     }
 
     tools {
-            maven 'Maven-3.8.6'  // Make sure this is installed in Jenkins
+            maven 'maven-3.8.6'  // Make sure this is installed in Jenkins
     }
 
     stages {
