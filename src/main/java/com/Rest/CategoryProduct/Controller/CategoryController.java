@@ -44,6 +44,7 @@ public class CategoryController {
     @PreAuthorize("hasRole('Admin')")
     @Tag(name = "Retrieve all category", description = "Used to get all the category")
     public ResponseEntity<List<Category>> getAllCategory(){
+//        meter registry
 //        meterRegistry.counter("category_requests_total", "endpoint", "/category", "method", "GET").increment();
         List<Category> category = categorySer.getAllCategory();
         return new ResponseEntity<>(category, HttpStatus.OK);
