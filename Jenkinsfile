@@ -19,8 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building ${env.APP_NAME} from ${params.BRANCH_NAME} branch"
-//                 sh 'mvn clean install -DskipTests'
-
+                sh 'mvn clean install -DskipTests'
             }
         }
 
