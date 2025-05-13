@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building ${env.APP_NAME} from branch ${params.BRANCH_NAME}"
-                sh './gradlew build'
+                sh 'mvn clean install'
             }
         }
 
