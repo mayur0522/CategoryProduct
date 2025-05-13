@@ -9,6 +9,10 @@ pipeline {
         APP_NAME = 'CategoryProduct'
     }
 
+    tools {
+            maven 'Maven-3.8.6'  // Make sure this is installed in Jenkins
+    }
+
     stages {
         stage('Checkout') {
             steps {
