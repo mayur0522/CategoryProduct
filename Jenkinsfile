@@ -24,6 +24,7 @@ pipeline {
             steps {
                 echo "Building ${env.APP_NAME} from ${params.BRANCH_NAME} branch"
                 bat 'mvn clean install -DskipTests'
+                
             }
         }
 
