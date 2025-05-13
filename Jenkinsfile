@@ -16,7 +16,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: "${params.BRANCH_NAME}", url: 'https://github.com/Yogeshjathar/CategoryProduct.git'
+//                 git branch: "${params.BRANCH_NAME}", url: 'https://github.com/Yogeshjathar/CategoryProduct.git'
+                checkout scm
             }
         }
 
