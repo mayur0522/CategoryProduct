@@ -19,21 +19,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building ${env.APP_NAME} from ${params.BRANCH_NAME} branch"
-                sh 'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
         stage('Package') {
             steps {
                 echo 'Packaging application...'
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
     }
