@@ -9,10 +9,6 @@ pipeline {
         APP_NAME = 'CategoryProduct'
     }
 
-    tools {
-            maven 'maven-3.8.6'  // Make sure this is installed in Jenkins
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -25,7 +21,7 @@ pipeline {
             steps {
                 echo "Building ${env.APP_NAME} from ${params.BRANCH_NAME} branch"
                 bat 'mvn clean install -DskipTests'
-                
+
             }
         }
 
