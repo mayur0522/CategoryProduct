@@ -1450,3 +1450,784 @@ Unconditional classes:
 2025-05-13T16:26:07.070+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-05-13T16:26:07.265+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-13T16:26:07.320+05:30  INFO 17796 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 17.895 seconds (process running for 18.691)
+2025-05-13T17:06:45.322+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 9048 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:06:45.336+05:30 DEBUG 9048 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:06:45.338+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:06:46.788+05:30  INFO 9048 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:06:46.855+05:30  INFO 9048 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:06:47.120+05:30  INFO 9048 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:06:47.996+05:30  INFO 9048 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:06:48.061+05:30  INFO 9048 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:06:48.113+05:30  INFO 9048 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:06:48.421+05:30  INFO 9048 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:06:48.471+05:30  INFO 9048 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:06:48.845+05:30  INFO 9048 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2093bb6c
+2025-05-13T17:06:48.845+05:30  INFO 9048 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:06:48.938+05:30  INFO 9048 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:06:49.772+05:30  INFO 9048 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:06:49.853+05:30  INFO 9048 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:06:50.353+05:30  INFO 9048 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:06:50.414+05:30  INFO 9048 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:06:50.472+05:30  INFO 9048 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:06:50.482+05:30  INFO 9048 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:06:51.988+05:30  WARN 9048 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:06:53.366+05:30  INFO 9048 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:06:53.404+05:30  WARN 9048 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:06:53.767+05:30  INFO 9048 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:06:55.037+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 10.122 seconds (process running for 11.093)
+2025-05-13T17:06:56.410+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:06:56.410+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:06:56.738+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:06:56.738+05:30  WARN 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:06:56.770+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:06:56.770+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:06:56.780+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:06:56.785+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:06:56.787+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:06:56.787+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:06:56.809+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:06:56.809+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:06:56.820+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:06:56.820+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:06:56.824+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:06:56.824+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:06:56.836+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:06:56.836+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:06:56.839+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:06:56.839+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:06:56.850+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:06:56.850+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:06:57.004+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:06:57.004+05:30  WARN 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:06:57.004+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:06:57.004+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:06:57.020+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:06:57.020+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:06:57.020+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:06:57.020+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:06:57.020+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:06:57.020+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:06:57.038+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:06:57.038+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:06:57.045+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:06:57.045+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:06:57.055+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:06:57.057+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:06:57.060+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:06:57.060+05:30  WARN 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:06:57.068+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:06:57.069+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:06:57.203+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:06:57.204+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:06:57.204+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:06:57.204+05:30  WARN 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:06:57.220+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:06:57.223+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:06:57.231+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:06:57.231+05:30  WARN 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:06:57.240+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:06:57.240+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:06:57.245+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:06:57.245+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:06:57.252+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:06:57.253+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:06:57.258+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:06:57.258+05:30 ERROR 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:06:57.258+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:06:57.258+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:06:57.271+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:06:57.271+05:30  INFO 9048 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:06:57.420+05:30  INFO 9048 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:06:57.420+05:30  INFO 9048 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:06:57.437+05:30  INFO 9048 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:07:02.704+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 18624 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:07:02.710+05:30 DEBUG 18624 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:07:02.710+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:07:04.269+05:30  INFO 18624 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:07:04.352+05:30  INFO 18624 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:07:04.596+05:30  INFO 18624 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:07:05.407+05:30  INFO 18624 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:07:05.474+05:30  INFO 18624 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:07:05.515+05:30  INFO 18624 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:07:05.790+05:30  INFO 18624 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:07:05.824+05:30  INFO 18624 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:07:06.140+05:30  INFO 18624 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70e8c019
+2025-05-13T17:07:06.143+05:30  INFO 18624 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:07:06.236+05:30  INFO 18624 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:07:07.069+05:30  INFO 18624 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:07:07.135+05:30  INFO 18624 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:07:07.652+05:30  INFO 18624 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:07:07.734+05:30  INFO 18624 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:07:07.807+05:30  INFO 18624 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:07:07.807+05:30  INFO 18624 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:07:09.817+05:30  WARN 18624 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:07:11.519+05:30  INFO 18624 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:07:11.584+05:30  WARN 18624 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:07:12.016+05:30  INFO 18624 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:07:13.449+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 11.176 seconds (process running for 12.195)
+2025-05-13T17:07:15.290+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:07:15.290+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:07:15.623+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:07:15.625+05:30  WARN 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:07:15.659+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:07:15.659+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:07:15.677+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:07:15.677+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:07:15.690+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:07:15.690+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:07:15.703+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:07:15.703+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:07:15.712+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:07:15.716+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:07:15.722+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:07:15.722+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:07:15.722+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:07:15.722+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:07:15.738+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:07:15.738+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:07:15.751+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:07:15.753+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:07:15.916+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:07:15.916+05:30  WARN 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:07:15.928+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:07:15.928+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:07:15.937+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:07:15.937+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:07:15.945+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:07:15.947+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:07:15.956+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:07:15.958+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:07:15.964+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:07:15.964+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:07:15.964+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:07:15.964+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:07:15.979+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:07:15.979+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:07:15.984+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:07:15.984+05:30  WARN 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:07:15.992+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:07:15.995+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:07:16.158+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:07:16.160+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:07:16.169+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:07:16.169+05:30  WARN 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:07:16.169+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:07:16.169+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:07:16.185+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:07:16.190+05:30  WARN 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:07:16.192+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:07:16.192+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:07:16.206+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:07:16.208+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:07:16.213+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:07:16.215+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:07:16.220+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:07:16.220+05:30 ERROR 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:07:16.230+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:07:16.230+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:07:16.238+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:07:16.240+05:30  INFO 18624 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:07:16.422+05:30  INFO 18624 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:07:16.422+05:30  INFO 18624 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:07:16.439+05:30  INFO 18624 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:09:26.120+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 24052 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:09:26.120+05:30 DEBUG 24052 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:09:26.120+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:09:27.535+05:30  INFO 24052 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:09:27.618+05:30  INFO 24052 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:09:27.866+05:30  INFO 24052 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:09:28.602+05:30  INFO 24052 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:09:28.668+05:30  INFO 24052 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:09:28.716+05:30  INFO 24052 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:09:29.011+05:30  INFO 24052 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:09:29.044+05:30  INFO 24052 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:09:29.375+05:30  INFO 24052 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2831c178
+2025-05-13T17:09:29.375+05:30  INFO 24052 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:09:29.451+05:30  INFO 24052 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:09:30.317+05:30  INFO 24052 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:09:30.377+05:30  INFO 24052 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:09:30.881+05:30  INFO 24052 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:09:30.958+05:30  INFO 24052 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:09:31.030+05:30  INFO 24052 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:09:31.030+05:30  INFO 24052 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:09:32.598+05:30  WARN 24052 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:09:33.840+05:30  INFO 24052 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:09:33.894+05:30  WARN 24052 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:09:34.235+05:30  INFO 24052 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:09:35.468+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 9.747 seconds (process running for 10.73)
+2025-05-13T17:09:36.800+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:09:36.800+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:09:37.067+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:09:37.067+05:30  WARN 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:09:37.101+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:09:37.101+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:09:37.116+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:09:37.116+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:09:37.132+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:09:37.132+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:09:37.133+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:09:37.133+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:09:37.148+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:09:37.148+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:09:37.150+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:09:37.150+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:09:37.150+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:09:37.165+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:09:37.172+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:09:37.174+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:09:37.182+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:09:37.184+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:09:37.333+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:09:37.335+05:30  WARN 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:09:37.341+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:09:37.342+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:09:37.348+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:09:37.350+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:09:37.353+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:09:37.353+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:09:37.360+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:09:37.364+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:09:37.368+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:09:37.368+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:09:37.368+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:09:37.379+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:09:37.384+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:09:37.384+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:09:37.384+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:09:37.384+05:30  WARN 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:09:37.396+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:09:37.396+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:09:37.534+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:09:37.534+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:09:37.534+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:09:37.534+05:30  WARN 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:09:37.534+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:09:37.534+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:09:37.552+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:09:37.552+05:30  WARN 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:09:37.552+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:09:37.552+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:09:37.567+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:09:37.568+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:09:37.574+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:09:37.574+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:09:37.578+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:09:37.582+05:30 ERROR 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:09:37.584+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:09:37.589+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:09:37.593+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:09:37.595+05:30  INFO 24052 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:09:37.734+05:30  INFO 24052 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:09:37.750+05:30  INFO 24052 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:09:37.766+05:30  INFO 24052 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:09:43.066+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 9120 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:09:43.080+05:30 DEBUG 9120 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:09:43.082+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:09:44.683+05:30  INFO 9120 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:09:44.749+05:30  INFO 9120 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:09:45.015+05:30  INFO 9120 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:09:45.815+05:30  INFO 9120 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:09:45.877+05:30  INFO 9120 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:09:45.917+05:30  INFO 9120 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:09:46.269+05:30  INFO 9120 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:09:46.314+05:30  INFO 9120 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:09:46.686+05:30  INFO 9120 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2831c178
+2025-05-13T17:09:46.698+05:30  INFO 9120 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:09:46.782+05:30  INFO 9120 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:09:47.632+05:30  INFO 9120 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:09:47.699+05:30  INFO 9120 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:09:48.216+05:30  INFO 9120 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:09:48.298+05:30  INFO 9120 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:09:48.348+05:30  INFO 9120 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:09:48.348+05:30  INFO 9120 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:09:50.213+05:30  WARN 9120 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:09:51.600+05:30  INFO 9120 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:09:51.652+05:30  WARN 9120 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:09:52.032+05:30  INFO 9120 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:09:53.119+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 10.482 seconds (process running for 11.574)
+2025-05-13T17:09:54.632+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:09:54.632+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:09:54.932+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:09:54.932+05:30  WARN 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:09:54.965+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:09:54.965+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:09:54.981+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:09:54.981+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:09:54.995+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:09:54.997+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:09:54.998+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:09:54.998+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:09:55.013+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:09:55.014+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:09:55.020+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:09:55.020+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:09:55.031+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:09:55.031+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:09:55.036+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:09:55.036+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:09:55.049+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:09:55.049+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:09:55.191+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:09:55.193+05:30  WARN 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:09:55.200+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:09:55.201+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:09:55.201+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:09:55.201+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:09:55.213+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:09:55.213+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:09:55.217+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:09:55.217+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:09:55.226+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:09:55.226+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:09:55.233+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:09:55.235+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:09:55.235+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:09:55.235+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:09:55.246+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:09:55.246+05:30  WARN 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:09:55.251+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:09:55.251+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:09:55.398+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:09:55.398+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:09:55.398+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:09:55.398+05:30  WARN 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:09:55.415+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:09:55.415+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:09:55.415+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:09:55.415+05:30  WARN 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:09:55.415+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:09:55.415+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:09:55.432+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:09:55.432+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:09:55.435+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:09:55.439+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:09:55.443+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:09:55.445+05:30 ERROR 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:09:55.450+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:09:55.450+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:09:55.450+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:09:55.450+05:30  INFO 9120 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:09:55.631+05:30  INFO 9120 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:09:55.637+05:30  INFO 9120 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:09:55.653+05:30  INFO 9120 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:20:11.650+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 11020 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:20:11.661+05:30 DEBUG 11020 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:20:11.661+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:20:12.983+05:30  INFO 11020 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:20:13.050+05:30  INFO 11020 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:20:13.267+05:30  INFO 11020 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:20:13.958+05:30  INFO 11020 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:20:14.017+05:30  INFO 11020 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:20:14.055+05:30  INFO 11020 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:20:14.317+05:30  INFO 11020 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:20:14.350+05:30  INFO 11020 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:20:14.700+05:30  INFO 11020 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e976553
+2025-05-13T17:20:14.700+05:30  INFO 11020 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:20:14.766+05:30  INFO 11020 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:20:15.567+05:30  INFO 11020 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:20:15.638+05:30  INFO 11020 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:20:16.113+05:30  INFO 11020 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:20:16.169+05:30  INFO 11020 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:20:16.233+05:30  INFO 11020 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:20:16.233+05:30  INFO 11020 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:20:17.650+05:30  WARN 11020 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:20:18.683+05:30  INFO 11020 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:20:18.771+05:30  WARN 11020 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:20:19.116+05:30  INFO 11020 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:20:20.066+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 8.774 seconds (process running for 9.706)
+2025-05-13T17:20:21.426+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:20:21.426+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:20:21.704+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:20:21.704+05:30  WARN 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:20:21.733+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:20:21.733+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:20:21.745+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:20:21.745+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:20:21.757+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:20:21.760+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:20:21.766+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:20:21.766+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:20:21.773+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:20:21.773+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:20:21.782+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:20:21.782+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:20:21.790+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:20:21.790+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:20:21.794+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:20:21.798+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:20:21.801+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:20:21.801+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:20:21.932+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:20:21.932+05:30  WARN 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:20:21.947+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:20:21.947+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:20:21.949+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:20:21.949+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:20:21.949+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:20:21.959+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:20:21.964+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:20:21.966+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:20:21.970+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:20:21.970+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:20:21.979+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:20:21.979+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:20:21.986+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:20:21.986+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:20:21.990+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:20:21.990+05:30  WARN 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:20:21.996+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:20:21.996+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:20:22.132+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:20:22.132+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:20:22.154+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:20:22.154+05:30  WARN 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:20:22.164+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:20:22.167+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:20:22.172+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:20:22.172+05:30  WARN 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:20:22.180+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:20:22.180+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:20:22.183+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:20:22.183+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:20:22.183+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:20:22.183+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:20:22.198+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:20:22.199+05:30 ERROR 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:20:22.200+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:20:22.200+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:20:22.200+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:20:22.200+05:30  INFO 11020 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:20:22.351+05:30  INFO 11020 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:20:22.351+05:30  INFO 11020 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:20:22.366+05:30  INFO 11020 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:20:27.567+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 3956 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:20:27.567+05:30 DEBUG 3956 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:20:27.567+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:20:28.981+05:30  INFO 3956 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:20:29.048+05:30  INFO 3956 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:20:29.265+05:30  INFO 3956 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:20:30.031+05:30  INFO 3956 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:20:30.098+05:30  INFO 3956 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:20:30.145+05:30  INFO 3956 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:20:30.448+05:30  INFO 3956 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:20:30.481+05:30  INFO 3956 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:20:30.798+05:30  INFO 3956 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2831c178
+2025-05-13T17:20:30.803+05:30  INFO 3956 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:20:30.874+05:30  INFO 3956 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:20:31.698+05:30  INFO 3956 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:20:31.765+05:30  INFO 3956 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:20:32.264+05:30  INFO 3956 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:20:32.352+05:30  INFO 3956 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:20:32.398+05:30  INFO 3956 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:20:32.398+05:30  INFO 3956 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:20:33.891+05:30  WARN 3956 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:20:35.159+05:30  INFO 3956 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:20:35.198+05:30  WARN 3956 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:20:35.581+05:30  INFO 3956 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:20:36.651+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 9.486 seconds (process running for 10.449)
+2025-05-13T17:20:37.964+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:20:37.964+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:20:38.230+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:20:38.230+05:30  WARN 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:20:38.262+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:20:38.264+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:20:38.271+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:20:38.273+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:20:38.287+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:20:38.287+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:20:38.289+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:20:38.289+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:20:38.297+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:20:38.297+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:20:38.297+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:20:38.297+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:20:38.316+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:20:38.316+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:20:38.316+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:20:38.316+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:20:38.332+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:20:38.332+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:20:38.464+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:20:38.464+05:30  WARN 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:20:38.464+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:20:38.464+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:20:38.480+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:20:38.480+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:20:38.487+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:20:38.487+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:20:38.492+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:20:38.492+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:20:38.498+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:20:38.498+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:20:38.506+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:20:38.506+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:20:38.512+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:20:38.514+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:20:38.514+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:20:38.514+05:30  WARN 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:20:38.514+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:20:38.514+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:20:38.649+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:20:38.662+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:20:38.668+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:20:38.668+05:30  WARN 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:20:38.668+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:20:38.668+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:20:38.680+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:20:38.680+05:30  WARN 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:20:38.685+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:20:38.685+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:20:38.697+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:20:38.699+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:20:38.704+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:20:38.704+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:20:38.706+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:20:38.706+05:30 ERROR 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:20:38.715+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:20:38.715+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:20:38.720+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:20:38.720+05:30  INFO 3956 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:20:38.862+05:30  INFO 3956 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:20:38.864+05:30  INFO 3956 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:20:38.880+05:30  INFO 3956 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:21:45.009+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 16556 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:21:45.020+05:30 DEBUG 16556 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:21:45.022+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:21:46.422+05:30  INFO 16556 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:21:46.488+05:30  INFO 16556 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:21:46.860+05:30  INFO 16556 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:21:47.668+05:30  INFO 16556 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:21:47.730+05:30  INFO 16556 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:21:47.771+05:30  INFO 16556 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:21:48.174+05:30  INFO 16556 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:21:48.204+05:30  INFO 16556 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:21:48.539+05:30  INFO 16556 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2831c178
+2025-05-13T17:21:48.556+05:30  INFO 16556 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:21:48.635+05:30  INFO 16556 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:21:49.437+05:30  INFO 16556 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:21:49.517+05:30  INFO 16556 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:21:50.326+05:30  INFO 16556 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:21:50.472+05:30  INFO 16556 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:21:50.560+05:30  INFO 16556 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:21:50.561+05:30  INFO 16556 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:21:52.466+05:30  WARN 16556 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:21:53.687+05:30  INFO 16556 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:21:53.758+05:30  WARN 16556 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:21:54.104+05:30  INFO 16556 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:21:55.137+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 10.514 seconds (process running for 11.452)
+2025-05-13T17:21:56.454+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:21:56.454+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:21:56.755+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:21:56.755+05:30  WARN 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:21:56.805+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:21:56.805+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:21:56.805+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:21:56.805+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:21:56.826+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:21:56.826+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:21:56.837+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:21:56.837+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:21:56.842+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:21:56.842+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:21:56.854+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:21:56.854+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:21:56.866+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:21:56.866+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:21:56.872+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:21:56.878+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:21:56.886+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:21:56.887+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:21:57.039+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:21:57.041+05:30  WARN 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:21:57.045+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:21:57.045+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:21:57.045+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:21:57.045+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:21:57.061+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:21:57.061+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:21:57.065+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:21:57.065+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:21:57.073+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:21:57.073+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:21:57.073+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:21:57.073+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:21:57.089+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:21:57.089+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:21:57.093+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:21:57.093+05:30  WARN 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:21:57.100+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:21:57.102+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:21:57.237+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:21:57.237+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:21:57.254+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:21:57.254+05:30  WARN 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:21:57.254+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:21:57.254+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:21:57.266+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:21:57.266+05:30  WARN 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:21:57.272+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:21:57.272+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:21:57.278+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:21:57.278+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:21:57.284+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:21:57.285+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:21:57.289+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:21:57.289+05:30 ERROR 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:21:57.298+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:21:57.298+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:21:57.305+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:21:57.305+05:30  INFO 16556 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:21:57.454+05:30  INFO 16556 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:21:57.469+05:30  INFO 16556 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:21:57.488+05:30  INFO 16556 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:22:03.224+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Starting CategoryProductApplicationTests using Java 21.0.6 with PID 9404 (started by HP11$ in C:\ProgramData\Jenkins\.jenkins\workspace\EcommerceAppJenkins)
+2025-05-13T17:22:03.232+05:30 DEBUG 9404 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13T17:22:03.232+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-05-13T17:22:04.720+05:30  INFO 9404 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-13T17:22:04.793+05:30  INFO 9404 --- [CategoryProduct] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2025-05-13T17:22:05.036+05:30  INFO 9404 --- [CategoryProduct] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eb9ed297-e64f-31fe-b9e0-a9c56cd74cf0
+2025-05-13T17:22:05.973+05:30  INFO 9404 --- [CategoryProduct] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-13T17:22:06.036+05:30  INFO 9404 --- [CategoryProduct] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-13T17:22:06.075+05:30  INFO 9404 --- [CategoryProduct] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-13T17:22:06.385+05:30  INFO 9404 --- [CategoryProduct] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-13T17:22:06.402+05:30  INFO 9404 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-13T17:22:06.719+05:30  INFO 9404 --- [CategoryProduct] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@528a16fb
+2025-05-13T17:22:06.719+05:30  INFO 9404 --- [CategoryProduct] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-13T17:22:06.802+05:30  INFO 9404 --- [CategoryProduct] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-13T17:22:07.669+05:30  INFO 9404 --- [CategoryProduct] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-13T17:22:07.735+05:30  INFO 9404 --- [CategoryProduct] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:22:08.261+05:30  INFO 9404 --- [CategoryProduct] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-13T17:22:08.326+05:30  INFO 9404 --- [CategoryProduct] [main] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-13T17:22:08.396+05:30  INFO 9404 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-13T17:22:08.396+05:30  INFO 9404 --- [CategoryProduct] [main] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-13T17:22:09.959+05:30  WARN 9404 --- [CategoryProduct] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13T17:22:11.468+05:30  INFO 9404 --- [CategoryProduct] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2025-05-13T17:22:11.552+05:30  WARN 9404 --- [CategoryProduct] [main] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-13T17:22:11.918+05:30  INFO 9404 --- [CategoryProduct] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-13T17:22:13.285+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.CategoryProductApplicationTests    : Started CategoryProductApplicationTests in 10.482 seconds (process running for 11.483)
+2025-05-13T17:22:14.885+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username null
+2025-05-13T17:22:14.887+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Controller.HomeController          : Current Username Mock User
+2025-05-13T17:22:15.227+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:22:15.227+05:30  WARN 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : No brands found in the database.
+2025-05-13T17:22:15.253+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 999
+2025-05-13T17:22:15.253+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:22:15.263+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to update the brand with id : 1
+2025-05-13T17:22:15.263+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Updated a brand with id : 1
+2025-05-13T17:22:15.285+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to fetch all the brands
+2025-05-13T17:22:15.285+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Fetched 3 brands
+2025-05-13T17:22:15.291+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:22:15.291+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Successfully created a new category : Oppo
+2025-05-13T17:22:15.301+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to create a new brand with name : Oppo
+2025-05-13T17:22:15.301+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Oppo brand already exists !!!
+2025-05-13T17:22:15.301+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
+2025-05-13T17:22:15.301+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
+2025-05-13T17:22:15.318+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 999
+2025-05-13T17:22:15.318+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand does not found with id : 999
+2025-05-13T17:22:15.318+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 1
+2025-05-13T17:22:15.331+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Deleted brand with id : 1
+2025-05-13T17:22:15.336+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Request received to delete the brand with id : 999
+2025-05-13T17:22:15.336+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.BrandServiceImpl           : Brand Not Found With Id : 999
+2025-05-13T17:22:15.518+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:22:15.518+05:30  WARN 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : No categories found in the database.
+2025-05-13T17:22:15.525+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Electronics
+2025-05-13T17:22:15.525+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Electronics category already exists !!!
+2025-05-13T17:22:15.535+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 999
+2025-05-13T17:22:15.535+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category does not found with id : 999
+2025-05-13T17:22:15.535+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-13T17:22:15.535+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Fetched 2 categories
+2025-05-13T17:22:15.551+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 999
+2025-05-13T17:22:15.551+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:22:15.557+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 1
+2025-05-13T17:22:15.563+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Updated a category with id : 1
+2025-05-13T17:22:15.570+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to create a new category with name : Accessories
+2025-05-13T17:22:15.572+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Successfully created a new category : Accessories
+2025-05-13T17:22:15.576+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to delete the category with id : 1
+2025-05-13T17:22:15.576+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Deleted category with id : 1
+2025-05-13T17:22:15.585+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Request received to update the category with id : 999
+2025-05-13T17:22:15.585+05:30  WARN 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category Not Found With Id : 999
+2025-05-13T17:22:15.594+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-13T17:22:15.594+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-13T17:22:15.760+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:22:15.760+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Fetched 3 products
+2025-05-13T17:22:15.772+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch all the products
+2025-05-13T17:22:15.772+05:30  WARN 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : No products found in the database.
+2025-05-13T17:22:15.777+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 999
+2025-05-13T17:22:15.777+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:22:15.785+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : MacBook air
+2025-05-13T17:22:15.786+05:30  WARN 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : MacBook air product already exists !!!
+2025-05-13T17:22:15.793+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to update the product with id : 1
+2025-05-13T17:22:15.793+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Updated a product with id : 1
+2025-05-13T17:22:15.799+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 1
+2025-05-13T17:22:15.802+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product found with id : 1
+2025-05-13T17:22:15.808+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to create a new product with name : Oppo
+2025-05-13T17:22:15.808+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Successfully created a new product : Oppo
+2025-05-13T17:22:15.810+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 999
+2025-05-13T17:22:15.810+05:30 ERROR 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : product Not Found With Id : 999
+2025-05-13T17:22:15.819+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Request received to delete the product with id : 1
+2025-05-13T17:22:15.819+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Deleted product with id : 1
+2025-05-13T17:22:15.827+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Requesting to fetch the product record with id 999
+2025-05-13T17:22:15.827+05:30  INFO 9404 --- [CategoryProduct] [main] c.R.C.Service.ProductServiceImpl         : Product Does not found with id : 999
+2025-05-13T17:22:15.991+05:30  INFO 9404 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:22:15.993+05:30  INFO 9404 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:22:16.001+05:30  INFO 9404 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-13T17:22:30.943+05:30  INFO 17796 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-13T17:22:30.959+05:30  INFO 17796 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-13T17:22:30.974+05:30  INFO 17796 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-13T17:22:30.974+05:30  INFO 17796 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-13T17:22:30.990+05:30  INFO 17796 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

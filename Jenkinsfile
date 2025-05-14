@@ -9,6 +9,11 @@ pipeline {
         APP_NAME = 'CategoryProduct'
     }
 
+    tools {
+            maven 'Maven 3.8.5'
+            jdk 'JDK 21'
+    }
+
     stages {
         stage('Checkout') {
             steps {
