@@ -5,9 +5,9 @@ spring:
 
 #   MySQL Database Configuration
     datasource:
-        url: jdbc:mysql://localhost:3306/categorydb
+        url: jdbc:mysql://34.93.20.112:3306/categorydb
         username: root
-        password: 2002
+        password: root
         driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
         hibernate:
@@ -19,7 +19,7 @@ spring:
         gcp :
             project-id : springboot-app-457506
             credentials :
-                location : file:/C:/Users/jatha/OneDrive/Documents/gcp/springboot-app-457506-459b9c19321c.json
+                location : classpath:springboot-app-457506-459b9c19321c.json
 
 #   Setting spring security default user using yaml
 #    security :

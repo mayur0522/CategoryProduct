@@ -19,6 +19,12 @@ target/
 *.iml
 *.ipr
 
+# Logs
+*.log
+
+# Ignore all JSON files in resources folder
+src/main/resources/*.json
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
