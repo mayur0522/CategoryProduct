@@ -24,7 +24,7 @@ REST APIs
 5. Kafka
 6. OAuth2  : Github, Google,
 7. Docker
-8. Jenkins CI-CD
+8. Jenkins CI-CD - running on 9090(default 8080)
 9. Microservices
 10. Github : 
     1. Branching
