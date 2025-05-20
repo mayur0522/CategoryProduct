@@ -33,7 +33,7 @@ logging:
         root: INFO
         com.Rest.CategoryProduct: DEBUG
     file:
-        name: logs/application.log
+        name: CategoryProduct\logs\application.log
 
 # Prometheus
 management:
