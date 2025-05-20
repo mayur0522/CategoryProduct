@@ -33,7 +33,7 @@ logging:
         root: INFO
         com.Rest.CategoryProduct: DEBUG
     file:
-        name: C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\logs\application.log
+        name: logs/application.log
 
 # Prometheus
 management:
