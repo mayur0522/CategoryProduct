@@ -1,357 +1,25 @@
-2025-05-21T10:14:38.319+05:30  WARN 3800 --- [CategoryProduct] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h52m8s790ms740µs).
-2025-05-21T10:28:37.238+05:30  INFO 3800 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-21T10:28:37.262+05:30  INFO 3800 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-21T10:28:37.287+05:30  INFO 3800 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-21T10:28:37.305+05:30  INFO 3800 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-21T10:28:37.317+05:30  INFO 3800 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-21T10:28:41.752+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 3984 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T10:28:41.756+05:30 DEBUG 3984 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T10:28:41.761+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-05-21T10:28:41.866+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T10:28:41.866+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T10:28:43.906+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T10:28:43.989+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
-2025-05-21T10:28:44.318+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T10:28:45.641+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T10:28:45.669+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T10:28:45.669+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T10:28:45.763+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T10:28:45.763+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3897 ms
-2025-05-21T10:28:46.567+05:30 DEBUG 3984 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T10:28:46.809+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-21T10:28:46.919+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-05-21T10:28:46.988+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-21T10:28:47.408+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-21T10:28:47.451+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-21T10:29:09.639+05:30  WARN 3984 --- [CategoryProduct] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
-2025-05-21T10:29:09.639+05:30 ERROR 3984 --- [CategoryProduct] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2025-05-21T10:29:09.639+05:30  WARN 3984 --- [CategoryProduct] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
-
-org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
-	at com.Rest.CategoryProduct.CategoryProductApplication.main(CategoryProductApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
-Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
-	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	... 38 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	... 51 common frames omitted
-Caused by: java.net.ConnectException: Connection timed out: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
-	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar:9.1.0]
-	... 54 common frames omitted
-
-2025-05-21T10:29:09.661+05:30 ERROR 3984 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2025-05-21T10:29:09.661+05:30  WARN 3984 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2025-05-21T10:29:09.671+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-21T10:29:09.687+05:30  INFO 3984 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-21T10:29:09.754+05:30 ERROR 3984 --- [CategoryProduct] [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar:3.4.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar:3.4.4]
-	at com.Rest.CategoryProduct.CategoryProductApplication.main(CategoryProductApplication.java:12) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.4.jar:3.4.4]
-Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
-	... 18 common frames omitted
-Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar:6.6.11.Final]
-	... 33 common frames omitted
-
-2025-05-21T11:05:11.236+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 15428 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T11:05:11.236+05:30 DEBUG 15428 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T11:05:11.246+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
-2025-05-21T11:05:11.346+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T11:05:11.346+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T11:05:13.284+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T11:05:13.383+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
-2025-05-21T11:05:13.725+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T11:05:14.940+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T11:05:14.958+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T11:05:14.958+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T11:05:15.026+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T11:05:15.038+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3678 ms
-2025-05-21T11:05:15.814+05:30 DEBUG 15428 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T11:05:15.859+05:30  WARN 15428 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2025-05-21T11:05:15.873+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-21T11:05:15.907+05:30  INFO 15428 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-21T11:05:15.939+05:30 ERROR 15428 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
-
-2025-05-21T11:07:19.152+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 25168 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T11:07:19.156+05:30 DEBUG 25168 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T11:07:19.158+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
-2025-05-21T11:07:19.248+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T11:07:19.248+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T11:07:21.128+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T11:07:21.217+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
-2025-05-21T11:07:21.518+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T11:07:22.770+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T11:07:22.793+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T11:07:22.793+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T11:07:22.879+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T11:07:22.879+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3631 ms
-2025-05-21T11:07:23.652+05:30 DEBUG 25168 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T11:07:23.694+05:30  WARN 25168 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2025-05-21T11:07:23.700+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-21T11:07:23.736+05:30  INFO 25168 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-21T11:07:23.756+05:30 ERROR 25168 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
-
-2025-05-21T11:10:03.221+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 9120 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T11:10:03.225+05:30 DEBUG 9120 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T11:10:03.225+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
-2025-05-21T11:10:03.321+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T11:10:03.321+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T11:10:05.165+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T11:10:05.245+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
-2025-05-21T11:10:05.557+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T11:10:06.760+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T11:10:06.777+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T11:10:06.777+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T11:10:06.852+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T11:10:06.852+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3524 ms
-2025-05-21T11:10:07.610+05:30 DEBUG 9120 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T11:10:07.656+05:30  WARN 9120 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2025-05-21T11:10:07.660+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-21T11:10:07.695+05:30  INFO 9120 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-21T11:10:07.723+05:30 ERROR 9120 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
-
-2025-05-21T11:11:26.160+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 13800 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T11:11:26.176+05:30 DEBUG 13800 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T11:11:26.178+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
-2025-05-21T11:11:26.263+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T11:11:26.263+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T11:11:28.070+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T11:11:28.158+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
-2025-05-21T11:11:28.445+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T11:11:29.633+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T11:11:29.649+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T11:11:29.649+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T11:11:29.729+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T11:11:29.729+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3466 ms
-2025-05-21T11:11:30.470+05:30 DEBUG 13800 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T11:11:30.511+05:30  WARN 13800 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2025-05-21T11:11:30.517+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-05-21T11:11:30.549+05:30  INFO 13800 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-05-21T11:11:30.566+05:30 ERROR 13800 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
-
-2025-05-21T11:13:32.240+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 26852 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
-2025-05-21T11:13:32.244+05:30 DEBUG 26852 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-05-21T11:13:32.244+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
-2025-05-21T11:13:32.324+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-21T11:13:32.324+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-21T11:13:34.254+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-21T11:13:34.339+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
-2025-05-21T11:13:34.669+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
-2025-05-21T11:13:35.884+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-05-21T11:13:35.903+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-21T11:13:35.903+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-05-21T11:13:35.979+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-21T11:13:35.979+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3655 ms
-2025-05-21T11:13:36.755+05:30 DEBUG 26852 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-05-21T11:13:37.003+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-21T11:13:37.056+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
-2025-05-21T11:13:37.120+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-21T11:13:37.484+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-21T11:13:37.531+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-21T11:13:38.056+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e25c318
-2025-05-21T11:13:38.056+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-21T11:13:38.151+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-22T13:49:12.659+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 6936 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-22T13:49:12.673+05:30 DEBUG 6936 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-22T13:49:12.673+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
+2025-05-22T13:49:12.770+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-22T13:49:12.770+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-22T13:49:14.877+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-22T13:49:14.972+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2025-05-22T13:49:15.321+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
+2025-05-22T13:49:16.749+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-22T13:49:16.761+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-22T13:49:16.761+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-22T13:49:16.858+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-22T13:49:16.858+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4088 ms
+2025-05-22T13:49:17.659+05:30 DEBUG 6936 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-22T13:49:17.948+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-22T13:49:18.045+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-22T13:49:18.106+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-22T13:49:18.455+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-22T13:49:18.487+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-22T13:49:19.185+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b48263e
+2025-05-22T13:49:19.185+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-22T13:49:19.370+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.41
@@ -359,36 +27,33 @@ Consider the following:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-21T11:13:39.292+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-21T11:13:39.405+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-21T11:13:39.539+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
-2025-05-21T11:13:39.615+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
-2025-05-21T11:13:39.702+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
-2025-05-21T11:13:39.704+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
-2025-05-21T11:13:41.492+05:30  WARN 26852 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-21T11:13:42.745+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
-2025-05-21T11:13:42.800+05:30  WARN 26852 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
-2025-05-21T11:13:42.957+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-05-21T11:13:43.965+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-05-21T11:13:44.053+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-05-21T11:13:44.085+05:30  INFO 26852 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 12.687 seconds (process running for 13.428)
-2025-05-21T11:13:53.184+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-21T11:13:53.184+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-21T11:13:53.184+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-05-21T11:13:53.275+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDc3NDA2NTcsImV4cCI6MTc0Nzc1ODY1N30.TexrD__3g_npt-Su0xD6CM9yFyO52eQ7-T0QGbklCnCkWZuHYVyD7U2Q5l7iVnrxCYOs-RYTQBlIYQN4uyHPCg
-2025-05-21T11:13:53.433+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      : Given jwt token is expired !!
-2025-05-21T11:13:53.469+05:30  WARN 26852 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.S.JwtAuthenticationEntryPoint      : Access Denied !! Full authentication is required to access this resource
-2025-05-21T11:14:04.913+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      :  Header :  null
-2025-05-21T11:14:04.913+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
-2025-05-21T11:14:05.053+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Controller.AuthController          : User is trying to login...
-2025-05-21T11:14:05.057+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Controller.AuthController          : Validating credentials of user
-2025-05-21T11:14:05.418+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Controller.AuthController          : Valid User
-2025-05-21T11:14:05.418+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-3] c.R.C.Controller.AuthController          : Logged in successfully
-2025-05-21T11:14:57.349+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-4] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDc4MDYyNDUsImV4cCI6MTc0NzgyNDI0NX0._BVzNfi_uzqHyxglPw4TgVPvCDyaI2uQtVXL967SelaHA6UhwUeuHaNBP9dnija9-8j3DPZZzy_6KMjMImNGmg
-2025-05-21T11:14:57.375+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.BrandServiceImpl           : Requesting to Fetch the brand record with id 1
-2025-05-21T11:14:57.579+05:30  INFO 26852 --- [CategoryProduct] [http-nio-8080-exec-4] c.R.C.Service.BrandServiceImpl           : Brand found with id : 1
-2025-05-21T11:33:44.839+05:30  INFO 26852 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-21T11:33:44.856+05:30  INFO 26852 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-21T11:33:44.869+05:30  INFO 26852 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-21T11:33:44.880+05:30  INFO 26852 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-21T11:33:44.893+05:30  INFO 26852 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-22T13:49:20.408+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-22T13:49:20.613+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-22T13:49:20.743+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-22T13:49:20.824+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-22T13:49:20.917+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-22T13:49:20.917+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-22T13:49:22.951+05:30  WARN 6936 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-22T13:49:24.106+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-22T13:49:24.147+05:30  WARN 6936 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-22T13:49:24.305+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-22T13:49:25.201+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-22T13:49:25.269+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-22T13:49:25.297+05:30  INFO 6936 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 13.642 seconds (process running for 14.484)
+2025-05-22T13:49:35.268+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-22T13:49:35.268+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-22T13:49:35.271+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-22T13:49:35.314+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      :  Header :  null
+2025-05-22T13:49:35.314+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] o.s.web.filter.OncePerRequestFilter      : Invalid Header Value !! 
+2025-05-22T13:49:35.442+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Controller.AuthController          : User is trying to login...
+2025-05-22T13:49:35.442+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Controller.AuthController          : Validating credentials of user
+2025-05-22T13:49:35.696+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Controller.AuthController          : Valid User
+2025-05-22T13:49:35.696+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-1] c.R.C.Controller.AuthController          : Logged in successfully
+2025-05-22T13:49:55.842+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-7] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDc5MDE5NzUsImV4cCI6MTc0NzkxOTk3NX0.-F2iC9-x1QL-iV2gzewmULjsdo1NigYbikWsBCMUAGZSV5C0yTsOL1qPYswp1SV2JPJxvdw0AupnxMqQNRY3hA
+2025-05-22T13:49:55.945+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-7] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch the Category record with id 1
+2025-05-22T13:49:56.176+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-7] c.R.C.Service.CategoryServiceImpl        : Category found with id : 1
+2025-05-22T13:49:57.570+05:30  INFO 6936 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_CATEGORY, Category ID: 1, Category Name: Electronics
+2025-05-22T13:50:00.051+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-9] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDc5MDE5NzUsImV4cCI6MTc0NzkxOTk3NX0.-F2iC9-x1QL-iV2gzewmULjsdo1NigYbikWsBCMUAGZSV5C0yTsOL1qPYswp1SV2JPJxvdw0AupnxMqQNRY3hA
+2025-05-22T13:50:00.080+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-9] c.R.C.Service.CategoryServiceImpl        : Requesting to fetch all the categories
+2025-05-22T13:50:00.266+05:30  INFO 6936 --- [CategoryProduct] [http-nio-8080-exec-9] c.R.C.Service.CategoryServiceImpl        : Fetched 5 categories
+2025-05-22T13:50:00.562+05:30  INFO 6936 --- [CategoryProduct] [global-gcp-pubsub-subscriber1] c.R.C.pubsub.CategoryPubSubSubscriber    : Handling event: GET_All_CATEGORIES, Category Count: 5
