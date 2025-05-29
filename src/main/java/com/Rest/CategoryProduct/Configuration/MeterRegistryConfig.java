@@ -18,5 +18,4 @@ public class MeterRegistryConfig {
     public CountedAspect countedAspect(MeterRegistry meterRegistry) {
         return new CountedAspect(meterRegistry);
     }
-
 }
