@@ -160,26 +160,26 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
-		<!-- Apache Beam SDK -->
+<!--		&lt;!&ndash; Apache Beam SDK &ndash;&gt;
 		<dependency>
 			<groupId>org.apache.beam</groupId>
 			<artifactId>beam-sdks-java-core</artifactId>
 			<version>2.53.0</version>
 		</dependency>
 
-		<!-- Beam runner for Google Cloud Dataflow -->
+		&lt;!&ndash; Beam runner for Google Cloud Dataflow &ndash;&gt;
 		<dependency>
 			<groupId>org.apache.beam</groupId>
 			<artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
 			<version>2.53.0</version>
 		</dependency>
 
-		<!-- Pub/Sub IO -->
+		&lt;!&ndash; Pub/Sub IO &ndash;&gt;
 		<dependency>
 			<groupId>org.apache.beam</groupId>
 			<artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
 			<version>2.53.0</version>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 

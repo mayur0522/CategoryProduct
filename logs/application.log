@@ -89,3 +89,226 @@
 2025-05-29T10:20:20.638+05:30  INFO 31136 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-29T10:20:20.638+05:30  INFO 31136 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-05-29T10:20:20.657+05:30  INFO 31136 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-29T15:28:09.376+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 19260 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-29T15:28:09.381+05:30 DEBUG 19260 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-29T15:28:09.382+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
+2025-05-29T15:28:09.459+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-sdks-java-core\2.53.0\beam-sdks-java-core-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-model-pipeline-2.53.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-model-job-management-2.53.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-vendor-guava-32_1_2-jre-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/byte-buddy-1.12.14.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jsr305-3.0.2.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/error_prone_annotations-2.10.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-annotations-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-databind-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-core-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/slf4j-api-1.7.30.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/snappy-java-1.1.10.4.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/joda-time-2.10.10.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:28:09.460+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-pipeline\2.53.0\beam-model-pipeline-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:28:09.460+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-job-management\2.53.0\beam-model-job-management-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:28:09.460+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-sdks-java-transform-service-launcher\2.53.0\beam-sdks-java-transform-service-launcher-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/beam-vendor-guava-32_1_2-jre-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/slf4j-api-1.7.30.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/args4j-2.33.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/error_prone_annotations-2.10.0.jar
+2025-05-29T15:28:09.460+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-fn-execution\2.53.0\beam-model-fn-execution-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:28:09.461+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-29T15:28:09.461+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-29T15:28:11.378+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T15:28:11.466+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2025-05-29T15:28:11.737+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79c7cc29-2f8e-3ffd-8449-b16c7f26accb
+2025-05-29T15:28:13.148+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-29T15:28:13.172+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-29T15:28:13.173+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-29T15:28:13.270+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-29T15:28:13.271+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3810 ms
+2025-05-29T15:28:14.028+05:30 DEBUG 19260 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-29T15:28:14.282+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T15:28:14.394+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-29T15:28:14.467+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T15:28:14.889+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T15:28:14.931+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T15:28:15.261+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41bbd077
+2025-05-29T15:28:15.263+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T15:28:15.359+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T15:28:16.380+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29T15:28:16.469+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:28:16.589+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-29T15:28:16.674+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-29T15:28:16.785+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-29T15:28:16.786+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-29T15:28:18.725+05:30  WARN 19260 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T15:28:19.900+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-29T15:28:19.957+05:30  WARN 19260 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-29T15:28:20.106+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-29T15:28:20.593+05:30  WARN 19260 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'secretManagerClient' defined in class path resource [com/google/cloud/spring/autoconfigure/secretmanager/GcpSecretManagerAutoConfiguration.class]: Failed to instantiate [com.google.cloud.secretmanager.v1.SecretManagerServiceClient]: Factory method 'secretManagerClient' threw exception with message: 'com.google.api.gax.retrying.RetrySettings$Builder com.google.api.gax.retrying.RetrySettings$Builder.setInitialRpcTimeoutDuration(java.time.Duration)'
+2025-05-29T15:28:20.605+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:28:20.608+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-29T15:28:20.616+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-29T15:28:20.625+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-29T15:28:20.646+05:30  INFO 19260 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-29T15:28:20.673+05:30 ERROR 19260 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder.<clinit>(SecretManagerServiceStubSettings.java:536)
+
+The following method did not exist:
+
+    'com.google.api.gax.retrying.RetrySettings$Builder com.google.api.gax.retrying.RetrySettings$Builder.setInitialRpcTimeoutDuration(java.time.Duration)'
+
+The calling method's class, com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder, was loaded from the following location:
+
+    jar:file:/C:/Users/jatha/.m2/repository/com/google/cloud/google-cloud-secretmanager/2.60.0/google-cloud-secretmanager-2.60.0.jar!/com/google/cloud/secretmanager/v1/stub/SecretManagerServiceStubSettings$Builder.class
+
+The called method's class, com.google.api.gax.retrying.RetrySettings$Builder, is available from the following locations:
+
+    jar:file:/C:/Users/jatha/.m2/repository/com/google/api/gax/2.38.0/gax-2.38.0.jar!/com/google/api/gax/retrying/RetrySettings$Builder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    com.google.api.gax.retrying.RetrySettings.Builder: file:/C:/Users/jatha/.m2/repository/com/google/api/gax/2.38.0/gax-2.38.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder and com.google.api.gax.retrying.RetrySettings$Builder
+
+2025-05-29T15:32:55.502+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 27412 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-29T15:32:55.506+05:30 DEBUG 27412 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-29T15:32:55.508+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
+2025-05-29T15:32:55.602+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-pipeline\2.53.0\beam-model-pipeline-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-pipeline/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:32:55.602+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-job-management\2.53.0\beam-model-job-management-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-job-management/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:32:55.602+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-sdks-java-core\2.53.0\beam-sdks-java-core-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-model-pipeline-2.53.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-model-job-management-2.53.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/beam-vendor-guava-32_1_2-jre-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/byte-buddy-1.12.14.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jsr305-3.0.2.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/error_prone_annotations-2.10.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-annotations-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-databind-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/jackson-core-2.14.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/slf4j-api-1.7.30.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/snappy-java-1.1.10.4.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/joda-time-2.10.10.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-core/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:32:55.602+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-model-fn-execution\2.53.0\beam-model-fn-execution-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/beam-vendor-grpc-1_54_0-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/error_prone_annotations-2.14.0.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-model-fn-execution/2.53.0/conscrypt-openjdk-uber-2.5.2.jar
+2025-05-29T15:32:55.603+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\jatha\.m2\repository\org\apache\beam\beam-sdks-java-transform-service-launcher\2.53.0\beam-sdks-java-transform-service-launcher-2.53.0.jar referenced one or more files that do not exist: file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/beam-vendor-guava-32_1_2-jre-0.1.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/slf4j-api-1.7.30.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/args4j-2.33.jar,file:/C:/Users/jatha/.m2/repository/org/apache/beam/beam-sdks-java-transform-service-launcher/2.53.0/error_prone_annotations-2.10.0.jar
+2025-05-29T15:32:55.603+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-29T15:32:55.603+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-29T15:32:57.460+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T15:32:57.555+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2025-05-29T15:32:57.872+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79c7cc29-2f8e-3ffd-8449-b16c7f26accb
+2025-05-29T15:32:59.127+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-29T15:32:59.150+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-29T15:32:59.150+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-29T15:32:59.260+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-29T15:32:59.261+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3657 ms
+2025-05-29T15:33:00.063+05:30 DEBUG 27412 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-29T15:33:00.306+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T15:33:00.390+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-29T15:33:00.436+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T15:33:00.846+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T15:33:00.892+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T15:33:01.398+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@717d1185
+2025-05-29T15:33:01.401+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T15:33:01.489+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T15:33:02.450+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29T15:33:02.530+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:33:02.641+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-29T15:33:02.715+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-29T15:33:02.797+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-29T15:33:02.797+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-29T15:33:04.482+05:30  WARN 27412 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T15:33:05.809+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-29T15:33:05.861+05:30  WARN 27412 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-29T15:33:06.013+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-29T15:33:06.452+05:30  WARN 27412 --- [CategoryProduct] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'secretManagerClient' defined in class path resource [com/google/cloud/spring/autoconfigure/secretmanager/GcpSecretManagerAutoConfiguration.class]: Failed to instantiate [com.google.cloud.secretmanager.v1.SecretManagerServiceClient]: Factory method 'secretManagerClient' threw exception with message: 'com.google.api.gax.retrying.RetrySettings$Builder com.google.api.gax.retrying.RetrySettings$Builder.setInitialRpcTimeoutDuration(java.time.Duration)'
+2025-05-29T15:33:06.462+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:33:06.465+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-29T15:33:06.474+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-29T15:33:06.480+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-29T15:33:06.500+05:30  INFO 27412 --- [CategoryProduct] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-29T15:33:06.523+05:30 ERROR 27412 --- [CategoryProduct] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder.<clinit>(SecretManagerServiceStubSettings.java:536)
+
+The following method did not exist:
+
+    'com.google.api.gax.retrying.RetrySettings$Builder com.google.api.gax.retrying.RetrySettings$Builder.setInitialRpcTimeoutDuration(java.time.Duration)'
+
+The calling method's class, com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder, was loaded from the following location:
+
+    jar:file:/C:/Users/jatha/.m2/repository/com/google/cloud/google-cloud-secretmanager/2.60.0/google-cloud-secretmanager-2.60.0.jar!/com/google/cloud/secretmanager/v1/stub/SecretManagerServiceStubSettings$Builder.class
+
+The called method's class, com.google.api.gax.retrying.RetrySettings$Builder, is available from the following locations:
+
+    jar:file:/C:/Users/jatha/.m2/repository/com/google/api/gax/2.38.0/gax-2.38.0.jar!/com/google/api/gax/retrying/RetrySettings$Builder.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    com.google.api.gax.retrying.RetrySettings.Builder: file:/C:/Users/jatha/.m2/repository/com/google/api/gax/2.38.0/gax-2.38.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes com.google.cloud.secretmanager.v1.stub.SecretManagerServiceStubSettings$Builder and com.google.api.gax.retrying.RetrySettings$Builder
+
+2025-05-29T15:39:29.516+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Starting CategoryProductApplication using Java 21.0.6 with PID 10988 (C:\Users\jatha\Projects\CategoryProduct\CategoryProduct\target\classes started by jatha in C:\Users\jatha\Projects\CategoryProduct)
+2025-05-29T15:39:29.519+05:30 DEBUG 10988 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-29T15:39:29.520+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : The following 1 profile is active: "dev"
+2025-05-29T15:39:29.591+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-29T15:39:29.592+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-29T15:39:31.164+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T15:39:31.229+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2025-05-29T15:39:31.529+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4ec73edc-3076-37d1-b5a4-32fdd5ff40eb
+2025-05-29T15:39:32.834+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-29T15:39:32.853+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-29T15:39:32.854+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-29T15:39:32.918+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-29T15:39:32.918+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3326 ms
+2025-05-29T15:39:33.589+05:30 DEBUG 10988 --- [CategoryProduct] [restartedMain] c.R.C.Security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-29T15:39:33.822+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T15:39:33.902+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-29T15:39:33.953+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T15:39:34.378+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T15:39:34.422+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-29T15:39:34.771+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42062447
+2025-05-29T15:39:34.775+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-29T15:39:34.846+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T15:39:35.636+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-29T15:39:35.724+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:39:35.838+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-29T15:39:35.905+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.g.c.s.a.c.GcpContextAutoConfiguration  : The default project ID is springboot-app-457506
+2025-05-29T15:39:35.982+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Default credentials provider for service account yoj-ecommerce-application@springboot-app-457506.iam.gserviceaccount.com
+2025-05-29T15:39:35.982+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.g.c.s.core.DefaultCredentialsProvider  : Scopes in use by default credentials: [https://www.googleapis.com/auth/pubsub, https://www.googleapis.com/auth/spanner.admin, https://www.googleapis.com/auth/spanner.data, https://www.googleapis.com/auth/datastore, https://www.googleapis.com/auth/sqlservice.admin, https://www.googleapis.com/auth/devstorage.read_only, https://www.googleapis.com/auth/devstorage.read_write, https://www.googleapis.com/auth/cloudruntimeconfig, https://www.googleapis.com/auth/trace.append, https://www.googleapis.com/auth/cloud-platform, https://www.googleapis.com/auth/cloud-vision, https://www.googleapis.com/auth/bigquery, https://www.googleapis.com/auth/monitoring.write]
+2025-05-29T15:39:37.781+05:30  WARN 10988 --- [CategoryProduct] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T15:39:38.858+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-29T15:39:38.900+05:30  WARN 10988 --- [CategoryProduct] [restartedMain] thorizationManagerRequestMatcherRegistry : One of the patterns in [/actuator/prometheus, auth/login, /swagger-ui/**, /v3/api-docs/**, /swagger-ui.html] is missing a leading slash. This is discouraged; please include the leading slash in all your request matcher patterns. In future versions of Spring Security, leaving out the leading slash will result in an exception.
+2025-05-29T15:39:39.053+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-29T15:39:39.857+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-29T15:39:39.936+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-29T15:39:39.951+05:30  INFO 10988 --- [CategoryProduct] [restartedMain] c.R.C.CategoryProductApplication         : Started CategoryProductApplication in 11.157 seconds (process running for 11.757)
+2025-05-29T15:39:53.223+05:30  INFO 10988 --- [CategoryProduct] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-29T15:39:53.223+05:30  INFO 10988 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-29T15:39:53.225+05:30  INFO 10988 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-29T15:39:53.511+05:30  INFO 10988 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      :  Header :  Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJZb2dlc2giLCJpYXQiOjE3NDg0OTM3ODQsImV4cCI6MTc0ODUxMTc4NH0.41XQ3_d11g_4faDO-SXNUiV4tb0XpEXW0HbyXl27SfMnR2TCWu6MyrLwqR8wgnlrd6KyXZRbbb46S7RYnQxQSA
+2025-05-29T15:39:53.647+05:30  INFO 10988 --- [CategoryProduct] [http-nio-8080-exec-2] o.s.web.filter.OncePerRequestFilter      : Given jwt token is expired !!
+2025-05-29T15:39:53.681+05:30  WARN 10988 --- [CategoryProduct] [http-nio-8080-exec-2] c.R.C.S.JwtAuthenticationEntryPoint      : Access Denied !! Full authentication is required to access this resource
+2025-05-29T15:39:59.945+05:30  INFO 10988 --- [CategoryProduct] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-29T15:39:59.949+05:30  INFO 10988 --- [CategoryProduct] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-29T15:39:59.958+05:30  INFO 10988 --- [CategoryProduct] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T15:39:59.961+05:30  INFO 10988 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-29T15:39:59.968+05:30  INFO 10988 --- [CategoryProduct] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
