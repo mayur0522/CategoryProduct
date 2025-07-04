@@ -1,4 +1,4 @@
-package com.Rest.CategoryProduct.pubsub;
+package com.Rest.CategoryProduct.pubsub.product;
 
 import com.google.api.client.util.Value;
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;

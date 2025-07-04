@@ -44,3 +44,8 @@ management:
 
         enable:
             all=true:
+
+
+# Disable config
+pubsub:
+    enabled=false:

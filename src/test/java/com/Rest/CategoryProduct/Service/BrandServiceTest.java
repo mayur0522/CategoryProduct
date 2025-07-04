@@ -4,7 +4,7 @@ import com.Rest.CategoryProduct.Entity.Brand;
 import com.Rest.CategoryProduct.Entity.Product;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.BrandRepositories;
-import com.Rest.CategoryProduct.pubsub.BrandPubSubPublisher;
+import com.Rest.CategoryProduct.pubsub.brand.BrandPubSubPublisher;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

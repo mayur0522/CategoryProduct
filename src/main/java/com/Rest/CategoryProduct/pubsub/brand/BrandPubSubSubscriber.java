@@ -1,4 +1,4 @@
-package com.Rest.CategoryProduct.pubsub;
+package com.Rest.CategoryProduct.pubsub.brand;
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import com.google.cloud.spring.pubsub.support.BasicAcknowledgeablePubsubMessage;

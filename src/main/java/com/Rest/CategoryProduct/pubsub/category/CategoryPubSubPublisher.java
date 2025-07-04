@@ -1,18 +1,17 @@
-package com.Rest.CategoryProduct.pubsub;
+package com.Rest.CategoryProduct.pubsub.category;
 
 import com.google.cloud.spring.pubsub.core.PubSubTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BrandPubSubPublisher {
-
+public class CategoryPubSubPublisher {
     private final PubSubTemplate pubSubTemplate;
 
-    public BrandPubSubPublisher(PubSubTemplate pubSubTemplate) {
+    public CategoryPubSubPublisher(PubSubTemplate pubSubTemplate) {
         this.pubSubTemplate = pubSubTemplate;
     }
 
     public void publish(String message){
-        pubSubTemplate.publish("yoj-brand-topic",message);
+        pubSubTemplate.publish("yoj-category-topic", message);
     }
 }

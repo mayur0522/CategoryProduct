@@ -3,7 +3,7 @@ package com.Rest.CategoryProduct.Service;
 import com.Rest.CategoryProduct.Entity.Product;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.ProductRepositories;
-import com.Rest.CategoryProduct.pubsub.ProductPubSubPublisher;
+import com.Rest.CategoryProduct.pubsub.product.ProductPubSubPublisher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
