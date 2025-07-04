@@ -5,6 +5,10 @@ spring:
     profiles:
         active: dev
 
+# Disable config
+pubsub:
+    enabled=false:
+
 #  GCP Cloud configuration
     cloud :
         gcp :
@@ -44,8 +48,3 @@ management:
 
         enable:
             all=true:
-
-
-# Disable config
-pubsub:
-    enabled=false:
