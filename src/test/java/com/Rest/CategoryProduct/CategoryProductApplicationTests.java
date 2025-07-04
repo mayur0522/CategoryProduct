@@ -9,5 +9,4 @@ class CategoryProductApplicationTests {
 //	@Test
 //	void contextLoads() {
 //	}
-
 }
