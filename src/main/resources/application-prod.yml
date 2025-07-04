@@ -5,12 +5,12 @@ spring:
       on-profile: prod
 
 #   MySQL Database Configuration
-datasource:
-  url: jdbc:mysql://34.93.20.112:3306/categorydb
-  username: root
-  password: root
-  driver-class-name: com.mysql.cj.jdbc.Driver
-jpa:
-  hibernate:
-    ddl-auto: update
-  show-sql: true
+  datasource:
+    url: jdbc:mysql://34.93.20.112:3306/categorydb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

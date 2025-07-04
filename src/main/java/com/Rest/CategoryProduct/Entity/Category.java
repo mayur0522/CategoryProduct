@@ -17,13 +17,13 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("category_id")
+    @JsonProperty("category_id") // Maps a JSON field to a Java property (and vice versa).
     private long categoryId;
 //    @Column( unique = true)
     private String categoryName;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     @JsonProperty("brands")
-    @JsonManagedReference
+    @JsonManagedReference  // Used to handle bi-directional relationships during JSON serialization to prevent infinite recursion.
     private List<Brand> brands;
 }
