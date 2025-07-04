@@ -1,10 +1,11 @@
-package com.Rest.CategoryProduct.Service;
+package com.Rest.CategoryProduct.Service.Impl;
 
 import com.Rest.CategoryProduct.Entity.Category;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.CategoryRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
+import com.Rest.CategoryProduct.Service.CategoryService;
 import com.Rest.CategoryProduct.pubsub.category.CategoryPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class CategoryServiceImpl implements CategoryService{
+public class CategoryServiceImpl implements CategoryService {
 //    private static final Logger log = LoggerFactory.getLogger(CategoryServiceImpl.class);
     @Autowired
     private CategoryPubSubPublisher pubSubPublisher;

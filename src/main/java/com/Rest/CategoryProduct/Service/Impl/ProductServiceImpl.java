@@ -1,4 +1,4 @@
-package com.Rest.CategoryProduct.Service;
+package com.Rest.CategoryProduct.Service.Impl;
 
 import com.Rest.CategoryProduct.Entity.Product;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
@@ -6,6 +6,7 @@ import com.Rest.CategoryProduct.Repositories.ProductRepositories;
 //import jakarta.persistence.EntityManager;
 //import jakarta.persistence.PersistenceContext;
 //import jakarta.transaction.Transactional;
+import com.Rest.CategoryProduct.Service.ProductService;
 import com.Rest.CategoryProduct.pubsub.product.ProductPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class ProductServiceImpl implements  ProductService{
+public class ProductServiceImpl implements ProductService {
 
 //    private static final Logger log = LoggerFactory.getLogger(ProductServiceImpl.class);
     @Autowired

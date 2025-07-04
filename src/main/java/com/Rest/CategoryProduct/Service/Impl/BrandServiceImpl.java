@@ -1,10 +1,11 @@
-package com.Rest.CategoryProduct.Service;
+package com.Rest.CategoryProduct.Service.Impl;
 
 import com.Rest.CategoryProduct.Entity.Brand;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.BrandRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
+import com.Rest.CategoryProduct.Service.BrandService;
 import com.Rest.CategoryProduct.pubsub.brand.BrandPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-public class BrandServiceImpl implements BrandService{
+public class BrandServiceImpl implements BrandService {
 //    private static final Logger log = LoggerFactory.getLogger(BrandServiceImpl.class);
     @Autowired
     private BrandPubSubPublisher pubSubPublisher;
