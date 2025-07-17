@@ -44,7 +44,19 @@ management:
         export:
             prometheus:
                 enabled: true
-
-
         enable:
             all=true:
+
+
+# As we config multiple bean for category, product and brand we will hard code it
+#Kafka Config
+#    kafka:
+ #       bootstrap-servers: localhost:9092
+  #      consumer:
+   #         group-id: ecom-group
+    #        auto-offset-reset: earliest #latest
+     #       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+       # producer:
+        #    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+         #   value-serializer: org.apache.kafka.common.serialization.StringSerializer

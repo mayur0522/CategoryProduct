@@ -6,6 +6,7 @@ import com.Rest.CategoryProduct.Repositories.BrandRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
 import com.Rest.CategoryProduct.Service.BrandService;
+import com.Rest.CategoryProduct.kafka.brand.BrandKafkaProducer;
 import com.Rest.CategoryProduct.pubsub.brand.BrandPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,9 @@ public class BrandServiceImpl implements BrandService {
     private BrandPubSubPublisher pubSubPublisher;
     @Autowired
     private BrandRepositories brandRepo;
+
+    @Autowired
+    private BrandKafkaProducer brandKafkaProducer;
 
 /*    @PersistenceContext
     private EntityManager entityManager; */
@@ -85,6 +89,7 @@ public class BrandServiceImpl implements BrandService {
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
+        brandKafkaProducer.sendBrand(brand);
         return "Brand inserted successfully";
     }
 

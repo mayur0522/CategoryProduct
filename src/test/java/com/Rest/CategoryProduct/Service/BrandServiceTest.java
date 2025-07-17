@@ -5,6 +5,7 @@ import com.Rest.CategoryProduct.Entity.Product;
 import com.Rest.CategoryProduct.Exceptions.ResourceNotFoundExceptions;
 import com.Rest.CategoryProduct.Repositories.BrandRepositories;
 import com.Rest.CategoryProduct.Service.Impl.BrandServiceImpl;
+import com.Rest.CategoryProduct.kafka.brand.BrandKafkaProducer;
 import com.Rest.CategoryProduct.pubsub.brand.BrandPubSubPublisher;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,13 +30,14 @@ public class BrandServiceTest {
 
     @Mock
     private BrandPubSubPublisher pubSubPublisher;
-
+    @Mock
+    private BrandKafkaProducer brandKafkaProducer;
     @InjectMocks
     private BrandServiceImpl brandService;
 
     List<Brand> mockBrands;
 
-    @BeforeEach
+//    @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
 

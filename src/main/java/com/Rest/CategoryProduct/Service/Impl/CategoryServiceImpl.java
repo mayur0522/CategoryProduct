@@ -6,6 +6,7 @@ import com.Rest.CategoryProduct.Repositories.CategoryRepositories;
 /*import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;*/
 import com.Rest.CategoryProduct.Service.CategoryService;
+import com.Rest.CategoryProduct.kafka.category.CategoryKafkaProducer;
 import com.Rest.CategoryProduct.pubsub.category.CategoryPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -23,6 +24,8 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryPubSubPublisher pubSubPublisher;
     @Autowired
     private CategoryRepositories categoryRepo;
+    @Autowired
+    private CategoryKafkaProducer categoryKafkaProducer;
 
 /*    @PersistenceContext
     private EntityManager entityManager;*/
@@ -80,6 +83,7 @@ public class CategoryServiceImpl implements CategoryService {
 
         String message = jsonObject.toString();
         pubSubPublisher.publish(message);
+        categoryKafkaProducer.sendCategory(category);
         return "Category inserted successfully";
     }
 

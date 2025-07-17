@@ -7,6 +7,7 @@ import com.Rest.CategoryProduct.Repositories.ProductRepositories;
 //import jakarta.persistence.PersistenceContext;
 //import jakarta.transaction.Transactional;
 import com.Rest.CategoryProduct.Service.ProductService;
+import com.Rest.CategoryProduct.kafka.product.ProductKafkaProducer;
 import com.Rest.CategoryProduct.pubsub.product.ProductPubSubPublisher;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +25,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductPubSubPublisher pubSubPublisher;
     @Autowired
     private ProductRepositories productRepo;
+    @Autowired
+    private ProductKafkaProducer productKafkaProducer;
 
 /*    @PersistenceContext
     private EntityManager entityManager;*/
@@ -84,7 +87,7 @@ public class ProductServiceImpl implements ProductService {
 
 //        String message = String.format("{\"event\":\"PRODUCT_CREATED\", \"id\":%d, \"name\":\"%s\" }",product.getProductId(),product.getProductName());
         pubSubPublisher.publish(message);
-
+        productKafkaProducer.sendProduct(product);
         return "Product inserted successfully";
     }
 
