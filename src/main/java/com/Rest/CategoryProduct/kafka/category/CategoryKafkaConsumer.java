@@ -18,4 +18,3 @@ public class CategoryKafkaConsumer {
         log.info("Received Category (Through kafka): " + category);
     }
 }
-
