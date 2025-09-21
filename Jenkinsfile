@@ -1,51 +1,124 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Git Branch')
+    environment {
+        SCANNER_HOME = tool 'sonar-scanner'
+        PROJECT_ID   = 'gke-springboot-472605'   // your GCP Project ID
+        REGION       = 'asia-south1'
+        ZONE         = 'asia-south1-b'
+        CLUSTER      = 'gke-cluster'
+        IMAGE_NAME   = 'springboot-app'
+        REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
     }
 
-    environment {
-        APP_NAME = 'CategoryProduct'
+    tools {
+        maven 'maven3'
+        jdk 'jdk-17'
+    }
+
+    triggers {
+        githubPush()   // auto-trigger when GitHub repo is updated
     }
 
     stages {
-        stage('Checkout') {
+        stage('Git Checkout') {
             steps {
-                git branch: "${params.BRANCH_NAME}", url: 'https://github.com/Yogeshjathar/CategoryProduct.git'
-//                 checkout scm
+                git branch: 'master', url: 'https://github.com/Yogeshjathar/CategoryProduct.git'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                sh "mvn compile"
+            }
+        }
+
+        stage('Unit Tests') {
+            steps {
+                sh "mvn test -DskipTests=true"
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh """
+                        ${env.SCANNER_HOME}/bin/sonar-scanner \
+                        -Dsonar.projectKey=springboot-app \
+                        -Dsonar.projectName=springboot-app \
+                        -Dsonar.java.binaries=target/classes
+                    """
+                }
+            }
+        }
+
+        stage('OWASP Dependency Check') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./', odcInstallation: 'DC'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
 
         stage('Build') {
             steps {
-                echo "Building ${env.APP_NAME} from ${params.BRANCH_NAME} branch"
-                bat 'mvn clean install -DskipTests'
-
+                sh "mvn package -DskipTests=true"
             }
         }
 
-        stage('Test') {
+        stage('Deploy to Nexus') {
             steps {
-                echo 'Running tests...'
-                bat 'mvn clean test'
+                withMaven(globalMavenSettingsConfig: 'global-maven', jdk: 'jdk-17', maven: 'maven3', traceability: true) {
+                    sh "mvn deploy -DskipTests=true"
+                }
             }
         }
 
-        stage('Package') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Packaging application...'
-                bat 'mvn package'
+                script {
+                    sh "docker build -t ${REPO}:latest -f docker/Dockerfile ."
+                }
+            }
+        }
+
+        stage('Authenticate with GCP') {
+            steps {
+                withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
+                    sh 'gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS'
+                    sh "gcloud config set project ${PROJECT_ID}"
+                    sh "gcloud auth configure-docker ${REGION}-docker.pkg.dev"
+                }
+            }
+        }
+
+        stage('Push Docker Image to Artifact Registry') {
+            steps {
+                sh "docker push ${REPO}:latest"
+            }
+        }
+
+        stage('Get GKE Credentials') {
+            steps {
+                sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
+            }
+        }
+
+        stage('Deploy to GKE') {
+            steps {
+                sh """
+                    kubectl apply -f k8s/deployment.yaml
+                    kubectl apply -f k8s/service.yaml
+                """
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline executed successfully.'
+            echo '✅ Spring Boot project deployed successfully to GKE!'
         }
         failure {
-            echo 'Pipeline failed. Please check the logs.'
+            echo '❌ Deployment failed.'
         }
     }
 }
