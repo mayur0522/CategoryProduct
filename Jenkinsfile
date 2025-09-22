@@ -23,7 +23,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/mayur0522/springboot-app-GKE.git'
+                git branch: 'main', url: 'https://github.com/mayur0522/springboot-app-GKE.git'
             }
         }
 
