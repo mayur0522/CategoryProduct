@@ -13,7 +13,7 @@ pipeline {
 
     tools {
         maven 'maven3'
-        jdk 'jdk-17'
+        jdk 'jdk-21'
     }
 
     triggers {
