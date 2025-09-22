@@ -17,7 +17,7 @@ pipeline {
     }
 
     triggers {
-        githubPush()   // auto-trigger when GitHub repo is updated
+        githubPush()
     }
 
     stages {
@@ -28,22 +28,22 @@ pipeline {
         }
 
         stage('Compile') {
-    steps {
-        sh "mvn compile"
-    }
-}
+            steps {
+                sh "mvn compile"
+            }
+        }
 
-stage('Unit Tests') {
-    steps {
-        sh "mvn test -DskipTests=true"
-    }
-}
+        stage('Unit Tests') {
+            steps {
+                sh "mvn test -DskipTests=true"
+            }
+        }
 
-stage('Package App') 
-    steps {
-        sh "mvn package -DskipTests=true"
-    }
-}
+        stage('Package App') {
+            steps {
+                sh "mvn package -DskipTests=true"
+            }
+        }
 
         stage('SonarQube Analysis') {
             steps {
@@ -75,7 +75,7 @@ stage('Package App')
             }
         }
 
-        stage('Build Docker Image') {   // unique name
+        stage('Build Docker Image') {
             steps {
                 script {
                     sh "docker build -t ${REPO}:latest -f Dockerfile ."
