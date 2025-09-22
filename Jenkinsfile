@@ -28,29 +28,28 @@ pipeline {
         }
 
         stage('Compile') {
-    steps {
-        dir('CategoryProduct') {   // <-- adjust if pom.xml is inside a subfolder
-            sh "mvn compile"
+            steps {
+                dir('CategoryProduct') {
+                    sh "mvn compile"
+                }
+            }
         }
-    }
-}
 
-stage('Unit Tests') {
-    steps {
-        dir('CategoryProduct') {
-            sh "mvn test -DskipTests=true"
+        stage('Unit Tests') {
+            steps {
+                dir('CategoryProduct') {
+                    sh "mvn test -DskipTests=true"
+                }
+            }
         }
-    }
-}
 
-stage('Build') {
-    steps {
-        dir('CategoryProduct') {
-            sh "mvn package -DskipTests=true"
+        stage('Package App') {        // renamed from Build
+            steps {
+                dir('CategoryProduct') {
+                    sh "mvn package -DskipTests=true"
+                }
+            }
         }
-    }
-}
-
 
         stage('SonarQube Analysis') {
             steps {
@@ -72,21 +71,17 @@ stage('Build') {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh "mvn package -DskipTests=true"
-            }
-        }
-
         stage('Deploy to Nexus') {
             steps {
-              withMaven(globalMavenSettingsConfig: '60870c10-d042-409e-bddf-c868fbc611c4', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
-                    sh "mvn deploy -DskipTests=true"
+                dir('CategoryProduct') {
+                    withMaven(globalMavenSettingsConfig: '60870c10-d042-409e-bddf-c868fbc611c4', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
+                        sh "mvn deploy -DskipTests=true"
+                    }
                 }
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build Docker Image') {   // unique name
             steps {
                 script {
                     sh "docker build -t ${REPO}:latest -f Dockerfile ."
