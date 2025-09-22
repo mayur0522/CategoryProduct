@@ -54,14 +54,13 @@ pipeline {
                     -Dsonar.projectKey=springboot-app \
                     -Dsonar.projectName=springboot-app \
                     -Dsonar.java.binaries=target/classes \
-                    -Dsonar.login=$SONAR_TOKEN \
-                    -Djavax.net.ssl.trustStore=${JAVA_HOME}/lib/security/cacerts \
-                    -Djavax.net.ssl.trustStorePassword=changeit
+                    -Dsonar.token=$SONAR_TOKEN
                 """
             }
         }
     }
 }
+
 
 
         stage('OWASP Dependency Check') {
