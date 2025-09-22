@@ -28,28 +28,22 @@ pipeline {
         }
 
         stage('Compile') {
-            steps {
-                dir('CategoryProduct') {
-                    sh "mvn compile"
-                }
-            }
-        }
+    steps {
+        sh "mvn compile"
+    }
+}
 
-        stage('Unit Tests') {
-            steps {
-                dir('CategoryProduct') {
-                    sh "mvn test -DskipTests=true"
-                }
-            }
-        }
+stage('Unit Tests') {
+    steps {
+        sh "mvn test -DskipTests=true"
+    }
+}
 
-        stage('Package App') {        // renamed from Build
-            steps {
-                dir('CategoryProduct') {
-                    sh "mvn package -DskipTests=true"
-                }
-            }
-        }
+stage('Package App') 
+    steps {
+        sh "mvn package -DskipTests=true"
+    }
+}
 
         stage('SonarQube Analysis') {
             steps {
