@@ -1,12 +1,11 @@
-# Use official OpenJDK 21 JDK base image
-FROM openjdk:21-jdk
+FROM openjdk:8u151-jdk-alpine3.7
 
-WORKDIR /app
+EXPOSE 8070
 
-# Copy the built jar file into the container
-COPY target/*.jar app.jar
+ENV APP_HOME /usr/src/app
 
-EXPOSE 8080
+COPY target/springboot-0.0.1-SNAPSHOT.jar $APP_HOME/app.jar
 
-# Run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+WORKDIR $APP_HOME
+
+ENTRYPOINT exec java -jar app.jar
