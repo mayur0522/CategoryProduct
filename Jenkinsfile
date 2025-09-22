@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        PROJECT_ID   = 'gke-springboot-472605'   // your GCP Project ID
+        PROJECT_ID   = 'gke-springboot-472605'
         REGION       = 'asia-south1'
         ZONE         = 'asia-south1-b'
         CLUSTER      = 'gke-cluster'
@@ -23,13 +23,13 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mayur0522/springboot-app-GKE.git'
+                git branch: 'main', url: 'https://github.com/mayur0522/CategoryProduct.git'
             }
         }
 
         stage('Compile') {
             steps {
-                sh "mvn compile"
+                sh "mvn clean compile"
             }
         }
 
@@ -67,19 +67,15 @@ pipeline {
 
         stage('Deploy to Nexus') {
             steps {
-                dir('CategoryProduct') {
-                    withMaven(globalMavenSettingsConfig: '60870c10-d042-409e-bddf-c868fbc611c4', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
-                        sh "mvn deploy -DskipTests=true"
-                    }
+                withMaven(globalMavenSettingsConfig: '60870c10-d042-409e-bddf-c868fbc611c4', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
+                    sh "mvn deploy -DskipTests=true"
                 }
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh "docker build -t ${REPO}:latest -f Dockerfile ."
-                }
+                sh "docker build -t ${REPO}:latest -f Dockerfile ."
             }
         }
 
