@@ -16,52 +16,34 @@ pipeline {
         jdk 'jdk-21'
     }
 
-    triggers {
-        githubPush()
-    }
-
     stages {
-        stage('Git Checkout') {
+        stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/mayur0522/CategoryProduct.git'
             }
         }
 
-        stage('Compile') {
+        stage('Build') {
             steps {
-                sh "mvn clean compile"
+                sh "mvn clean package -DskipTests"
             }
         }
 
-        stage('Unit Tests') {
+        stage('SonarQube Analysis') {
             steps {
-                sh "mvn test -DskipTests=true"
+                withSonarQubeEnv('sonar-token') {
+                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                        sh """
+                            ${env.SCANNER_HOME}/bin/sonar-scanner \
+                            -Dsonar.projectKey=springboot-app \
+                            -Dsonar.projectName=springboot-app \
+                            -Dsonar.java.binaries=target/classes \
+                            -Dsonar.token=$SONAR_TOKEN
+                        """
+                    }
+                }
             }
         }
-
-        stage('Package App') {
-            steps {
-                sh "mvn package -DskipTests=true"
-            }
-        }
-
-      stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('sonar-token') {
-            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                sh """
-                    ${env.SCANNER_HOME}/bin/sonar-scanner \
-                    -Dsonar.projectKey=springboot-app \
-                    -Dsonar.projectName=springboot-app \
-                    -Dsonar.java.binaries=target/classes \
-                    -Dsonar.token=$SONAR_TOKEN
-                """
-            }
-        }
-    }
-}
-
-
 
         stage('OWASP Dependency Check') {
             steps {
@@ -70,17 +52,13 @@ pipeline {
             }
         }
 
-       stage('Deploy to Nexus') {
-    steps {
-        withCredentials([usernamePassword(credentialsId: 'nexus-credentials', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASS')]) {
-            withMaven(globalMavenSettingsConfig: 'maven-settings', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
-                sh "mvn deploy -DskipTests=true"
+        stage('Deploy to Nexus') {
+            steps {
+                withMaven(globalMavenSettingsConfig: '60870c10-d042-409e-bddf-c868fbc611c4', jdk: 'jdk-21', maven: 'maven3') {
+                    sh "mvn deploy -DskipTests"
+                }
             }
         }
-    }
-}
-
-
 
         stage('Build Docker Image') {
             steps {
@@ -98,24 +76,17 @@ pipeline {
             }
         }
 
-        stage('Push Docker Image to Artifact Registry') {
+        stage('Push Docker Image') {
             steps {
                 sh "docker push ${REPO}:latest"
             }
         }
 
-        stage('Get GKE Credentials') {
-            steps {
-                sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-            }
-        }
-
         stage('Deploy to GKE') {
             steps {
-                sh """
-                    kubectl apply -f k8s/deployment.yaml
-                    kubectl apply -f k8s/service.yaml
-                """
+                sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
+                sh "kubectl apply -f k8s/deployment.yaml"
+                sh "kubectl apply -f k8s/service.yaml"
             }
         }
     }
