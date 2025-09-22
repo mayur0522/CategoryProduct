@@ -70,13 +70,16 @@ pipeline {
             }
         }
 
-        stage('Deploy to Nexus') {
-            steps {
-                withMaven(globalMavenSettingsConfig: 'maven-snapshots', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
-                    sh "mvn deploy -DskipTests=true"
-                }
+       stage('Deploy to Nexus') {
+    steps {
+        withCredentials([usernamePassword(credentialsId: 'nexus-credentials', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASS')]) {
+            withMaven(globalMavenSettingsConfig: 'maven-settings', jdk: 'jdk-21', maven: 'maven3', traceability: true) {
+                sh "mvn deploy -DskipTests=true"
             }
         }
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
