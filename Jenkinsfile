@@ -45,18 +45,19 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('sonar-token') {
-                    sh """
-                        ${env.SCANNER_HOME}/bin/sonar-scanner \
-                        -Dsonar.projectKey=springboot-app \
-                        -Dsonar.projectName=springboot-app \
-                        -Dsonar.java.binaries=target/classes
-                    """
-                }
-            }
-        }
+        withSonarQubeEnv('SonarQube') {
+    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+        sh """
+            ${env.SCANNER_HOME}/bin/sonar-scanner \
+            -Dsonar.projectKey=springboot-app \
+            -Dsonar.projectName=springboot-app \
+            -Dsonar.java.binaries=target/classes \
+            -Dsonar.login=$SONAR_TOKEN \
+            -Djavax.net.ssl.trustStore=${JAVA_HOME}/lib/security/cacerts \
+            -Djavax.net.ssl.trustStorePassword=changeit
+        """
+    }
+}
 
         stage('OWASP Dependency Check') {
             steps {
