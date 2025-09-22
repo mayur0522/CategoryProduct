@@ -76,7 +76,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${REPO}:latest -f docker/Dockerfile ."
+                    sh "docker build -t ${REPO}:latest -f Dockerfile ."
                 }
             }
         }
