@@ -28,16 +28,29 @@ pipeline {
         }
 
         stage('Compile') {
-            steps {
-                sh "mvn compile"
-            }
+    steps {
+        dir('CategoryProduct') {   // <-- adjust if pom.xml is inside a subfolder
+            sh "mvn compile"
         }
+    }
+}
 
-        stage('Unit Tests') {
-            steps {
-                sh "mvn test -DskipTests=true"
-            }
+stage('Unit Tests') {
+    steps {
+        dir('CategoryProduct') {
+            sh "mvn test -DskipTests=true"
         }
+    }
+}
+
+stage('Build') {
+    steps {
+        dir('CategoryProduct') {
+            sh "mvn package -DskipTests=true"
+        }
+    }
+}
+
 
         stage('SonarQube Analysis') {
             steps {
