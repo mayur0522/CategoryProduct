@@ -47,6 +47,12 @@ management:
         enable:
             all=true:
 
+    endpoint:
+        health:
+            probes:
+                enable: true
+            
+
 
 # As we config multiple bean for category, product and brand we will hard code it
 #Kafka Config
