@@ -83,14 +83,21 @@ pipeline {
             }
         }
 
-        stage('Deploy to GKE') {
-            steps {
-                sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-                sh "kubectl apply -f k8s/deployment.yaml"
-                sh "kubectl apply -f k8s/service.yaml"
+       stage('Deploy to GKE') {
+    steps {
+        script {
+            def applyDeployment = sh(script: "kubectl apply -f k8s/deployment.yaml", returnStatus: true)
+            def applyService = sh(script: "kubectl apply -f k8s/service.yaml", returnStatus: true)
+            
+            if (applyDeployment != 0 || applyService != 0) {
+                error "❌ Kubernetes deployment failed"
+            } else {
+                echo "✅ Kubernetes resources applied successfully"
             }
         }
     }
+}
+
 
     post {
         success {
