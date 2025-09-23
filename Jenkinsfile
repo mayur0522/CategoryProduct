@@ -30,20 +30,21 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-            steps {
-               withSonarQubeEnv(credentialsId: 'sonar-token') {
-                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                        sh """
-                            ${env.SCANNER_HOME}/bin/sonar-scanner \
-                            -Dsonar.projectKey=springboot-app \
-                            -Dsonar.projectName=springboot-app \
-                            -Dsonar.java.binaries=target/classes \
-                            -Dsonar.token=$SONAR_TOKEN
-                        """
-                    }
-                }
+    steps {
+        withSonarQubeEnv('sonar') {
+            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                sh """
+                    ${env.SCANNER_HOME}/bin/sonar-scanner \
+                    -Dsonar.projectKey=springboot-app \
+                    -Dsonar.projectName=springboot-app \
+                    -Dsonar.java.binaries=target/classes \
+                    -Dsonar.token=$SONAR_TOKEN
+                """
             }
         }
+    }
+}
+
 
         stage('OWASP Dependency Check') {
             steps {
