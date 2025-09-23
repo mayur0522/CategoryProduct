@@ -83,20 +83,14 @@ pipeline {
             }
         }
 
-       stage('Deploy to GKE') {
+     stage('Deploy to GKE') {
     steps {
-        script {
-            def applyDeployment = sh(script: "kubectl apply -f k8s/deployment.yaml", returnStatus: true)
-            def applyService = sh(script: "kubectl apply -f k8s/service.yaml", returnStatus: true)
-            
-            if (applyDeployment != 0 || applyService != 0) {
-                error "❌ Kubernetes deployment failed"
-            } else {
-                echo "✅ Kubernetes resources applied successfully"
-            }
-        }
+        sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
+        sh 'kubectl apply -f k8s/service.yaml --record --wait'
+        echo "✅ Kubernetes resources applied successfully"
     }
 }
+
 
 
     post {
