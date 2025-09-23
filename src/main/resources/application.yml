@@ -1,68 +1,57 @@
 # Spring Application Name
 spring:
-    application:
-        name: CategoryProduct
-    profiles:
-        active: dev
+  application:
+    name: CategoryProduct
+  profiles:
+    active: dev
 
 # Disable config
 pubsub:
-    enabled=false:
+  enabled: false
 
-#  GCP Cloud configuration
-    cloud :
-        gcp :
-            project-id : springboot-app-457506
-            credentials :
-                location : classpath:springboot-app-457506-459b9c19321c.json
+# GCP Cloud configuration
+cloud:
+  gcp:
+    project-id: gke-springboot-472605
+    credentials:
+      location: classpath:springboot-app-457506-459b9c19321c.json
 
-#   Setting spring security default user using yaml
-#    security :
-#        user:
-#            name: Yogesh
-#            password: 123
-
-#Logging Configuration
+# Logging Configuration
 logging:
-    level:
-        root: INFO
-        com.Rest.CategoryProduct: DEBUG
-    file:
-        name: CategoryProduct\logs\application.log
+  level:
+    root: INFO
+    com.Rest.CategoryProduct: DEBUG
+  file:
+    name: CategoryProduct/logs/application.log
 
-# Prometheus
+# Prometheus / Actuator
 management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-            base-path: /actuator
-    endpoint:
-        prometheus:
-            enabled: true
-    metrics:
-        export:
-            prometheus:
-                enabled: true
-        enable:
-            all=true:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    enable:
+      all: true
+  endpoint:
+    prometheus:
+      enabled: true
+    health:
+      probes:
+        enabled: true
 
-    endpoint:
-        health:
-            probes:
-                enable: true
-            
-
-
-# As we config multiple bean for category, product and brand we will hard code it
-#Kafka Config
-#    kafka:
- #       bootstrap-servers: localhost:9092
-  #      consumer:
-   #         group-id: ecom-group
-    #        auto-offset-reset: earliest #latest
-     #       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-       # producer:
-        #    key-serializer: org.apache.kafka.common.serialization.StringSerializer
-         #   value-serializer: org.apache.kafka.common.serialization.StringSerializer
+# Kafka Config (commented for now)
+# kafka:
+#   bootstrap-servers: localhost:9092
+#   consumer:
+#     group-id: ecom-group
+#     auto-offset-reset: earliest
+#     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#     value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#   producer:
+#     key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#     value-serializer: org.apache.kafka.common.serialization.StringSerializer
