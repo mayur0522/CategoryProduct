@@ -83,14 +83,16 @@ pipeline {
             }
         }
 
-     stage('Deploy to GKE') {
+    stage('Deploy to GKE') {
     steps {
-        sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
-        sh 'kubectl apply -f k8s/service.yaml --record --wait'
-        echo "✅ Kubernetes resources applied successfully"
+        script {
+            // Apply deployment and service safely
+            sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
+            sh 'kubectl apply -f k8s/service.yaml --record --wait'
+            echo "✅ Kubernetes resources applied successfully"
+        }
     }
 }
-
 
 
     post {
