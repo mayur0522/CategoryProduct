@@ -30,21 +30,20 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('sonar') {
-            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                sh """
-                    ${env.SCANNER_HOME}/bin/sonar-scanner \
-                    -Dsonar.projectKey=springboot-app \
-                    -Dsonar.projectName=springboot-app \
-                    -Dsonar.java.binaries=target/classes \
-                    -Dsonar.token=$SONAR_TOKEN
-                """
+            steps {
+                withSonarQubeEnv('sonar') {
+                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                        sh """
+                            ${env.SCANNER_HOME}/bin/sonar-scanner \
+                            -Dsonar.projectKey=springboot-app \
+                            -Dsonar.projectName=springboot-app \
+                            -Dsonar.java.binaries=target/classes \
+                            -Dsonar.token=$SONAR_TOKEN
+                        """
+                    }
+                }
             }
         }
-    }
-}
-
 
         stage('OWASP Dependency Check') {
             steps {
@@ -83,17 +82,17 @@ pipeline {
             }
         }
 
-    stage('Deploy to GKE') {
-    steps {
-        script {
-            // Apply deployment and service safely
-            sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
-            sh 'kubectl apply -f k8s/service.yaml --record --wait'
-            echo "✅ Kubernetes resources applied successfully"
+        stage('Deploy to GKE') {
+            steps {
+                script {
+                    sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
+                    sh 'kubectl apply -f k8s/service.yaml --record --wait'
+                    echo "✅ Kubernetes resources applied successfully"
+                }
+            }
         }
-    }
-}
 
+    } // <-- CLOSES the stages block
 
     post {
         success {
@@ -103,4 +102,5 @@ pipeline {
             echo '❌ Deployment failed.'
         }
     }
-}
+
+} // <-- CLOSES the pipeline block
