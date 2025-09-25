@@ -1,7 +1,7 @@
 spring:
   cloud:
     vault:
-      uri: http://<VAULT_HOST>:8200
+      uri: http://34.180.3.84:8200
       token: <VAULT_TOKEN>
       kv:
         enabled: true
