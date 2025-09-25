@@ -10,8 +10,8 @@ pipeline {
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
         
-        VAULT_ADDR  = 'http://34.180.3.84:8200'  // Replace with your Vault host
-        VAULT_TOKEN = credentials('vault-token')  // Jenkins secret for Vault token
+        VAULT_ADDR  = 'http://34.180.3.84:8200'  
+        VAULT_TOKEN = credentials('vault-token')  
     }
 
     tools {
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        export DB_CREDS=$(vault kv get -format=json secret/data/categorydb)
+                        DB_CREDS=$(vault kv get -format=json secret/data/categorydb)
                         export DB_USERNAME=$(echo $DB_CREDS | jq -r '.data.data.username')
                         export DB_PASSWORD=$(echo $DB_CREDS | jq -r '.data.data.password')
                         export DB_HOST=$(echo $DB_CREDS | jq -r '.data.data.host')
@@ -45,7 +45,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn clean package -DskipTests"
+                sh "mvn clean install -DskipTests"
             }
         }
 
@@ -72,17 +72,9 @@ pipeline {
             }
         }
 
-        stage('Deploy to Nexus') {
-            steps {
-                withMaven(globalMavenSettingsConfig: 'global-maven', jdk: 'jdk-21', maven: 'maven3') {
-                    sh "mvn deploy -DskipTests"
-                }
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
-                sh '''
+                sh """
                     docker build \
                         --build-arg DB_USERNAME=$DB_USERNAME \
                         --build-arg DB_PASSWORD=$DB_PASSWORD \
@@ -90,7 +82,7 @@ pipeline {
                         --build-arg DB_PORT=$DB_PORT \
                         --build-arg DB_NAME=$DB_NAME \
                         -t ${REPO}:latest -f Dockerfile .
-                '''
+                """
             }
         }
 
@@ -113,8 +105,8 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
-                    sh 'kubectl apply -f k8s/service.yaml --record --wait'
+                    sh 'kubectl apply -f k8s/deployment.yaml -n default --record --wait'
+                    sh 'kubectl apply -f k8s/service.yaml -n default --record --wait'
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
