@@ -149,13 +149,11 @@
     <!-- Maven Distribution Management for Deploy -->
     <distributionManagement>
         <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Releases</name>
+            <id>maven-releases</id>
             <url>http://34.93.56.98:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Nexus Snapshots</name>
+            <id>maven-snapshots</id>
             <url>http://34.93.56.98:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
