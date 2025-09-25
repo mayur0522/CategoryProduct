@@ -4,11 +4,11 @@ metadata:
   name: springboot-db-secret
 type: Opaque
 data:
-  DB_USERNAME: <base64-encoded-username>
-  DB_PASSWORD: <base64-encoded-password>
-  DB_HOST: <base64-encoded-host>
-  DB_PORT: <base64-encoded-port>
-  DB_NAME: <base64-encoded-database>
+  DB_USERNAME: springuser
+  DB_PASSWORD: springpass123
+  DB_HOST: 35.200.204.16
+  DB_PORT: 3306
+  DB_NAME: categorydb
 
 ---
 apiVersion: apps/v1
