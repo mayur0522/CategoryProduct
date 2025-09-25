@@ -10,7 +10,7 @@ pipeline {
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
         
-        # Vault Configuration
+        Vault Configuration
         VAULT_ADDR  = 'http://34.180.3.84:8200'  // Replace with Vault host
         VAULT_TOKEN = credentials('vault-token')  // Jenkins secret for Vault token
     }
