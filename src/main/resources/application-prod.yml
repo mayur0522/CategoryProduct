@@ -1,16 +1,19 @@
-# Setting profile
 spring:
-  config:
-    activate:
-      on-profile: prod
-
-#   MySQL Database Configuration
+  cloud:
+    vault:
+      uri: http://<VAULT_HOST>:8200
+      token: <VAULT_TOKEN>
+      kv:
+        enabled: true
+        backend: secret
+        default-context: gcp/cloudsql/categorydb
   datasource:
-    url: jdbc:mysql://35.200.204.16:3306/categorydb
-    username: root
-    password: root
+    url: jdbc:mysql://${spring.cloud.vault.database.host}:${spring.cloud.vault.database.port}/${spring.cloud.vault.database.database}
+    username: ${spring.cloud.vault.database.username}
+    password: ${spring.cloud.vault.database.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
