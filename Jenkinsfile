@@ -29,21 +29,20 @@ pipeline {
         }
 
         stage('Fetch Secrets from Vault') {
-            steps {
-                script {
-                    // Fetch DB credentials from Vault using CLI
-                    sh """
-                        export DB_CREDS=\$(vault kv get -format=json secret/categorydb)
-                        export DB_USERNAME=\$(echo \$DB_CREDS | jq -r '.data.username')
-                        export DB_PASSWORD=\$(echo \$DB_CREDS | jq -r '.data.password')
-                        export DB_HOST=\$(echo \$DB_CREDS | jq -r '.data.host')
-                        export DB_PORT=\$(echo \$DB_CREDS | jq -r '.data.port')
-                        export DB_NAME=\$(echo \$DB_CREDS | jq -r '.data.database')
-                    """
-                    echo "✅ Fetched DB credentials from Vault"
-                }
-            }
+    steps {
+        script {
+            sh """
+                export DB_CREDS=\$(vault kv get -format=json secret/data/categorydb)
+                export DB_USERNAME=\$(echo \$DB_CREDS | jq -r '.data.data.username')
+                export DB_PASSWORD=\$(echo \$DB_CREDS | jq -r '.data.data.password')
+                export DB_HOST=\$(echo \$DB_CREDS | jq -r '.data.data.host')
+                export DB_PORT=\$(echo \$DB_CREDS | jq -r '.data.data.port')
+                export DB_NAME=\$(echo \$DB_CREDS | jq -r '.data.data.database')
+            """
+            echo "✅ Fetched DB credentials from Vault"
         }
+    }
+}
 
         stage('Build') {
             steps {
