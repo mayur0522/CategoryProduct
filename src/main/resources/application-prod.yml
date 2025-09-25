@@ -8,7 +8,7 @@ spring:
         backend: secret
         default-context: gcp/cloudsql/categorydb
   datasource:
-    url: jdbc:mysql://35.244.27.3:3306/categorydb
+    url: jdbc:mysql://${spring.cloud.vault.database.host}:${spring.cloud.vault.database.port}/${spring.cloud.vault.database.database}
     username: ${spring.cloud.vault.database.username}
     password: ${spring.cloud.vault.database.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
