@@ -5,10 +5,10 @@ WORKDIR /usr/src/app
 # Create logs folder
 RUN mkdir -p CategoryProduct/logs
 
-# Copy the JAR built by Maven
+# Copy the correct JAR produced by Maven
 COPY target/app.jar app.jar
 
-# Expose port
+# Expose the port
 EXPOSE 8070
 
 # Run the app
