@@ -9,9 +9,8 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-        
-        
-        VAULT_ADDR  = 'http://34.180.3.84:8200'  // Replace with Vault host
+
+        VAULT_ADDR  = 'http://34.180.3.84:8200'
         VAULT_TOKEN = credentials('vault-token')  // Jenkins secret for Vault token
     }
 
@@ -28,21 +27,36 @@ pipeline {
             }
         }
 
-        stage('Fetch Secrets from Vault') {
-    steps {
-        script {
-            sh """
-                export DB_CREDS=\$(vault kv get -format=json secret/data/categorydb)
-                export DB_USERNAME=\$(echo \$DB_CREDS | jq -r '.data.data.username')
-                export DB_PASSWORD=\$(echo \$DB_CREDS | jq -r '.data.data.password')
-                export DB_HOST=\$(echo \$DB_CREDS | jq -r '.data.data.host')
-                export DB_PORT=\$(echo \$DB_CREDS | jq -r '.data.data.port')
-                export DB_NAME=\$(echo \$DB_CREDS | jq -r '.data.data.database')
-            """
-            echo "✅ Fetched DB credentials from Vault"
+        stage('Install Vault CLI') {
+            steps {
+                sh """
+                    if ! command -v vault &> /dev/null; then
+                        echo "Vault CLI not found, installing..."
+                        curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+                        echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+                        sudo apt-get update && sudo apt-get install vault -y
+                    fi
+                    vault --version
+                """
+            }
         }
-    }
-}
+
+        stage('Fetch Secrets from Vault') {
+            steps {
+                script {
+                    sh """
+                        export VAULT_TOKEN=${VAULT_TOKEN}
+                        DB_CREDS=\$(vault kv get -format=json secret/categorydb)
+                        export DB_USERNAME=\$(echo \$DB_CREDS | jq -r '.data.data.username')
+                        export DB_PASSWORD=\$(echo \$DB_CREDS | jq -r '.data.data.password')
+                        export DB_HOST=\$(echo \$DB_CREDS | jq -r '.data.data.host')
+                        export DB_PORT=\$(echo \$DB_CREDS | jq -r '.data.data.port')
+                        export DB_NAME=\$(echo \$DB_CREDS | jq -r '.data.data.database')
+                    """
+                    echo "✅ DB credentials fetched from Vault"
+                }
+            }
+        }
 
         stage('Build') {
             steps {
@@ -98,9 +112,11 @@ pipeline {
         stage('Authenticate with GCP') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    sh 'gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS'
-                    sh "gcloud config set project ${PROJECT_ID}"
-                    sh "gcloud auth configure-docker ${REGION}-docker.pkg.dev"
+                    sh """
+                        gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+                        gcloud config set project ${PROJECT_ID}
+                        gcloud auth configure-docker ${REGION}-docker.pkg.dev
+                    """
                 }
             }
         }
@@ -114,14 +130,12 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    // Set env variables for Kubernetes deployment if needed
                     sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
                     sh 'kubectl apply -f k8s/service.yaml --record --wait'
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
         }
-
     }
 
     post {
