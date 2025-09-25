@@ -6,7 +6,7 @@ spring:
 
 #   MySQL Database Configuration
   datasource:
-    url: jdbc:mysql://34.93.20.112:3306/categorydb
+    url: jdbc:mysql://35.200.204.16:3306/categorydb
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
