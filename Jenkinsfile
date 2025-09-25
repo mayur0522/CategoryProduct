@@ -9,6 +9,10 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
+        
+        # Vault Configuration
+        VAULT_ADDR  = 'http://34.180.3.84:8200'  // Replace with Vault host
+        VAULT_TOKEN = credentials('vault-token')  // Jenkins secret for Vault token
     }
 
     tools {
@@ -17,9 +21,27 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/mayur0522/CategoryProduct.git'
+            }
+        }
+
+        stage('Fetch Secrets from Vault') {
+            steps {
+                script {
+                    // Fetch DB credentials from Vault using CLI
+                    sh """
+                        export DB_CREDS=\$(vault kv get -format=json secret/categorydb)
+                        export DB_USERNAME=\$(echo \$DB_CREDS | jq -r '.data.username')
+                        export DB_PASSWORD=\$(echo \$DB_CREDS | jq -r '.data.password')
+                        export DB_HOST=\$(echo \$DB_CREDS | jq -r '.data.host')
+                        export DB_PORT=\$(echo \$DB_CREDS | jq -r '.data.port')
+                        export DB_NAME=\$(echo \$DB_CREDS | jq -r '.data.database')
+                    """
+                    echo "✅ Fetched DB credentials from Vault"
+                }
             }
         }
 
@@ -62,7 +84,15 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${REPO}:latest -f Dockerfile ."
+                sh """
+                    docker build \
+                        --build-arg DB_USERNAME=$DB_USERNAME \
+                        --build-arg DB_PASSWORD=$DB_PASSWORD \
+                        --build-arg DB_HOST=$DB_HOST \
+                        --build-arg DB_PORT=$DB_PORT \
+                        --build-arg DB_NAME=$DB_NAME \
+                        -t ${REPO}:latest -f Dockerfile .
+                """
             }
         }
 
@@ -85,6 +115,7 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
+                    // Set env variables for Kubernetes deployment if needed
                     sh 'kubectl apply -f k8s/deployment.yaml --record --wait'
                     sh 'kubectl apply -f k8s/service.yaml --record --wait'
                     echo "✅ Kubernetes resources applied successfully"
@@ -92,7 +123,7 @@ pipeline {
             }
         }
 
-    } // <-- CLOSES the stages block
+    }
 
     post {
         success {
@@ -102,5 +133,4 @@ pipeline {
             echo '❌ Deployment failed.'
         }
     }
-
-} // <-- CLOSES the pipeline block
+}
