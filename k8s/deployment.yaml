@@ -7,7 +7,7 @@ data:
   DB_USERNAME: c3ByaW5ndXNlcg==       # springuser
   DB_PASSWORD: c3ByaW5ncGFzczEyMw==   # springpass123
   DB_HOST: MzUuMjAwLjIwNC4xNg==       # 35.200.204.16
-  DB_PORT:MzMwNg==                    # 3306
+  DB_PORT: MzMwNg==                    # 3306
   DB_NAME: Y2F0ZWdvcnlkYg==           # categorydb
 
 ---
