@@ -3,7 +3,7 @@ spring:
   application:
     name: CategoryProduct
   profiles:
-    active: dev
+    active: prod
 
 # Disable config
 pubsub:
