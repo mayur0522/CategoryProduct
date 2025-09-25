@@ -30,7 +30,7 @@
         <spring-kafka.version>3.0.9</spring-kafka.version>
     </properties>
 
-    <!-- Spring Cloud BOM for dependency management -->
+    <!-- Spring Cloud BOM -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -145,6 +145,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!-- Maven Distribution Management for Deploy -->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Releases</name>
+            <url>http://34.93.56.98:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshots</name>
+            <url>http://34.93.56.98:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <finalName>app</finalName>
