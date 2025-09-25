@@ -105,6 +105,13 @@
             <artifactId>spring-kafka</artifactId>
             <version>3.3.7</version>
         </dependency>
+        
+      <!-- vault -->
+        <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-starter-vault-config</artifactId>
+        </dependency>
+
 
         <!-- Tests -->
         <dependency>
