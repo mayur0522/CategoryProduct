@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: springboot-app-service
 spec:
-  type: LoadBalancer
   selector:
     app: springboot-app
   ports:
-    - port: 80
-      targetPort: 8080
+    - protocol: TCP
+      port: 8070
+      targetPort: 8070
+  type: LoadBalancer
