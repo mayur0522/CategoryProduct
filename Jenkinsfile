@@ -9,6 +9,9 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
+
+        VAULT_ADDR  = 'http://34.180.3.84:8200'  // Vault host
+        VAULT_TOKEN = credentials('vault-token')  // Jenkins secret for Vault token
     }
 
     tools {
@@ -21,6 +24,22 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/mayur0522/CategoryProduct.git'
+            }
+        }
+
+        stage('Fetch Secrets from Vault') {
+            steps {
+                script {
+                    sh '''
+                        export DB_CREDS=$(vault kv get -format=json secret/data/categorydb)
+                        export DB_USERNAME=$(echo $DB_CREDS | jq -r '.data.data.username')
+                        export DB_PASSWORD=$(echo $DB_CREDS | jq -r '.data.data.password')
+                        export DB_HOST=$(echo $DB_CREDS | jq -r '.data.data.host')
+                        export DB_PORT=$(echo $DB_CREDS | jq -r '.data.data.port')
+                        export DB_NAME=$(echo $DB_CREDS | jq -r '.data.data.database')
+                    '''
+                    echo "✅ Fetched DB credentials from Vault"
+                }
             }
         }
 
@@ -63,9 +82,15 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh """
-                    docker build -t ${REPO}:latest -f Dockerfile .
-                """
+                sh '''
+                    docker build \
+                        --build-arg DB_USERNAME=$DB_USERNAME \
+                        --build-arg DB_PASSWORD=$DB_PASSWORD \
+                        --build-arg DB_HOST=$DB_HOST \
+                        --build-arg DB_PORT=$DB_PORT \
+                        --build-arg DB_NAME=$DB_NAME \
+                        -t ${REPO}:latest -f Dockerfile .
+                '''
             }
         }
 
@@ -88,10 +113,26 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
+                    // Authenticate to GKE
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-                    sh 'kubectl apply -f k8s/deployment.yaml --wait'
-                    sh 'kubectl apply -f k8s/service.yaml --wait'
-                    echo "✅ Kubernetes resources applied successfully"
+
+                    try {
+                        // Apply Deployment and Service
+                        sh "kubectl apply -f k8s/deployment.yaml --wait --timeout=180s"
+                        sh "kubectl apply -f k8s/service.yaml --wait --timeout=60s"
+                        echo "✅ Kubernetes resources applied successfully"
+
+                        // Wait for pods to be ready
+                        sh "kubectl wait --for=condition=ready pod -l app=springboot-app --timeout=180s"
+                        echo "✅ All pods are ready"
+
+                    } catch (err) {
+                        echo "❌ Deployment failed, fetching pod info and logs"
+                        sh "kubectl get pods -l app=springboot-app -o wide"
+                        sh "kubectl describe pod -l app=springboot-app"
+                        sh "kubectl logs -l app=springboot-app --all-containers=true || true"
+                        error("Deployment failed, see pod status/logs above")
+                    }
                 }
             }
         }
