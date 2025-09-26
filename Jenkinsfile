@@ -30,14 +30,19 @@ pipeline {
         stage('Fetch Secrets from Vault') {
             steps {
                 script {
-                    sh '''
-                        export DB_CREDS=$(vault kv get -format=json secret/data/categorydb)
-                        export DB_USERNAME=$(echo $DB_CREDS | jq -r '.data.data.username')
-                        export DB_PASSWORD=$(echo $DB_CREDS | jq -r '.data.data.password')
-                        export DB_HOST=$(echo $DB_CREDS | jq -r '.data.data.host')
-                        export DB_PORT=$(echo $DB_CREDS | jq -r '.data.data.port')
-                        export DB_NAME=$(echo $DB_CREDS | jq -r '.data.data.database')
-                    '''
+                    // Fetch secrets from Vault
+                    def dbCreds = sh(
+                        script: "vault kv get -format=json secret/data/categorydb",
+                        returnStdout: true
+                    ).trim()
+
+                    // Set environment variables for later stages
+                    env.DB_USERNAME = sh(script: "echo ${dbCreds} | jq -r '.data.data.username'", returnStdout: true).trim()
+                    env.DB_PASSWORD = sh(script: "echo ${dbCreds} | jq -r '.data.data.password'", returnStdout: true).trim()
+                    env.DB_HOST     = sh(script: "echo ${dbCreds} | jq -r '.data.data.host'", returnStdout: true).trim()
+                    env.DB_PORT     = sh(script: "echo ${dbCreds} | jq -r '.data.data.port'", returnStdout: true).trim()
+                    env.DB_NAME     = sh(script: "echo ${dbCreds} | jq -r '.data.data.database'", returnStdout: true).trim()
+
                     echo "✅ Fetched DB credentials from Vault"
                 }
             }
@@ -89,11 +94,6 @@ pipeline {
                     def jar = sh(script: "ls target/*.jar", returnStdout: true).trim()
                     sh """
                         docker build \
-                            --build-arg DB_USERNAME=$DB_USERNAME \
-                            --build-arg DB_PASSWORD=$DB_PASSWORD \
-                            --build-arg DB_HOST=$DB_HOST \
-                            --build-arg DB_PORT=$DB_PORT \
-                            --build-arg DB_NAME=$DB_NAME \
                             --build-arg JAR_FILE=${jar} \
                             -t ${REPO}:latest -f Dockerfile .
                     """
@@ -121,7 +121,20 @@ pipeline {
             steps {
                 script {
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
+
+                    // Create Kubernetes secret with DB credentials
+                    sh """
+                        kubectl create secret generic categorydb-secret \
+                        --from-literal=username=${DB_USERNAME} \
+                        --from-literal=password=${DB_PASSWORD} \
+                        --from-literal=host=${DB_HOST} \
+                        --from-literal=port=${DB_PORT} \
+                        --from-literal=database=${DB_NAME} \
+                        --dry-run=client -o yaml | kubectl apply -f -
+                    """
+
                     try {
+                        // Deploy app
                         sh "kubectl apply -f k8s/deployment.yaml --wait --timeout=180s"
                         sh "kubectl apply -f k8s/service.yaml --wait --timeout=60s"
                         sh "kubectl wait --for=condition=ready pod -l app=springboot-app --timeout=180s"
