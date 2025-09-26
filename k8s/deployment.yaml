@@ -11,6 +11,7 @@ data:
   DB_NAME: Y2F0ZWdvcnlkYg==           # categorydb
 
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,19 +29,45 @@ spec:
         app: springboot-app
     spec:
       containers:
-  - name: springboot-app
-    image: asia-south1-docker.pkg.dev/gke-springboot-472605/springboot-artifacts/springboot-app:latest
-    ports:
-      - containerPort: 8070
-    livenessProbe:
-      httpGet:
-        path: /actuator/health
-        port: 8070
-      initialDelaySeconds: 30
-      periodSeconds: 10
-    readinessProbe:
-      httpGet:
-        path: /actuator/health
-        port: 8070
-      initialDelaySeconds: 20
-      periodSeconds: 5
+        - name: springboot-app
+          image: asia-south1-docker.pkg.dev/gke-springboot-472605/springboot-artifacts/springboot-app:latest
+          ports:
+            - containerPort: 8070
+          env:
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-db-secret
+                  key: DB_USERNAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-db-secret
+                  key: DB_PASSWORD
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-db-secret
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-db-secret
+                  key: DB_PORT
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: springboot-db-secret
+                  key: DB_NAME
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8070
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8070
+            initialDelaySeconds: 20
+            periodSeconds: 5
