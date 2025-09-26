@@ -6,8 +6,8 @@ spring:
 
   cloud:
     vault:
-      uri: http://34.180.3.84:8200
-      token: root
+      uri: http://34.180.3.84:8200        # Vault address
+      token: root                          # Vault token (or use Kubernetes auth)
       kv:
         enabled: true
         backend: secret
