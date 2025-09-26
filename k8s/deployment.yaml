@@ -14,6 +14,7 @@ spec:
       labels:
         app: springboot-app
     spec:
+      serviceAccountName: vault-auth  # Optional: Vault Agent Injector or Kubernetes auth
       containers:
         - name: springboot-app
           image: asia-south1-docker.pkg.dev/gke-springboot-472605/springboot-artifacts/springboot-app:latest
@@ -31,3 +32,4 @@ spec:
               port: 8070
             initialDelaySeconds: 20
             periodSeconds: 5
+
