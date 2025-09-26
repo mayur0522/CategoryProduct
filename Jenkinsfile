@@ -9,6 +9,13 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
+
+        // Vault config
+        VAULT_ADDR   = 'http://34.180.3.84:8200/'      // Replace with your Vault URL
+        VAULT_TOKEN  = credentials('vault-token')      // Jenkins Vault token credential
+
+        // Cloud SQL
+        CLOUD_SQL_INSTANCE = 'project:asia-south1:cloudsql-instance'  // Replace with your instance
     }
 
     tools {
@@ -61,10 +68,24 @@ pipeline {
             }
         }
 
+        stage('Retrieve DB Credentials from Vault') {
+            steps {
+                script {
+                    // Fetch DB username/password from Vault
+                    env.DB_USERNAME = sh(script: "vault kv get -field=username secret/springboot-db", returnStdout: true).trim()
+                    env.DB_PASSWORD = sh(script: "vault kv get -field=password secret/springboot-db", returnStdout: true).trim()
+                    echo "✅ Retrieved DB credentials from Vault"
+                }
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh """
-                    docker build -t ${REPO}:latest -f Dockerfile .
+                    docker build \
+                        --build-arg DB_USERNAME=${DB_USERNAME} \
+                        --build-arg DB_PASSWORD=${DB_PASSWORD} \
+                        -t ${REPO}:latest -f Dockerfile .
                 """
             }
         }
@@ -85,13 +106,24 @@ pipeline {
             }
         }
 
-        stage('Deploy to GKE') {
+        stage('Deploy to GKE with Vault secrets') {
             steps {
                 script {
+                    // Get GKE credentials
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
+
+                    // Apply deployment YAML with environment variables from Vault
+                    sh """
+                        kubectl set env deployment/springboot-app \
+                        DB_USERNAME=${DB_USERNAME} \
+                        DB_PASSWORD=${DB_PASSWORD} \
+                        CLOUD_SQL_CONNECTION_NAME=${CLOUD_SQL_INSTANCE}
+                    """
+
+                    // Apply Kubernetes manifests
                     sh 'kubectl apply -f k8s/deployment.yaml --wait'
                     sh 'kubectl apply -f k8s/service.yaml --wait'
-                    echo "✅ Kubernetes resources applied successfully"
+                    echo "✅ Spring Boot app deployed to GKE with Vault secrets"
                 }
             }
         }
@@ -99,10 +131,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Spring Boot project deployed successfully to GKE!'
+            echo '✅ Pipeline completed successfully!'
         }
         failure {
-            echo '❌ Deployment failed.'
+            echo '❌ Pipeline failed.'
         }
     }
 }
