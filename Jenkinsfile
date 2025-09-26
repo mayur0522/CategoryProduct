@@ -61,11 +61,21 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-            steps {
-                sh "docker build -t ${REPO}:latest -f Dockerfile ."
-            }
-        }
+    steps {
+        sh '''
+            # Make sure the JAR exists
+            ls target/
 
+            docker build \
+                --build-arg DB_USERNAME=$DB_USERNAME \
+                --build-arg DB_PASSWORD=$DB_PASSWORD \
+                --build-arg DB_HOST=$DB_HOST \
+                --build-arg DB_PORT=$DB_PORT \
+                --build-arg DB_NAME=$DB_NAME \
+                -t ${REPO}:latest -f Dockerfile .
+        '''
+    }
+        }
         stage('Authenticate with GCP') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
