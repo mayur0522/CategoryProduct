@@ -9,6 +9,9 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
+
+        VAULT_ADDR  = 'http://34.180.3.84:8200'
+        VAULT_TOKEN = credentials('vault-token')  // Jenkins secret
     }
 
     tools {
@@ -17,15 +20,35 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/mayur0522/CategoryProduct.git'
             }
         }
 
-        stage('Build') {
+        stage('Fetch Secrets from Vault') {
             steps {
-                sh "mvn clean package -DskipTests"
+                script {
+                    sh '''
+                        export DB_CREDS=$(vault kv get -format=json secret/data/categorydb)
+                        export DB_USERNAME=$(echo $DB_CREDS | jq -r '.data.data.username')
+                        export DB_PASSWORD=$(echo $DB_CREDS | jq -r '.data.data.password')
+                        export DB_HOST=$(echo $DB_CREDS | jq -r '.data.data.host')
+                        export DB_PORT=$(echo $DB_CREDS | jq -r '.data.data.port')
+                        export DB_NAME=$(echo $DB_CREDS | jq -r '.data.data.database')
+                    '''
+                    echo "✅ Fetched DB credentials from Vault"
+                }
+            }
+        }
+
+        stage('Build JAR') {
+            steps {
+                sh """
+                    mvn clean package -DskipTests
+                    ls -l target/
+                """
             }
         }
 
@@ -61,21 +84,23 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-    steps {
-        sh '''
-            # Make sure the JAR exists
-            ls target/
-
-            docker build \
-                --build-arg DB_USERNAME=$DB_USERNAME \
-                --build-arg DB_PASSWORD=$DB_PASSWORD \
-                --build-arg DB_HOST=$DB_HOST \
-                --build-arg DB_PORT=$DB_PORT \
-                --build-arg DB_NAME=$DB_NAME \
-                -t ${REPO}:latest -f Dockerfile .
-        '''
-    }
+            steps {
+                script {
+                    def jar = sh(script: "ls target/*.jar", returnStdout: true).trim()
+                    sh """
+                        docker build \
+                            --build-arg DB_USERNAME=$DB_USERNAME \
+                            --build-arg DB_PASSWORD=$DB_PASSWORD \
+                            --build-arg DB_HOST=$DB_HOST \
+                            --build-arg DB_PORT=$DB_PORT \
+                            --build-arg DB_NAME=$DB_NAME \
+                            --build-arg JAR_FILE=${jar} \
+                            -t ${REPO}:latest -f Dockerfile .
+                    """
+                }
+            }
         }
+
         stage('Authenticate with GCP') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
@@ -100,7 +125,7 @@ pipeline {
                         sh "kubectl apply -f k8s/deployment.yaml --wait --timeout=180s"
                         sh "kubectl apply -f k8s/service.yaml --wait --timeout=60s"
                         sh "kubectl wait --for=condition=ready pod -l app=springboot-app --timeout=180s"
-                        echo "✅ Kubernetes resources applied successfully and pods are ready"
+                        echo "✅ All Kubernetes pods are ready"
                     } catch (err) {
                         echo "❌ Deployment failed, fetching pod info and logs"
                         sh "kubectl get pods -l app=springboot-app -o wide"
@@ -114,11 +139,7 @@ pipeline {
     }
 
     post {
-        success {
-            echo '✅ Spring Boot project deployed successfully to GKE!'
-        }
-        failure {
-            echo '❌ Deployment failed.'
-        }
+        success { echo '✅ Spring Boot project deployed successfully to GKE!' }
+        failure { echo '❌ Deployment failed.' }
     }
 }
