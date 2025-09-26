@@ -15,7 +15,7 @@ pipeline {
         VAULT_TOKEN  = credentials('vault-token')      // Jenkins Vault token credential
 
         // Cloud SQL
-        CLOUD_SQL_INSTANCE = 'project:asia-south1:cloudsql-instance'  // Replace with your instance
+        CLOUD_SQL_INSTANCE = 'gke-springboot-472605:asia-south1:springboot-mysql'  // Replace with your instance
     }
 
     tools {
