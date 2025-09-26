@@ -9,9 +9,6 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-
-        VAULT_ADDR  = 'http://34.180.3.84:8200'
-        VAULT_TOKEN = credentials('vault-token')  // Jenkins secret
     }
 
     tools {
@@ -27,33 +24,9 @@ pipeline {
             }
         }
 
-        stage('Fetch Secrets from Vault') {
+        stage('Build') {
             steps {
-                script {
-                    // Fetch secrets from Vault
-                    def dbCreds = sh(
-                        script: "vault kv get -format=json secret/data/categorydb",
-                        returnStdout: true
-                    ).trim()
-
-                    // Set environment variables for later stages
-                    env.DB_USERNAME = sh(script: "echo ${dbCreds} | jq -r '.data.data.username'", returnStdout: true).trim()
-                    env.DB_PASSWORD = sh(script: "echo ${dbCreds} | jq -r '.data.data.password'", returnStdout: true).trim()
-                    env.DB_HOST     = sh(script: "echo ${dbCreds} | jq -r '.data.data.host'", returnStdout: true).trim()
-                    env.DB_PORT     = sh(script: "echo ${dbCreds} | jq -r '.data.data.port'", returnStdout: true).trim()
-                    env.DB_NAME     = sh(script: "echo ${dbCreds} | jq -r '.data.data.database'", returnStdout: true).trim()
-
-                    echo "✅ Fetched DB credentials from Vault"
-                }
-            }
-        }
-
-        stage('Build JAR') {
-            steps {
-                sh """
-                    mvn clean package -DskipTests
-                    ls -l target/
-                """
+                sh "mvn clean package -DskipTests"
             }
         }
 
@@ -90,14 +63,9 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                script {
-                    def jar = sh(script: "ls target/*.jar", returnStdout: true).trim()
-                    sh """
-                        docker build \
-                            --build-arg JAR_FILE=${jar} \
-                            -t ${REPO}:latest -f Dockerfile .
-                    """
-                }
+                sh """
+                    docker build -t ${REPO}:latest -f Dockerfile .
+                """
             }
         }
 
@@ -121,38 +89,20 @@ pipeline {
             steps {
                 script {
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-
-                    // Create Kubernetes secret with DB credentials
-                    sh """
-                        kubectl create secret generic categorydb-secret \
-                        --from-literal=username=${DB_USERNAME} \
-                        --from-literal=password=${DB_PASSWORD} \
-                        --from-literal=host=${DB_HOST} \
-                        --from-literal=port=${DB_PORT} \
-                        --from-literal=database=${DB_NAME} \
-                        --dry-run=client -o yaml | kubectl apply -f -
-                    """
-
-                    try {
-                        // Deploy app
-                        sh "kubectl apply -f k8s/deployment.yaml --wait --timeout=180s"
-                        sh "kubectl apply -f k8s/service.yaml --wait --timeout=60s"
-                        sh "kubectl wait --for=condition=ready pod -l app=springboot-app --timeout=180s"
-                        echo "✅ All Kubernetes pods are ready"
-                    } catch (err) {
-                        echo "❌ Deployment failed, fetching pod info and logs"
-                        sh "kubectl get pods -l app=springboot-app -o wide"
-                        sh "kubectl describe pod -l app=springboot-app"
-                        sh "kubectl logs -l app=springboot-app --all-containers=true || true"
-                        error("Deployment failed, see pod status/logs above")
-                    }
+                    sh 'kubectl apply -f k8s/deployment.yaml --wait'
+                    sh 'kubectl apply -f k8s/service.yaml --wait'
+                    echo "✅ Kubernetes resources applied successfully"
                 }
             }
         }
     }
 
     post {
-        success { echo '✅ Spring Boot project deployed successfully to GKE!' }
-        failure { echo '❌ Deployment failed.' }
+        success {
+            echo '✅ Spring Boot project deployed successfully to GKE!'
+        }
+        failure {
+            echo '❌ Deployment failed.'
+        }
     }
 }
