@@ -1,4 +1,9 @@
 spring:
+  application:
+    name: CategoryProduct
+  profiles:
+    active: prod
+
   cloud:
     vault:
       uri: http://34.180.3.84:8200
@@ -7,13 +12,15 @@ spring:
         enabled: true
         backend: secret
         default-context: gcp/cloudsql/categorydb
+
   datasource:
-    url: http://34.180.3.84:3306
-    username: ${spring.cloud.vault.database.username}
-    password: ${spring.cloud.vault.database.password}
+    url: jdbc:mysql://${spring.cloud.vault.gcp.cloudsql.categorydb.host}:${spring.cloud.vault.gcp.cloudsql.categorydb.port}/${spring.cloud.vault.gcp.cloudsql.categorydb.database}
+    username: ${spring.cloud.vault.gcp.cloudsql.categorydb.username}
+    password: ${spring.cloud.vault.gcp.cloudsql.categorydb.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true
