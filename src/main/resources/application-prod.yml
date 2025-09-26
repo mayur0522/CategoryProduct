@@ -6,8 +6,9 @@ spring:
 
   cloud:
     vault:
-      uri: http://34.180.3.84:8200        # Vault address
-      token: root                          # Vault token (or use Kubernetes auth)
+      uri: http://34.180.3.84:8200
+      authentication: token
+      token: root  # or use Kubernetes auth
       kv:
         enabled: true
         backend: secret
@@ -22,5 +23,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
