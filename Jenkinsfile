@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
-            args '-u root:root' // run as root to avoid permission issues
+            args '-u root:root'
         }
     }
 
@@ -14,15 +14,21 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-        PATH         = "/google-cloud-sdk/bin:${env.PATH}" // ensures plugin is found
-    }
-
-    tools {
-        maven 'maven3'
-        jdk 'jdk-21'
+        PATH         = "/google-cloud-sdk/bin:${env.PATH}" // ensure plugin is found
     }
 
     stages {
+
+        stage('Install JDK & Maven') {
+            steps {
+                sh """
+                    apt-get update
+                    apt-get install -y openjdk-21-jdk maven
+                    java -version
+                    mvn -version
+                """
+            }
+        }
 
         stage('Checkout') {
             steps {
@@ -90,6 +96,9 @@ pipeline {
             steps {
                 script {
                     sh """
+                        # Ensure kubectl & plugin installed
+                        gcloud components install kubectl gke-gcloud-auth-plugin --quiet
+
                         # Authenticate and fetch GKE credentials
                         gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}
 
