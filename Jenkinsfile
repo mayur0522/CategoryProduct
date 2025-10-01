@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        PROJECT_ID   = 'gke-springboot-472605'
+        PROJECT_ID   = 'springapp-gke'
         REGION       = 'asia-south1'
         ZONE         = 'asia-south1-b'
         CLUSTER      = 'gke-cluster'
