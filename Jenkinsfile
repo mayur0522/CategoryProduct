@@ -84,8 +84,8 @@ pipeline {
             steps {
                 script {
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-                    sh 'kubectl apply -f k8s/deployment.yaml --wait'
-                    sh 'kubectl apply -f k8s/service.yaml --wait'
+                    sh 'kubectl apply -f k8s/spring-deployment.yaml --wait'
+                    sh 'kubectl apply -f k8s/spring-service.yaml --wait'
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
