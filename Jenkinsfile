@@ -9,7 +9,7 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-        PATH         = "/root/google-cloud-sdk/bin:${env.PATH}" // ensure correct plugin is used
+        PATH         = "${env.HOME}/bin:${env.PATH}" // ensure plugin installed in HOME/bin
     }
 
     tools {
@@ -66,16 +66,29 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
                     sh """
-                        # Authenticate with GCP
                         gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
                         gcloud config set project ${PROJECT_ID}
                         gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet
 
-                        # Build Docker image
                         docker build -t ${REPO}:latest -f Dockerfile .
-
-                        # Push Docker image to Artifact Registry
                         docker push ${REPO}:latest
+                    """
+                }
+            }
+        }
+
+        stage('Ensure GKE Auth Plugin') {
+            steps {
+                script {
+                    sh """
+                        mkdir -p \$HOME/bin
+                        if ! command -v gke-gcloud-auth-plugin >/dev/null 2>&1; then
+                            echo "Installing gke-gcloud-auth-plugin..."
+                            curl -Lo \$HOME/bin/gke-gcloud-auth-plugin https://storage.googleapis.com/gke-gcloud-auth-plugin/Linux_x86_64/gke-gcloud-auth-plugin
+                            chmod +x \$HOME/bin/gke-gcloud-auth-plugin
+                        fi
+                        export PATH=\$HOME/bin:\$PATH
+                        gke-gcloud-auth-plugin version
                     """
                 }
             }
@@ -84,15 +97,12 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    // Ensure we remove old broken plugin (if exists)
-                    sh 'sudo rm -f /usr/local/bin/gke-gcloud-auth-plugin || true'
-
-                    // Authenticate and get credentials
+                    // Authenticate with GKE
                     sh """
                         gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}
                     """
 
-                    // Apply Kubernetes manifests (skip OpenAPI validation if needed)
+                    // Apply manifests, skip validation if OpenAPI fails
                     sh """
                         kubectl apply -f k8s/spring-deployment.yaml --wait --validate=false
                         kubectl apply -f k8s/spring-service.yaml --wait --validate=false
@@ -113,4 +123,3 @@ pipeline {
         }
     }
 }
-
