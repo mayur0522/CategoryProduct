@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
+            args '-u root:root' // run as root to avoid permission issues
+        }
+    }
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
@@ -9,7 +14,7 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-        PATH         = "/root/google-cloud-sdk/bin:${env.PATH}" // ensures kubectl finds gke-gcloud-auth-plugin
+        PATH         = "/google-cloud-sdk/bin:${env.PATH}" // ensures plugin is found
     }
 
     tools {
@@ -84,17 +89,14 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    // Authenticate with GKE cluster
                     sh """
+                        # Authenticate and fetch GKE credentials
                         gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}
-                    """
 
-                    // Apply Kubernetes manifests, skip OpenAPI validation if needed
-                    sh """
+                        # Apply Kubernetes manifests
                         kubectl apply -f k8s/spring-deployment.yaml --wait --validate=false
                         kubectl apply -f k8s/spring-service.yaml --wait --validate=false
                     """
-
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
