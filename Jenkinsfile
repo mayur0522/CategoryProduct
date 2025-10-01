@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'gcr.io/google.com/cloudsdktool/cloud-sdk:latest'
-            args '-u root:root'
-        }
-    }
+    agent any
 
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
@@ -14,21 +9,14 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
-        PATH         = "/google-cloud-sdk/bin:${env.PATH}" // ensure plugin is found
+    }
+
+    tools {
+        maven 'maven3'
+        jdk 'jdk-21'
     }
 
     stages {
-
-        stage('Install JDK & Maven') {
-            steps {
-                sh """
-                    apt-get update
-                    apt-get install -y openjdk-21-jdk maven
-                    java -version
-                    mvn -version
-                """
-            }
-        }
 
         stage('Checkout') {
             steps {
@@ -83,10 +71,10 @@ pipeline {
                         gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet
 
                         # Build Docker image
-                        docker build -t ${REPO}:latest -f Dockerfile .
+                        sudo docker build -t ${REPO}:latest -f Dockerfile .
 
                         # Push Docker image to Artifact Registry
-                        docker push ${REPO}:latest
+                        sudo docker push ${REPO}:latest
                     """
                 }
             }
@@ -95,17 +83,9 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    sh """
-                        # Ensure kubectl & plugin installed
-                        gcloud components install kubectl gke-gcloud-auth-plugin --quiet
-
-                        # Authenticate and fetch GKE credentials
-                        gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}
-
-                        # Apply Kubernetes manifests
-                        kubectl apply -f k8s/spring-deployment.yaml --wait --validate=false
-                        kubectl apply -f k8s/spring-service.yaml --wait --validate=false
-                    """
+                    sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
+                    sh 'kubectl apply -f k8s/spring-deployment.yaml --wait'
+                    sh 'kubectl apply -f k8s/spring-service.yaml --wait'
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
