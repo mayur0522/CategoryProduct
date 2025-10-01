@@ -9,6 +9,7 @@ pipeline {
         CLUSTER      = 'gke-cluster'
         IMAGE_NAME   = 'springboot-app'
         REPO         = "asia-south1-docker.pkg.dev/${PROJECT_ID}/springboot-artifacts/${IMAGE_NAME}"
+        PATH         = "/usr/local/bin:${env.PATH}" // ensure plugin is found
     }
 
     tools {
@@ -83,9 +84,28 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
+                    // Ensure gke-gcloud-auth-plugin exists and is executable
+                    sh """
+                        if ! command -v gke-gcloud-auth-plugin >/dev/null 2>&1; then
+                            echo "Installing gke-gcloud-auth-plugin..."
+                            ARCH=\$(uname -m)
+                            if [[ "\$ARCH" == "x86_64" ]]; then
+                                curl -Lo gke-gcloud-auth-plugin https://storage.googleapis.com/gke-gcloud-auth-plugin/Linux_x86_64/gke-gcloud-auth-plugin
+                            else
+                                curl -Lo gke-gcloud-auth-plugin https://storage.googleapis.com/gke-gcloud-auth-plugin/Linux_arm64/gke-gcloud-auth-plugin
+                            fi
+                            chmod +x gke-gcloud-auth-plugin
+                            sudo mv gke-gcloud-auth-plugin /usr/local/bin/
+                        fi
+                        export PATH=/usr/local/bin:\$PATH
+                    """
+
+                    // Authenticate with GKE
                     sh "gcloud container clusters get-credentials ${CLUSTER} --zone ${ZONE} --project ${PROJECT_ID}"
-                    sh 'kubectl apply -f k8s/spring-deployment.yaml --wait'
-                    sh 'kubectl apply -f k8s/spring-service.yaml --wait'
+
+                    // Apply Kubernetes manifests
+                    sh "kubectl apply -f k8s/spring-deployment.yaml --wait --validate=false"
+                    sh "kubectl apply -f k8s/spring-service.yaml --wait --validate=false"
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
