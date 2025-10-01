@@ -61,27 +61,22 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh """
-                    sudo docker build -t ${REPO}:latest -f Dockerfile .
-                """
-            }
-        }
-
-        stage('Authenticate with GCP') {
+        stage('Authenticate, Build & Push Docker Image') {
             steps {
                 withCredentials([file(credentialsId: 'gcp-service-account-key', variable: 'GOOGLE_APPLICATION_CREDENTIALS')]) {
-                    sh 'gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS'
-                    sh "gcloud config set project ${PROJECT_ID}"
-                    sh "gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet"
-                }
-            }
-        }
+                    sh """
+                        # Authenticate with GCP
+                        gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+                        gcloud config set project ${PROJECT_ID}
+                        gcloud auth configure-docker ${REGION}-docker.pkg.dev --quiet
 
-        stage('Push Docker Image') {
-            steps {
-                sh "docker push ${REPO}:latest"
+                        # Build Docker image
+                        sudo docker build -t ${REPO}:latest -f Dockerfile .
+
+                        # Push Docker image to Artifact Registry
+                        sudo docker push ${REPO}:latest
+                    """
+                }
             }
         }
 
