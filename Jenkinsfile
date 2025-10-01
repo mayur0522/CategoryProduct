@@ -84,7 +84,7 @@ pipeline {
         stage('Deploy to GKE') {
             steps {
                 script {
-                    // Ensure gke-gcloud-auth-plugin exists and is executable
+                    // Dynamically install gke-gcloud-auth-plugin if missing
                     sh """
                         if ! command -v gke-gcloud-auth-plugin >/dev/null 2>&1; then
                             echo "Installing gke-gcloud-auth-plugin..."
@@ -106,6 +106,7 @@ pipeline {
                     // Apply Kubernetes manifests
                     sh "kubectl apply -f k8s/spring-deployment.yaml --wait --validate=false"
                     sh "kubectl apply -f k8s/spring-service.yaml --wait --validate=false"
+
                     echo "✅ Kubernetes resources applied successfully"
                 }
             }
