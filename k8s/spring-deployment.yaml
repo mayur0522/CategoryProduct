@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecommerce-app
+  name: categoryproduct-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ecommerce-app
+      app: categoryproduct-app
   template:
     metadata:
       labels:
-        app: ecommerce-app
+        app: categoryproduct-app
     spec:
       containers:
-        - name: ecommerce-container-app
-          image: ecommerce-app:v1
-          imagePullPolicy: Never
+        - name: categoryproduct-container
+          image: asia-south1-docker.pkg.dev/springapp-gke/springboot-artifacts/springboot-app:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
